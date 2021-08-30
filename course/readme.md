@@ -1,0 +1,97 @@
+
+University of Manitoba CS Missing semester
+==========================================
+
+Inspired by [MIT's missing semester](https://missing.csail.mit.edu/), a toolkit for
+students to train students in hard tech skills that will help them succeed.
+We've seen 3rd year students in Operating Systems, Real Time Systems, and other
+technical courses struggle to use the tools - stumbling with the tools rather than
+focusing on the assignment at hand.
+
+Topics
+------
+
+* [Different types of languages, ways of interacting](languages)
+  * Compilation
+  * Scripting
+  * REPL
+    * Why REPL is great
+    * When is it useful
+* [Shell](shell)
+  * using a shell _Well_
+  * unix program structure
+    * Standard in, standard out, standard error
+    * piping, file redirection, how that relates to stdin/stdout/stderr
+    * output redirection
+  * create a bash script to automate something
+    * See bash/shell as a scripting language, not just a window
+  * Environment variables to choose resources
+* [Unix Power Tools](unix)
+  * linux vs unix vs mac
+  * tools
+    * `awk` (alternatively `cut`)
+    * `find` done properly
+    * `sed`
+    * `xargs`
+  * wrap with processing a csv/tsv file
+* [Remote systems](remote)
+  * ssh
+  * moving files
+    * To the system
+    * From the system (No, you can't push home)
+* [Building programs](building)
+  * Makefiles
+  * Library paths?
+* [Debugging](debugging)
+  * Why it's better than print statements
+  * anti-pattern debugging
+  * gdb/pdb breakpoints, stepping stack traces
+  * some guis
+    * intro this. these change all the time
+* [Source code control](versioning_code)
+  * Git!
+  * Creating a repository
+  * Add, check-in, revert
+  * make a branch, merge, or abandon
+  * Collisions with yourself (or as a team)
+* [Quality code](quality_code)
+  * Linters, style checkers
+  * adding these to makefiles/tests
+* [Virtual machines](virtualiztion)
+  * What are they?
+  * Why should we use them?
+* The rest
+  * things that don't fit into here, and also don't fit into
+    the program, either.
+    * profiling - finding slow parts in code
+
+
+Possible topics
+---------------
+
+Connecting software to tools:
+
+* How do we connect to databases?
+* Using REST APIs?
+* File encodings, character sets (ascii/unicode. CRLF/LF). converting between the two
+* Virtual environments (python/ruby) for isolation lite(tm)
+* CPU vs GPU vs ALU
+
+Outputs
+-------
+
+Videos covering this material _on our infrastructure_. Students
+can see this material anywhere, but we can make it real to them here.
+
+UMLearn course, where badges are released. Some "challenges" where the
+answer can be put into a UMLearn quiz (or similar). Open to all 2nd-grad level
+students in CS.
+
+Book suggestions
+-----------------
+
+For myself to use, and for the students.
+
+* [The Linux Command Line](https://linuxcommand.org/tlcl.php)
+* [Unix power tools](https://www.amazon.ca/Unix-Power-Tools-Jerry-Peek/dp/0596003307)
+* [Unix programming environment](https://www.amazon.ca/UNIX-Programming-Environment-KERNIGHAN-PIKE/dp/013937681X/ref=pd_sim_3/143-8981586-4934920)
