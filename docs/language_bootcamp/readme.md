@@ -17,6 +17,11 @@ Content of each (available where applicable)
 - Loops and structures
 - How to run it
 
+if possible, discuss
+
+- file i/o
+- arguments
+
 Languages
 
 - [Java] (if you didn’t do 1st year here)
