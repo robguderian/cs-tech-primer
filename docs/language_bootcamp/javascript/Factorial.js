@@ -1,5 +1,16 @@
 "use strict";
 
+//------------------------------------------------------
+// factorial
+//
+// PURPOSE: to show a recursive implementation of the factorial function.
+//
+// PARAMETERS:
+//      - num is the number that you want to perform a factorial on.
+//
+// RETURN: returns the calculated factorial value (integer).
+//
+//------------------------------------------------------
 function factorial(num){
     if (arguments.length !== 1 || !Number.isInteger(num) || num < 0){
         throw new Error("Invalid use of factorial() function.  factorial() " +
@@ -15,6 +26,13 @@ function factorial(num){
     return returnValue;
 }
 
+//------------------------------------------------------
+// main
+//
+// PURPOSE: calls factorial() on a specified value and outputs the result to
+//          console.log().
+//
+//------------------------------------------------------
 function main(){
     let num = 5; // number to calculate factorial on
     let answer = factorial(num); // factorial result / answer
