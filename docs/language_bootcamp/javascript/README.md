@@ -33,9 +33,9 @@ at the beginning of your function / method:
 
 ```javascript
 function factorial(num) {
-    if (arguments.length !== 1 && !Number.isInteger(num)){
-        throw new Error("Invalid use of factorial().  It takes 1 argument, " +
-            "which is an integer.");
+    if (arguments.length !== 1 || !Number.isInteger(num) || num < 0){
+        throw new Error("Invalid use of factorial() function.  factorial() " +
+            "takes 1 argument as a parameter, which is a positive integer.");
     }
     
     // ... implementation
@@ -60,8 +60,7 @@ class Wine {
             this.#_name = "";
             this.#_age = -1;
         } 
-        else if (arguments.length === 2 && name instanceof String &&
-            Number.isInteger(age)) {
+        else if (arguments.length === 2 && name instanceof String && Number.isInteger(age)) {
             this.#_name = name;
             this.#_age = age;
         } 
