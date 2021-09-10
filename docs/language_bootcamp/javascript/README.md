@@ -1,4 +1,4 @@
-JavaScript Best Practices
+JavaScript Quirks
 ===================
 
 ### Strict Formatting:
@@ -13,6 +13,8 @@ to add the following text to the top of your file before any code:
 
 - Note that you can have comments above this line (so your default header
 comment block can be above it if you want.  It's a style choice).
+
+---
 
 ### Function / Method Arguments:
 In JavaScript, **you can pass as many or as few arguments as you wish** to
@@ -81,7 +83,9 @@ valid cases.  The first conditional is for the empty constructor, the second is
 when you pass the name (string) and age (integer) arguments.  Any other uses of
 the constructor will throw an error due to invalidity.
 
-### Equality (== versus ===):
+---
+
+### Equality ( == vs === ):
 JavaScript doesn't use == the same way you're probably used to.  For example,
 if you typed the following in C, it'd return false, but in JavaScript, this
 line of code returns true:
@@ -92,7 +96,7 @@ line of code returns true:
 
 This was a design choice to make the language more accessible to non-programmers,
 but it had a lot of unintended side effects.  As such, it became important to
-implement a more traditional equality operation.  So in JavaScript, we use the
+implement a more traditional equality operation.  So, in JavaScript, we use the
 following to check for explicit equality:
 
 ```javascript
@@ -100,3 +104,22 @@ following to check for explicit equality:
 ```
 
 Therefore, best practice is to **always use === and !==** (instead of == and !=).
+
+---
+
+### Null vs Undefined
+
+In other languages, when you attempt to access something that doesn't exist, 
+you'll get null (null pointer exception, etc.).  JavaScript is different;
+instead of null, **JavaScript defaults to undefined**.  The use of null still
+exists, but it's a value that the programmer has to explicitly assign to 
+something.  This is useful in debugging because if you get null, it's
+potentially an expected null.
+
+Another thing to note is that, in JavaScript, null is an object, and undefined
+is undefined:
+
+```javascript
+console.log(typeof null); // object
+console.log(typeof undefined); // undefined
+```
