@@ -19,7 +19,8 @@ In JavaScript, **you can pass as many or as few arguments as you wish** to
 a given function / method.  It's up to that function / method to determine if
 the number of parameters / arguments match a given case or not.
 
-**It's best practice to check the arguments of all functions / methods.**
+**It's considered best practice to check the arguments of all functions / 
+methods.**
 
 Signatures are just a suggestion in JavaScript.  As such, you cannot have
 multiple versions of a function / method with different signatures.  The last
@@ -65,7 +66,9 @@ class Wine {
             this.#_age = age;
         } 
         else {
-            throw new Error("Invalid use of Wine's constructor.");
+            throw new Error("Invalid use of Wine's constructor.  It takes " +
+                "either 0 arguments, or 2 arguments (name, age), where name " +
+                "is a String, and age is an integer.");
         }
     }
     
