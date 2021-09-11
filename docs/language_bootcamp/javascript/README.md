@@ -1,7 +1,8 @@
 JavaScript Quirks
 ===================
 
-### Strict Formatting:
+### Strict Formatting
+
 It's recommended to use strict formatting in your JavaScript files.  This
 helps prevent unwanted accidental declarations of variables, and enforces
 the use of semicolons ';' at the end of your lines.  The way to do this is
@@ -16,7 +17,8 @@ comment block can be above it if you want.  It's a style choice).
 
 ---
 
-### Function / Method Arguments:
+### Function / Method Arguments
+
 In JavaScript, **you can pass as many or as few arguments as you wish** to
 a given function / method.  It's up to that function / method to determine if
 the number of parameters / arguments match a given case or not.
@@ -31,6 +33,7 @@ want to have multiple versions of a given method, with multiple ways to call
 said method, you need to add conditional cases to check against.
 
 #### 1 Case
+
 If you only have one case, the common thing to do is to include a conditional
 at the beginning of your function / method:
 
@@ -50,6 +53,7 @@ if the argument that's passed is an integer.  If either of these is false,
 it'll throw an error.
 
 #### Multiple Cases
+
 If you have multiple cases, say for a constructor for instance, you'll have
 conditionals for each case:
 
@@ -85,7 +89,8 @@ the constructor will throw an error due to invalidity.
 
 ---
 
-### Equality ( == vs === ):
+### Equality ( == vs === )
+
 JavaScript doesn't use == the same way you're probably used to.  For example,
 if you typed the following in C, it'd return false, but in JavaScript, this
 line of code returns true:
@@ -97,17 +102,26 @@ line of code returns true:
 This was a design choice to make the language more accessible to non-programmers,
 but it had a lot of unintended side effects.  As such, it became important to
 implement a more traditional equality operation.  So, in JavaScript, we use the
-following to check for explicit equality:
+following to check for strict equality (also checks data type):
 
 ```javascript
 "1" === 1; // returns false in JavaScript
+```
+
+Another important thing to note is that when using ==, the equality is not 
+transitive.  Here's an example:
+
+```javascript
+A == B; // true
+B == C; // true
+A == C; // not necessarily true.  Could be false.
 ```
 
 Therefore, best practice is to **always use === and !==** (instead of == and !=).
 
 ---
 
-### Null vs Undefined
+### null vs undefined
 
 In other languages, when you attempt to access something that doesn't exist, 
 you'll get null (null pointer exception, etc.).  JavaScript is different;
@@ -122,4 +136,26 @@ is undefined:
 ```javascript
 console.log(typeof null); // object
 console.log(typeof undefined); // undefined
+```
+
+---
+
+### Number Primitive
+
+JavaScript doesn't have primitives for int, long, float, or double.  Instead,
+all of these fall under JavaScript's **Number** primitive. 
+
+To explicitly check for an integer, you could use the following:
+
+```javascript
+Number.isInteger(num); // returns a boolean signifying if "num" is an integer.
+```
+
+#### Division
+
+JavaScript's default division operator */* performs floating point division,
+not integer division.
+
+```javascript
+console.log(5/2); // prints 2.5, not 2
 ```
