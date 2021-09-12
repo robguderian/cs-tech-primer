@@ -16,17 +16,27 @@ JavaScript Quirks
 
 ### Strict Formatting
 
-It's recommended to use strict formatting in your JavaScript files.  This
-helps prevent unwanted accidental declarations of variables, and enforces
-the use of semicolons ';' at the end of your lines.  The way to do this is
-to add the following text to the top of your file before any code:
+It's recommended to use strict formatting in your JavaScript files.  This has 
+two main benefits:
+
+1. It helps prevent unwanted accidental declarations of variables.
+   * To declare a variable, you have to use one of the following keywords:
+     * `let`
+     * `var`
+     * `const`
+     
+2. It forces the use of semicolons `;` at the end of your lines.
+
+You can enable strict formatting by adding the following text to the top of
+your file, before any code:
 
 ```javascript
 "use strict";
 ```
 
 - Note that you can have comments above this line (so your default header
-comment block can be above it if you want.  It's a style choice).
+comment block can be above it, or below it, however you want.  It's a style
+choice).
 
 ---
 
@@ -35,6 +45,9 @@ comment block can be above it if you want.  It's a style choice).
 In JavaScript, **you can pass as many or as few arguments as you wish** to
 a given function / method.  It's up to that function / method to determine if
 the number of parameters / arguments match a given case or not.
+
+- You can access these arguments either by parameter names or through the
+`arguments` keyword.
 
 **It's considered best practice to check the arguments of all functions / 
 methods.**
@@ -61,9 +74,9 @@ function factorial(num) {
 }
 ```
 
-- The example above checks if the number of **arguments** is equal to 1 and
-if the argument that's passed is an integer.  If either of these is false,
-it'll throw an error.
+- The example above checks if the number of arguments is equal to 1 and if the
+argument that's passed is an integer.  If either of these is false, it'll throw
+an error.
 
 #### Multiple Cases
 
@@ -104,7 +117,7 @@ the constructor will throw an error due to invalidity.
 
 ### Equality ( == vs === )
 
-JavaScript doesn't use == the same way you're probably used to.  For example,
+JavaScript doesn't use `==` the same way you're probably used to.  For example,
 if you typed the following in C, it'd return false, but in JavaScript, this
 line of code returns true:
 
@@ -112,16 +125,17 @@ line of code returns true:
 "1" == 1; // returns true in JavaScript
 ```
 
-This was a design choice to make the language more accessible to non-programmers,
-but it had a lot of unintended side effects.  As such, it became important to
-implement a more traditional equality operation.  So, in JavaScript, we use the
-following to check for strict equality (also checks data type):
+This was a design choice to make the language more accessible to
+non-programmers, but it had a lot of unintended side effects.  As such, it
+became important to implement a more traditional equality operation.  So, in
+JavaScript, we use `===` to check for strict equality (taking into account the
+data type):
 
 ```javascript
 "1" === 1; // returns false in JavaScript
 ```
 
-Another important thing to note is that when using ==, the equality is not 
+Another important thing to note is that when using `==`, the equality is not 
 transitive.  Here's an example:
 
 ```javascript
@@ -130,7 +144,8 @@ B == C; // true
 A == C; // not necessarily true.  Could be false.
 ```
 
-Therefore, best practice is to **always use === and !==** (instead of == and !=).
+Therefore, best practice is to **always use `===` and `!==`** (instead of `==`
+and `!=`).
 
 ---
 
@@ -138,9 +153,9 @@ Therefore, best practice is to **always use === and !==** (instead of == and !=)
 
 In other languages, when you attempt to access something that doesn't exist, 
 you'll get null (null pointer exception, etc.).  JavaScript is different;
-instead of null, **JavaScript defaults to undefined**.  The use of null still
-exists, but it's a value that the programmer has to explicitly assign to 
-something.  This is useful in debugging because if you get null, it's
+instead of null, **JavaScript defaults to `undefined`**.  The use of `null`
+still exists, but it's a value that the programmer has to explicitly assign
+to something.  This is useful in debugging because if you get null, it's
 potentially an expected null.
 
 Another thing to note is that, in JavaScript, null is an object, and undefined
@@ -156,7 +171,7 @@ console.log(typeof undefined); // undefined
 ### Number Primitive
 
 JavaScript doesn't have primitives for int, long, float, or double.  Instead,
-all of these fall under JavaScript's **Number** primitive. 
+all of these fall under JavaScript's `Number` primitive. 
 
 To explicitly check for an integer, you could use the following:
 
@@ -166,7 +181,7 @@ Number.isInteger(num); // returns a boolean signifying if "num" is an integer.
 
 #### Division
 
-JavaScript's default division operator **/** performs floating point division,
+JavaScript's default division operator `/` performs floating point division,
 not integer division.
 
 ```javascript
@@ -177,19 +192,19 @@ console.log(5/2); // prints 2.5, not 2
 
 ### Require
 
-The "require" keyword is how you import dependencies to a given file.
+The `require` keyword is how you import dependencies to a given file.
 
 ```javascript
 const Person = require("./Person");
 const assert = require("assert");
 ```
 
-The code above imports two dependencies, "Person" and "assert".
+The code above imports two dependencies, `Person` and `assert`.
 
-- "Person" is a fictitious file we've made within this directory (the "./" is
+- `Person` is a fictitious file we've made within this directory (the `./` is
 a relative path, telling you it's in the current directory), and
-- "assert" is a standard file that's used for creating tests for your code.
-(Note that it doesn't use a relative path "./")
+- `assert` is a standard file that's used for creating tests for your code.
+(Note that it doesn't use a relative path `./`)
 
 In order to be able to import a file you made, you need to add the following
 line of code (typically at the bottom of your file):
@@ -198,7 +213,7 @@ line of code (typically at the bottom of your file):
 module.exports = Person;
 ```
 
-- "Person" is just a continuation of the example above.  You can change this.
+- `Person` is just a continuation of the example above.  You can change this.
 
 ---
 
@@ -209,7 +224,7 @@ In JavaScript, variables and methods default to being public.
 #### Underscore
 
 The convention to kindly ask people to **not** use your variable, or method, is
-to lead its name with an underscore '_':
+to lead its name with an underscore `_`:
 
 ```javascript
 class Example {
@@ -224,7 +239,7 @@ outside your class.
 
 #### \#
 
-The use of '#' in front of the name of a variable, or method, will make that 
+The use of `#` in front of the name of a variable, or method, will make that 
 variable or method private and therefore inaccessible from outside your class.
 
 ```javascript
@@ -243,7 +258,7 @@ class Employee {
 }
 ```
 
-- In the above code, the variable #_salary, and method #calculateBonus are 
+- In the above code, the variable `#_salary`, and method `#calculateBonus` are 
 private.  Neither of these can be called outside the Employee class.
 
 Note that private instance variables need to be declared outside of methods.
