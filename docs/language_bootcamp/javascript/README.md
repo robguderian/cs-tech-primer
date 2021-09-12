@@ -1,6 +1,19 @@
 JavaScript Quirks
 ===================
 
+1. [Strict Formatting](#strict-formatting)
+2. [Function / Method Arguments](#function--method-arguments)
+   1. [1 Case](#1-case)
+   2. [Multiple Cases](#multiple-cases)
+3. [Equality ( == vs === )](#equality---vs--)
+4. [null vs undefined](#null-vs-undefined)
+5. [Number Primitive](#number-primitive)
+6. [Require](#require)
+7. [Private Variables and Methods](#private-variables-and-methods)
+8. [Duck Typing](#duck-typing)
+
+---
+
 ### Strict Formatting
 
 It's recommended to use strict formatting in your JavaScript files.  This
@@ -153,7 +166,7 @@ Number.isInteger(num); // returns a boolean signifying if "num" is an integer.
 
 #### Division
 
-JavaScript's default division operator */* performs floating point division,
+JavaScript's default division operator **/** performs floating point division,
 not integer division.
 
 ```javascript
@@ -168,7 +181,7 @@ The "require" keyword is how you import dependencies to a given file.
 
 ```javascript
 const Person = require("./Person");
-const assert = require ("assert");
+const assert = require("assert");
 ```
 
 The code above imports two dependencies, "Person" and "assert".
@@ -195,7 +208,7 @@ In JavaScript, variables and methods default to being public.
 
 #### Underscore
 
-The convention to kindly ask people to *not* use your variable, or method, is
+The convention to kindly ask people to **not** use your variable, or method, is
 to lead its name with an underscore '_':
 
 ```javascript
@@ -234,3 +247,10 @@ class Employee {
 private.  Neither of these can be called outside the Employee class.
 
 Note that private instance variables need to be declared outside of methods.
+
+---
+
+### Duck Typing
+
+
+
