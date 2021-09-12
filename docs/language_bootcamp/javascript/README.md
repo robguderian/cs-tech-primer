@@ -159,3 +159,78 @@ not integer division.
 ```javascript
 console.log(5/2); // prints 2.5, not 2
 ```
+
+---
+
+### Require
+
+The "require" keyword is how you import dependencies to a given file.
+
+```javascript
+const Person = require("./Person");
+const assert = require ("assert");
+```
+
+The code above imports two dependencies, "Person" and "assert".
+
+- "Person" is a fictitious file we've made within this directory (the "./" is
+a relative path, telling you it's in the current directory), and
+- "assert" is a standard file that's used for creating tests for your code.
+(Note that it doesn't use a relative path "./")
+
+In order to be able to import a file you made, you need to add the following
+line of code (typically at the bottom of your file):
+
+```javascript
+module.exports = Person;
+```
+
+- "Person" is just a continuation of the example above.  You can change this.
+
+---
+
+### Private Variables and Methods
+
+In JavaScript, variables and methods default to being public.
+
+#### Underscore
+
+The convention to kindly ask people to *not* use your variable, or method, is
+to lead its name with an underscore '_':
+
+```javascript
+class Example {
+    _dontUseMe() {
+        // implementation
+    }
+}
+```
+
+However, this doesn't actually stop people from using said variable or method
+outside your class.
+
+#### \#
+
+The use of '#' in front of the name of a variable, or method, will make that 
+variable or method private and therefore inaccessible from outside your class.
+
+```javascript
+class Employee {
+    #_salary; // private instance variables need to be declared outside methods
+
+    constructor(name, salary) {
+        this.name = name;
+        this.#_salary = salary;
+    }
+
+    // 
+    #calculateBonus(){
+        // implementation
+    }
+}
+```
+
+- In the above code, the variable #_salary, and method #calculateBonus are 
+private.  Neither of these can be called outside the Employee class.
+
+Note that private instance variables need to be declared outside of methods.
