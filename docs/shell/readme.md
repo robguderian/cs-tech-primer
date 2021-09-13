@@ -18,7 +18,8 @@ After doing this unit, students should be able to...
 * change permissions on a file to make it executable.
   * Octal codes
   * `#!` to choose which interpreter to use (bash, python, other)
-* know how to search previous commands (or, at least know it's possible, and know that it.
+* know how to search previous commands (or, at least know it's possible, and
+  know that it.
   is probably available in their shell of choice)
 * understand a unix programs inputs and outputs.
 * use piping to create a a complex flow.

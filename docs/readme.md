@@ -65,7 +65,6 @@ Topics
     the program, either.
     * profiling - finding slow parts in code
 
-
 Possible topics
 ---------------
 
@@ -73,7 +72,8 @@ Connecting software to tools:
 
 * How do we connect to databases?
 * Using REST APIs?
-* File encodings, character sets (ascii/unicode. CRLF/LF). converting between the two
+* File encodings, character sets (ascii/unicode. CRLF/LF). converting
+  between the two
 * Virtual environments (python/ruby) for isolation lite(tm)
 * CPU vs GPU vs ALU
 
