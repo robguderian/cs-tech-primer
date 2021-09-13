@@ -25,4 +25,4 @@ Activities
 
 * Check out a git repository that has a known conflict,
   preform a 3-way merge into `main` branch
-* Something with https://learngitbranching.js.org/
+* Something with [Learn git branching](https://learngitbranching.js.org/)

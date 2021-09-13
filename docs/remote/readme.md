@@ -24,6 +24,9 @@ By the end of this module, student should be able to...
 Activities
 ----------
 
-* Give a multi-file program that depends on a library that is ONLY on aviary (custom one).
-  Multi-file so students MUST use `scp`/`rsync`. UMLearn quiz to place the results.
-* Have a large text file on UMLearn. Upload, change, upload - how fast is it to transfer using the different tools?
+* Give a multi-file program that depends on a library that is ONLY on aviary
+  (custom one).
+  Multi-file so students MUST use `scp`/`rsync`. UMLearn quiz to place the
+  results.
+* Have a large text file on UMLearn. Upload, change, upload - how fast is it
+  to transfer using the different tools?

@@ -17,5 +17,5 @@ By the end of this module, students will be able to:
 Readings
 --------
 
-* https://cs-fundamentals.com/tech-interview/c/difference-between-static-and-dynamic-linking
-* https://www.ibm.com/docs/en/aix/7.2?topic=techniques-when-use-dynamic-linking-static-linking
+* [cs-fundamentals](https://cs-fundamentals.com/tech-interview/c/difference-between-static-and-dynamic-linking)
+* [ibm](https://www.ibm.com/docs/en/aix/7.2?topic=techniques-when-use-dynamic-linking-static-linking)
