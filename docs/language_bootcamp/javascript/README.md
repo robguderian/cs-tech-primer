@@ -203,9 +203,9 @@ const assert = require("assert");
 
 The code above imports two dependencies, `Person` and `assert`.
 
-*`Person` is a fictitious file we've made within this directory (the `./` is
+* `Person` is a fictitious file we've made within this directory (the `./` is
 a relative path, telling you it's in the current directory), and
-*`assert` is a standard file that's used for creating tests for your code.
+* `assert` is a standard file that's used for creating tests for your code.
 (Note that it doesn't use a relative path `./`)
 
 In order to be able to import a file you made, you need to add the following
@@ -215,7 +215,7 @@ line of code (typically at the bottom of your file):
 module.exports = Person;
 ```
 
-*`Person` is just a continuation of the example above.  You can change this.
+* `Person` is just a continuation of the example above.  You can change this.
 
 ---
 
@@ -260,7 +260,7 @@ class Employee {
 }
 ```
 
-*In the above code, the variable `#_salary`, and method `#calculateBonus` are
+* In the above code, the variable `#_salary`, and method `#calculateBonus` are
 private.  Neither of these can be called outside the Employee class.
 
 Note that private instance variables need to be declared outside of methods.
