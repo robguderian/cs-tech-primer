@@ -14,6 +14,9 @@ At the end of this module, students will be able to:
   * keep trying that one line of code
   * try out an idea really quickly
 * know how Notebooks interact like REPLs
+* `#!` to choose which interpreter to use (bash, python, other)
+  * Discuss magic numbers for files
+
 
 Activities
 ----------

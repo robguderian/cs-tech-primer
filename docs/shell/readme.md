@@ -15,17 +15,10 @@ After doing this unit, students should be able to...
 * understand what a $PATH is
 * add more paths to the $PATH in a .profile
 * traverse a filesystem (move around a filesystem), find and execute files.
-* change permissions on a file to make it executable.
-  * Octal codes
-  * `#!` to choose which interpreter to use (bash, python, other)
 * know how to search previous commands (or, at least know it's possible, and know that it.
   is probably available in their shell of choice)
 * understand a unix programs inputs and outputs.
-* use piping to create a a complex flow.
-* use pushd, popd
-* use `source` to load variables
-* set, and use environment variables
-  * use environment variables for debug vs deployment
+
 
 The Shell
 ---------
@@ -186,6 +179,11 @@ touch thisFile
 ie, you touched it. But, it also creates the file if it does not exist.
 `touch` is legitimately useful if you want a makefile to 'see' a change in a
 file.
+
+Repeating commands
+------------------
+
+llkjadsflkjasdflkjafdlkadjf
 
 Quick reference
 ---------------
