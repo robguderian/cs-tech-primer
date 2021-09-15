@@ -12,7 +12,7 @@ Content of each (available where applicable)
 
 - Fizzbuzz (if/else demo)
 - Factorial done recursively
-- Some string processing
+- Some string processing (see below)
 - Object demo
 - Loops and structures
 - How to run it
@@ -22,7 +22,30 @@ if possible, discuss
 - file i/o
 - arguments
 
+String example
+--------------
+
+The example shows:
+
+- substring
+- search
+- index a letter
+- split
+- Palindromicity
+
+We'll use the Rockyou corpus, which is leaked password (warning, there is
+some bad language in the corpus)
+
+Then, find:
+
+- how many passwords have the word 'pass' in it?
+- see if you've been owned
+- count letter frequencies
+- .... we'll probably just use this
+- how many palindromes are there in the corpus
+
 Languages
+---------
 
 - [Java] (if you didn’t do 1st year here)
 - C
