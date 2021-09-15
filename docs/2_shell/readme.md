@@ -15,10 +15,9 @@ After doing this unit, students should be able to...
 * understand what a $PATH is
 * add more paths to the $PATH in a .profile
 * traverse a filesystem (move around a filesystem), find and execute files.
-* know how to search previous commands (or, at least know it's possible, and know that it.
-  is probably available in their shell of choice)
+* know how to search previous commands (or, at least know it's possible, and know
+  that it is probably available in their shell of choice)
 * understand a unix programs inputs and outputs.
-
 
 The Shell
 ---------
@@ -66,8 +65,8 @@ pelican.cs.umanitoba.ca 136% ls ~robg/demo/
 
 ### Relative paths
 
-Remember, the shell is all about **state**. So, we are in a directory... which? Use `pwd`
-Present Working Directory to figure that out.
+Remember, the shell is all about **state**. So, we are in a directory... which?
+Use `pwd` Present Working Directory to figure that out.
 
 Say we have the following:
 
@@ -143,8 +142,8 @@ the root `/`... and back again:
 pelican.cs.umanitoba.ca 133% ls /home/cs/staff/robg/demo/1012/../../../../../../home/cs/staff/robg/demo/
 ```
 
-Creating files
---------------
+Creating files and directories
+------------------------------
 
 Eventually, we want to fill this file system. We'll discuss moving in remote
 files somewhere else, here we focus in _just making them_.
@@ -191,5 +190,6 @@ Quick reference
 Commands you'll totally forget
 
 * `ls` - list the directories
-* `cd folder_name` - move into directory `folder_name`. `cd ..` to move back one folder
+* `cd folder_name` - move into directory `folder_name`. `cd ..` to move back
+  one folder
 * `pwd` - present working directory, where am I?
