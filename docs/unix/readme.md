@@ -10,11 +10,12 @@ Focus on using the tools to wrangle some data
 By the end of the module, students should be able to:
 
 * use `awk` to extract columns of data.
-* use `find` to ... find... a file by name, use `-exec` to run a command with that filename.
+* use `find` to ... find... a file by name, use `-exec` to run a command with
+  that filename.
 * use `sed` to convert characters/words.
 * use `sed` to remove data.
-* use `ls` and `xargs` to run a command on all the items in the current folder, like
-  rename them all.
+* use `ls` and `xargs` to run a command on all the items in the current folder,
+  like rename them all.
 * be able to compress/uncompress folders with `tar`
 * be able to set variables, use loops, and other simple programming tools
 

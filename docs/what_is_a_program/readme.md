@@ -10,15 +10,14 @@ By the end of this module, students will be able to:
   a program (bash/python)
 * be able to use `strings` to pull strings from a program
 * understand ELF format, how a program starts.
-* know that programs are linked (https://wiki.osdev.org/Linker_Scripts)
+* know that programs are linked [osdev](https://wiki.osdev.org/Linker_Scripts)
   via a linker. That segments _can_ move.
 * know how an OS/shell can tell apart a text file from an
   actual executable (binary). (`file` command does this)
-  see (https://en.wikipedia.org/wiki/List_of_file_signatures)
-
+  see [The list on wikipedia](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
 Notes to self
 --------------
 
-Talk about https://en.wikipedia.org/wiki/GNU_Binutils and 
+Talk about [GNU_Binutils](https://en.wikipedia.org/wiki/GNU_Binutils) and
 ... do things? Rip apart a program?
