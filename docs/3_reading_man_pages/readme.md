@@ -181,3 +181,9 @@ The sections are searched in order. So `man printf` would find section 1 first.
 ```sh
 apropos --section 3 printf
 ```
+
+Activity
+--------
+
+There is a program named TODO that does TODO. Read the man page
+to make it TODO.
