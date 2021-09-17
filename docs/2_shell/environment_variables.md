@@ -35,7 +35,7 @@ a development environment, or production - then set its logging appropriately.
 We can inspect variables by printing them. Variables start with a `$`
 
 ```sh
-$ echo $PATH
+echo $PATH
 ```
 
 We can [set variables](https://tldp.org/LDP/abs/html/varassignment.html)
@@ -44,6 +44,7 @@ for **just this** shell
 ```sh
 $ variable=lookMortyITurnedMyselfIntoAVariable
 $ echo $variable
+lookMortyITurnedMyselfIntoAVariable
 ```
 
 But, this does not propagate into any programs we run. If we want these
@@ -66,11 +67,25 @@ bash printEnv.sh
 ```
 
 ```sh
-$ bash printEnv.sh  | grep variable
-# nothing
 $ variable=WeAreHere
 $ bash printEnv.sh  | grep variable
+# nothing
 $ export variable
 $ bash printEnv.sh  | grep variable
 variable=WeAreHere
 ```
+
+Viewing in languages
+--------------------
+
+TODO
+
+`source` a file
+---------------
+
+TODO
+
+Activities
+----------
+
+TODO

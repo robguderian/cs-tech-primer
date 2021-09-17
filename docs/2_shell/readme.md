@@ -184,7 +184,7 @@ Repeating commands
 
 Easy! Mash that up button.
 
-![](./images/drake_up.png)
+![Up up up up up](./images/drake_up.png)
 
 Sure, that works. But it's not **smart**.
 
@@ -197,7 +197,7 @@ and configurable on macs - often set to the 'options' key.
 You should, to be a fancy person, stay on the home row. Up and down are for
 scrubs.
 
-![](images/uporp.jpg)
+![I don't feel like I'm wrong here](images/uporp.jpg)
 
 Use ctrl-p, ctrl-n instead.
 

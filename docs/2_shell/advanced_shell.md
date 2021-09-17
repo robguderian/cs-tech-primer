@@ -12,7 +12,7 @@ After doing this unit, students should be able to...
 Moving around a line
 --------------------
 
-![](images/arrow_key.jpg)
+![Mash-hand-hold technique](images/arrow_key.jpg)
 
 If you're holding down the arrow key, you've already messed up.
 Remember: home row is fastest!
@@ -77,11 +77,10 @@ falcon.cs.umanitoba.ca 106% cd man
 falcon.cs.umanitoba.ca 107% pwd
 /import/share/man
 falcon.cs.umanitoba.ca 108% ls
-CACHEDIR.TAG  cat1  cat2  cat3  cat4  cat5  cat6  cat7  cat8  cat9  index.db  man1  man2  man3  man4  man5  man6  man7  man8  man9  manl  mann  whatis
+CACHEDIR.TAG  cat1  cat2  cat3  cat4  cat5  cat6  cat7  cat8  cat9 [...trimmed]
 falcon.cs.umanitoba.ca 109% popd
 ~/demo 
 falcon.cs.umanitoba.ca 110% pwd
 /home/cs/staff/robg/demo
 # back to where we came from!
 ```
-
