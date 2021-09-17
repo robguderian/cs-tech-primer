@@ -182,7 +182,34 @@ file.
 Repeating commands
 ------------------
 
-llkjadsflkjasdflkjafdlkadjf
+Easy! Mash that up button.
+
+![Up up up up up](./images/drake_up.png)
+
+Sure, that works. But it's not **smart**.
+
+There's [a whole suite of things we can do with the history](https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html),
+but I'll highlight the really useful ones here.
+
+The gnu page uses C for 'ctrl' and M for 'meta'. Meta key is 'alt' for Windows,
+and configurable on macs - often set to the 'options' key.
+
+You should, to be a fancy person, stay on the home row. Up and down are for
+scrubs.
+
+![I don't feel like I'm wrong here](images/uporp.jpg)
+
+Use ctrl-p, ctrl-n instead.
+
+Then... we can 'modify' this behavior with the meta key to use what we've typed
+as a keyword search.
+
+Try this: start typing a command you've typed before (think a long `gcc`
+command
+that you *really* should have made a makefile for...) and press alt-and-p
+(opt-and-p if you're on an Mac). Now, it only brings up relevant searches!
+
+Use this! This is maybe the most useful thing you can learn to go fast!
 
 Quick reference
 ---------------

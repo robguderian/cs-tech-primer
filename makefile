@@ -1,6 +1,6 @@
 ALL: all
 
-markdownFiles := $(shell find . -type f -name \*.md)
+markdownFiles := $(shell find . -type f -name \*.md ! -path "./docs/vendor/*" ! -path "./docs/_site/*")
 
 $(markdownFiles):
 	echo $(realpath $@)
@@ -11,4 +11,4 @@ all: style
 style: markdownlint
 
 markdownlint:
-	markdownlint ${markdownFiles}
+	markdownlint ${markdownFiles} -c lint_config.json
