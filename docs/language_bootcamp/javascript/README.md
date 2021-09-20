@@ -253,7 +253,6 @@ class Employee {
         this.#_salary = salary;
     }
 
-    // 
     #calculateBonus(){
         // implementation
     }
@@ -269,4 +268,32 @@ Note that private instance variables need to be declared outside of methods.
 
 ## Duck Typing
 
-[TODO] Coming Soon...
+The term *Duck Typing* comes from the phrase **"If it walks like a duck, and
+talks like a duck, it's a duck."**  What this means for programming, is that
+if you have a function or method that's working on an Object, or array of
+Objects, you don't need to check the types of said Objects.  Instead, you can
+just check if all the Objects contain a particular feature (variable, method,
+etc.).
+
+Here's an example:
+
+```javascript
+function printArray(list){
+    if (arguments.length !== 1 || !Array.isArray(list)){
+        throw new Error("Invalid use of printArray() function.  It takes 1 " +
+            "argument, an array.");
+    }
+
+    for (let i = 0; i < list.length; i++){
+        if ("toString" in list[i] && typeof(list[i].toString) === "function"){
+            console.log(list[i].toString());
+        }
+    }
+}
+```
+
+* The example above tries to call toString() on each item in the provided list.
+There's a for loop that iterates over all the items, and before attempting to
+call toString() on any given item, it checks if that item contains a feature
+called "toString" in it, and that the toString feature is a function.  Only if
+it passes both of these checks will it call toString() on that item.
