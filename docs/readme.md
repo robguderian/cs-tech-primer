@@ -11,13 +11,13 @@ focusing on the assignment at hand.
 Topics
 ------
 
-* [Different types of languages, ways of interacting](languages)
+* [Different types of languages, ways of interacting](1_languages)
   * Compilation
   * Scripting
   * REPL
     * Why REPL is great
     * When is it useful
-* [Shell](shell)
+* [Shell](2_shell)
   * using a shell _Well_
   * unix program structure
     * Standard in, standard out, standard error
@@ -26,6 +26,10 @@ Topics
   * create a bash script to automate something
     * See bash/shell as a scripting language, not just a window
   * Environment variables to choose resources
+* [Reading manual pages](3_reading_man_pages/readme.md)
+  * Read man pages
+  * understand SYNOPSIS syntax
+  * search them on the command line
 * [Unix Power Tools](unix)
   * linux vs unix vs mac
   * tools
@@ -64,6 +68,13 @@ Topics
   * things that don't fit into here, and also don't fit into
     the program, either.
     * profiling - finding slow parts in code
+
+The above are general UNIX/linux and meta-programming topics.
+But, what if you need to learn a new programming language?
+
+Check out the [Hello world in 14(ish) languages](language_bootcamp), where
+we have how to compile (if it's a compiled language), run, debug, and discuss
+best practices in a bunch of common languages!
 
 Possible topics
 ---------------
