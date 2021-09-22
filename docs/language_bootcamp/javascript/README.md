@@ -191,6 +191,12 @@ not integer division.
 console.log(5/2); // prints 2.5, not 2
 ```
 
+If you want to do integer division, use the `Math.floor()` function.
+
+```javascript
+console.log(Math.floor(5/2)); // prints 2
+```
+
 ---
 
 ## Importing
