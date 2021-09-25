@@ -7,7 +7,7 @@
 //            - FizzBuzz if the value is divisible by both Fizz and Buzz,
 //            - Fizz if the value is only divisible by Fizz,
 //            - Buzz if the value is only divisible by Buzz,
-//            - or the value itself if it's no divisible by either Fizz or Buzz
+//            - or the value itself if it's not divisible by either Fizz or Buzz
 //
 // PARAMETERS:
 //      - limit is the maximum number we want to check against.
