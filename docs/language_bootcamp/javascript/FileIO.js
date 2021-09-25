@@ -86,3 +86,5 @@ function main(){
 }
 
 main(); // run main() function.
+
+module.exports = {readFile: readFile};
