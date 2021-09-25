@@ -1,0 +1,24 @@
+name: Upload to course
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+jobs:
+  update_course_content:
+    name: Upload files to the course
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Brightspace/third-party-actions@actions/checkout
+      - name: Upload to Course
+        uses: Brightspace/update-course-action@master
+        with:
+          valenceAppId: ${{ secrets.VALENCE_APPID }}
+          valenceAppKey: ${{ secrets.VALENCE_APPKEY }}
+          valenceUserId: ${{ secrets.VALENCE_USERID }}
+          valenceUserKey: ${{ secrets.VALENCE_USERKEY }}
+          instanceDomain: umanitobadev.desire2learn.com
+          courseOrgUnitId: 123456
+          contentDirectory: content
+          manifestPath: manifest.json
+          dryRun: ${{ github.ref != 'refs/heads/master' }}

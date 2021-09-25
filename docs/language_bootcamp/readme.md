@@ -47,14 +47,14 @@ Then, find:
 Languages
 ---------
 
-- [Java] (if you didn’t do 1st year here)
+- [Java](java) (if you didn’t do 1st year here)
 - C
 - C++
 - Lua
 - Go
 - Bash
 - Python
-- Node/Javascript
+- [Node/Javascript](javascript)
 - SQL (doesn’t fit well for demos - I have a bunch of sample databases to play with)
 - R (Not in the labs currently) (not really R’s strengths, the Dataframes are key)
 - Ruby
