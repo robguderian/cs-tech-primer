@@ -87,6 +87,7 @@ Connecting software to tools:
   between the two
 * Virtual environments (python/ruby) for isolation lite(tm)
 * CPU vs GPU vs ALU
+* Concurrency basics
 
 Outputs
 -------
