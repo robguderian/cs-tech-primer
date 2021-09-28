@@ -12,6 +12,7 @@
    1. [Underscore](#underscore)
    2. [Pound Sign](#pound-sign)
 8. [Duck Typing](#duck-typing)
+9. [Abstract Objects / Methods](#abstract-objects--methods)
 
 ---
 
@@ -190,6 +191,12 @@ not integer division.
 console.log(5/2); // prints 2.5, not 2
 ```
 
+If you want to do integer division, use the `Math.floor()` function.
+
+```javascript
+console.log(Math.floor(5/2)); // prints 2
+```
+
 ---
 
 ## Importing
@@ -253,7 +260,6 @@ class Employee {
         this.#_salary = salary;
     }
 
-    // 
     #calculateBonus(){
         // implementation
     }
@@ -269,4 +275,66 @@ Note that private instance variables need to be declared outside of methods.
 
 ## Duck Typing
 
-[TODO] Coming Soon...
+The term *Duck Typing* comes from the phrase **"If it walks like a duck, and
+talks like a duck, it's a duck."**  What this means for programming, is that
+if you have a function or method that's working on an Object, or array of
+Objects, you don't need to check the types of said Objects.  Instead, you can
+just check if all the Objects contain a particular feature (variable, method,
+etc.).
+
+Here's an example:
+
+```javascript
+function printArray(list){
+    if (arguments.length !== 1 || !Array.isArray(list)){
+        throw new Error("Invalid use of printArray() function.  It takes 1 " +
+            "argument, an array.");
+    }
+
+    for (let i = 0; i < list.length; i++){
+        if ("toString" in list[i] && typeof(list[i].toString) === "function"){
+            console.log(list[i].toString());
+        }
+    }
+}
+```
+
+* The example above tries to call toString() on each item in the provided list.
+There's a for loop that iterates over all the items, and before attempting to
+call toString() on any given item, it checks if that item contains a feature
+called "toString" in it, and that the toString feature is a function.  Only if
+it passes both of these checks will it call toString() on that item.
+
+---
+
+## Abstract Objects / Methods
+
+JavaScript doesn't have an abstract keyword.  Instead, we need to throw errors
+if someone's trying to either create an abstract object, or use an abstract
+method.  
+
+Example:
+
+```javascript
+class Shape{
+    constructor() {
+        if (this.constructor === Shape) {
+            throw new Error("Cannot create instance of abstract class Shape.");
+        }
+    }
+
+    getArea(){
+        throw new Error("Cannot call Shape's abstract getArea() method.");
+    }
+}
+```
+
+* Shape is an abstract class.  You wouldn't want to initialize a Shape object.
+Instead, you'd want to initialize a Circle, Square, Hexagon, etc. which all
+inherit from the Shape class.  In order to ensure you don't create an instance
+of the Shape object, you have to check if the constructor that's being used to
+initialize the object is of type Shape, using `if (this.constructor === Shape)`.
+If it is, you throw an error.
+* getArea() is an example of an abstract method.  As is, it'll throw an error
+when it's called.  This forces Shapes concrete subclasses to implement their
+own version of getArea().
