@@ -1,0 +1,20 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Brightspace/update-course-action/master/manifest_schema_v1_0.json",
+    "modules": [
+        {
+            "title": "Test Module",
+            "type": "module",
+            "children": [
+                {
+                    "type": "resource",
+                    "fileName": "docs/2_shell/arrow_key.png"
+                },
+                {
+                    "title": "Hello",
+                    "type": "topic",
+                    "fileName": "docs/2_shell/readme.md"
+                }
+            ]
+        }
+    ]
+}
