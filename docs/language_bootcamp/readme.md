@@ -12,7 +12,7 @@ Content of each (available where applicable)
 
 - Fizzbuzz (if/else demo)
 - Factorial done recursively
-- Some string processing
+- Some string processing (see below)
 - Object demo
 - Loops and structures
 - How to run it
@@ -22,17 +22,57 @@ if possible, discuss
 - file i/o
 - arguments
 
-Languages
+String example
+--------------
 
-- [Java] (if you didn’t do 1st year here)
+The example shows:
+
+- substring
+- search
+- index a letter
+- split
+- Palindromicity
+
+We'll use the Rockyou corpus, which is leaked password (warning, there is
+some bad language in the corpus)
+
+Then, find:
+
+- how many passwords have the word 'pass' in it?
+- see if you've been owned
+- count letter frequencies
+- .... we'll probably just use this
+- how many palindromes are there in the corpus
+
+Languages
+---------
+
+- [Java](java) (if you didn’t do 1st year here)
 - C
 - C++
 - Lua
 - Go
 - Bash
 - Python
-- Node/Javascript
-- SQL (doesn’t fit well for demos - I have a bunch of sample databases to play with)
+- [Node/Javascript](javascript)
 - R (Not in the labs currently) (not really R’s strengths, the Dataframes are key)
 - Ruby
 - rust (Not in the labs currently)
+
+Technologies
+------------
+
+These may be programming languages to themselves, but, don't fit the examples...
+they are used for other things.
+
+### Querying
+
+- SQL (doesn’t fit well for demos - I have a bunch of sample databases to play
+  with)
+- Mongo
+- Redis
+
+TODO - explain when to use which. Why Redis (being all in-memory) is good or
+bad.
+
+Could expand to discuss using AWS/cloud services to offload work?

@@ -17,3 +17,18 @@ for checking markdown style.
 * Mac: `brew install markdownlint-cli`
 * Linux: TODO (Rob doesn't currently have an x86 linux image)
 * Either via npm: `npm install -g markdownlint-cli`
+
+View site locally
+-----------------
+
+github.io uses Jekyll to render the markdown pages. Run locally with
+bundle:
+
+```sh
+bundle update
+bundle install
+bundle exec jekyll serve
+```
+
+See Jekyll install documentation, and running with bundle
+[here](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/).
