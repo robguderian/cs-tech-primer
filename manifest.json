@@ -7,12 +7,12 @@
             "children": [
                 {
                     "type": "resource",
-                    "fileName": "docs/2_shell/images/arrow_key.jpg"
+                    "fileName": "2_shell/images/arrow_key.jpg"
                 },
                 {
                     "title": "Hello",
                     "type": "topic",
-                    "fileName": "docs/2_shell/readme.md"
+                    "fileName": "2_shell/readme.md"
                 }
             ]
         }
