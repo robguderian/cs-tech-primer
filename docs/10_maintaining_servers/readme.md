@@ -19,3 +19,4 @@ By the end of this module, student will be able to...
 * be able to start and stop a daemon.
 * understand how to create a daemon.
 * be able to send syslog to a log aggregator.
+* use a tools for creating a VM
