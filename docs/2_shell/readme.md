@@ -156,7 +156,7 @@ We can make directories fairly easily:
 mkdir someFolder
 ```
 
-Which uses the [permissions mask](../unix/permissions.md) for the default permissions
+Which uses the [permissions mask](../06_unix/permissions.md) for the default permissions
 of the folder.
 
 If you want to make a entire string of folders:
