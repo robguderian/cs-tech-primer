@@ -6,9 +6,24 @@
             "type": "module",
             "children": [
                 {
-                    "title": "Hello",
+                    "title": "Introduction",
                     "type": "topic",
                     "fileName": "2_shell/readme.md"
+                },
+                {
+                    "title": "Advanced",
+                    "type": "topic",
+                    "fileName": "2_shell/advanced_shell.md"
+                },
+                {
+                    "title": "Environment Variables",
+                    "type": "topic",
+                    "fileName": "2_shell/environment_variables.md"
+                },
+                {
+                    "title": "Piping and Pipelines",
+                    "type": "topic",
+                    "fileName": "2_shell/piping.md"
                 },
                 {
                     "title": "images",
@@ -18,6 +33,16 @@
                             "type": "resource",
                             "fileName": "2_shell/images/arrow_key.jpg",
                             "title": "arrow_key.jpg"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "2_shell/images/drake_up.png",
+                            "title": "drake_up.png"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "2_shell/images/uporp.jpg",
+                            "title": "uporp.jpg"
                         }
                     ]
                 }
