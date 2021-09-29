@@ -18,6 +18,8 @@ for checking markdown style.
 * Linux: TODO (Rob doesn't currently have an x86 linux image)
 * Either via npm: `npm install -g markdownlint-cli`
 
+Markdown linting can be invoked with `make style`
+
 View site locally
 -----------------
 
@@ -33,3 +35,8 @@ bundle exec jekyll serve
 See Jekyll install documentation, and running with bundle
 [here](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/).
 
+Commiting
+---------
+
+Be sure that `make style` is not complaining about any errors
+in your markdown documents.
