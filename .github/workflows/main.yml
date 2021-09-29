@@ -18,7 +18,7 @@ jobs:
           valenceUserId: ${{ secrets.VALENCE_USERID }}
           valenceUserKey: ${{ secrets.VALENCE_USERKEY }}
           instanceDomain: umanitobadev.desire2learn.com
-          courseOrgUnitId: 123456
+          courseOrgUnitId: 168445
           contentDirectory: content
           manifestPath: manifest.json
-          dryRun: ${{ github.ref != 'refs/heads/master' }}
+          dryRun: ${{ github.ref != 'refs/heads/main' }}
