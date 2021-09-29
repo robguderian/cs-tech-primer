@@ -1,23 +1,10 @@
 JavaScript Quirks
 =================
 
-- [JavaScript Quirks](#javascript-quirks)
-  - [Strict Formatting](#strict-formatting)
-  - [Function / Method Arguments](#function--method-arguments)
-    - [1 Case](#1-case)
-    - [Multiple Cases](#multiple-cases)
-  - [Equality ( == vs === )](#equality---vs--)
-  - [null vs undefined](#null-vs-undefined)
-  - [Number Primitive](#number-primitive)
-    - [Division](#division)
-  - [Importing](#importing)
-  - [Private Variables and Methods](#private-variables-and-methods)
-    - [Underscore](#underscore)
-    - [Pound Sign](#pound-sign)
-  - [Duck Typing](#duck-typing)
-  - [Abstract Objects / Methods](#abstract-objects--methods)
+Javascript gets a pretty bad rap, but remains a VERY popular language...
+albeit with some quirks...
 
----
+This should help you start quickly, and dodge a lot of the pitfalls.
 
 Strict Formatting
 ----------------
