@@ -270,9 +270,9 @@
                     "type": "module",
                     "children": [
                         {
-                            "title": "Versioning code",
+                            "title": "Introduction to JS",
                             "type": "topic",
-                            "fileName": "9_versioning_code/readme.md"
+                            "fileName": "javascript/README.md"
                         }
                     ]
                 }
