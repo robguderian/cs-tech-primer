@@ -226,22 +226,22 @@
                                         {
                                             "title": "Basics",
                                             "type": "topic",
-                                            "fileName": "language_bootcamp/java/6_FinalChallenge/Challenge.md"
+                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_FinalChallenge/Challenge.md"
                                         },
                                         {
                                             "title": "Client.class",
                                             "type": "topic",
-                                            "fileName": "language_bootcamp/java/6_FinalChallenge/Client.class"
+                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_FinalChallenge/Client.class"
                                         },
                                         {
                                             "title": "Server.class",
                                             "type": "topic",
-                                            "fileName": "language_bootcamp/java/6_FinalChallenge/Server.class"
+                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_FinalChallenge/Server.class"
                                         },
                                         {
                                             "title": "Skeleton.java",
                                             "type": "topic",
-                                            "fileName": "language_bootcamp/java/6_FinalChallenge/Skeleton.java"
+                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_FinalChallenge/Skeleton.java"
                                         }
                                     ]
                                 }
