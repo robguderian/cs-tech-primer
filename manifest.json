@@ -2,6 +2,22 @@
     "$schema": "https://raw.githubusercontent.com/Brightspace/update-course-action/master/manifest_schema_v1_0.json",
     "modules": [
         {
+            "title": "Programming Language Differences",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Introduction",
+                    "type": "topic",
+                    "fileName": "1_languages/readme.md"
+                },
+                {
+                    "title": "What is a program?",
+                    "type": "topic",
+                    "fileName": "1_languages/what_is_a_program.md"
+                }
+            ]
+        },
+        {
             "title": "Shell",
             "type": "module",
             "children": [
@@ -43,6 +59,199 @@
                             "type": "resource",
                             "fileName": "2_shell/images/uporp.jpg",
                             "title": "uporp.jpg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Reading Manual Pages",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Man pages",
+                    "type": "topic",
+                    "fileName": "3_reading_man_pages/readme.md"
+                }
+            ]
+        },
+        {
+            "title": "Writing and Maintaining Quality Code",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Quality Code",
+                    "type": "topic",
+                    "fileName": "4_quality_code/readme.md"
+                }
+            ]
+        },
+        {
+            "title": "Debugging",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Debugging, and debuggers",
+                    "type": "topic",
+                    "fileName": "5_debugging/readme.md"
+                }
+            ]
+        },
+        {
+            "title": "UNIX",
+            "type": "module",
+            "children": [
+                {
+                    "title": "unix",
+                    "type": "topic",
+                    "fileName": "6_unix/readme.md"
+                },
+                {
+                    "title": "unix permissions",
+                    "type": "topic",
+                    "fileName": "6_unix/permissions.md"
+                }
+            ]
+        },
+        {
+            "title": "Building programs",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Building programs",
+                    "type": "topic",
+                    "fileName": "7_building/readme.md"
+                }
+            ]
+        },
+        {
+            "title": "Virtualization",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Virtualization, and virtual machines",
+                    "type": "topic",
+                    "fileName": "8_virtualization/readme.md"
+                }
+            ]
+        },
+        {
+            "title": "Versioning code",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Versioning code",
+                    "type": "topic",
+                    "fileName": "9_versioning_code/readme.md"
+                }
+            ]
+        },
+        {
+            "title": "Programming Language Bootcamp",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Language Bootcamp Information",
+                    "type": "topic",
+                    "fileName": "language_bootcamp/readme.md"
+                },
+                {
+                    "title": "Java",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "Introduction",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/java/readme.md"
+                        },
+                        {
+                            "title": "Basics",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "Comments",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/1_Comments.md"
+                                },
+                                {
+                                    "title": "Variable types",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/2_Primitives.md"
+                                },
+                                {
+                                    "title": "Casting",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/3_Casting.md"
+                                },
+                                {
+                                    "title": "User Input",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/4_UserInput.md"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Control and Flow",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "Conditionals if/else if /else",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/1_Conditionals.md"
+                                },
+                                {
+                                    "title": "Ternary Operator",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/2_TernaryOperator.md"
+                                },
+                                {
+                                    "title": "For Loops",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/3_ForLoops.md"
+                                },
+                                {
+                                    "title": "While Loops",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/4_WhileLoops.md"
+                                },
+                                {
+                                    "title": "Nested Loops",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/5_NestedLoops.md"
+                                },
+                                {
+                                    "title": "Challenge",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/6_FinalChallenge.md"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Arrays",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "Basics",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/3_Arrays/1_SimpleArrays.md"
+                                },
+                                {
+                                    "title": "Lists (ArrayList)",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/3_Arrays/2_ArrayLists.md"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Javascript",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "Versioning code",
+                            "type": "topic",
+                            "fileName": "9_versioning_code/readme.md"
                         }
                     ]
                 }
