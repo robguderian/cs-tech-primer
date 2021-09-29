@@ -2,7 +2,7 @@ name: Upload to course
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 jobs:
   update_course_content:
