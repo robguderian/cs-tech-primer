@@ -47,14 +47,14 @@ Then, find:
 Languages
 ---------
 
-- [Java](java/readme.md) (if you didn’t do 1st year here)
+- [Java](./java/readme.md) (if you didn’t do 1st year here)
 - C
 - C++
 - Lua
 - Go
 - Bash
 - Python
-- [Node/Javascript](javascript/README.md)
+- [Node/Javascript](./javascript/README.md)
 - R (Not in the labs currently) (not really R’s strengths, the Dataframes are key)
 - Ruby
 - rust (Not in the labs currently)
