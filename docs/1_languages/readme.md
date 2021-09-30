@@ -20,9 +20,10 @@ At the end of this module, students will be able to:
 Activities
 ----------
 
-* Create a python project that has circular dependencies, have the students fix
-  the imports. Python _reads_ the files in order of import. UMLearn quiz that
-  accepts the output as the 'answer'
+* Create a python project that has circular dependencies, have the students
+  fix the imports.
+  Python _reads_ the files in order of import. UMLearn quiz that accepts the
+  output as the 'answer'
 * Have a set of libraries, have students use `python3 -i` to read the libraries,
   drop into a REPL'
 * Provide a jupyter notebook with functions in the upper cells. Have students

@@ -1,31 +1,22 @@
-# JavaScript Quirks
+JavaScript Quirks
+=================
 
-1. [Strict Formatting](#strict-formatting)
-2. [Function / Method Arguments](#function--method-arguments)
-   1. [1 Case](#1-case)
-   2. [Multiple Cases](#multiple-cases)
-3. [Equality ( == vs === )](#equality---vs--)
-4. [null vs undefined](#null-vs-undefined)
-5. [Number Primitive](#number-primitive)
-6. [Importing](#importing)
-7. [Private Variables and Methods](#private-variables-and-methods)
-   1. [Underscore](#underscore)
-   2. [Pound Sign](#pound-sign)
-8. [Duck Typing](#duck-typing)
-9. [Abstract Objects / Methods](#abstract-objects--methods)
+Javascript gets a pretty bad rap, but remains a VERY popular language...
+albeit with some quirks...
 
----
+This should help you start quickly, and dodge a lot of the pitfalls.
 
-## Strict Formatting
+Strict Formatting
+----------------
 
 It's recommended to use strict formatting in your JavaScript files.  This has
 two main benefits:
 
 1. It helps prevent unwanted accidental declarations of variables.
-   * To declare a variable, you have to use one of the following keywords:
-     * `let`
-     * `var`
-     * `const`
+   - To declare a variable, you have to use one of the following keywords:
+     - `let`
+     - `var`
+     - `const`
 
 2. It forces the use of semicolons `;` at the end of your lines.
 
@@ -36,19 +27,20 @@ your file, before any code:
 "use strict";
 ```
 
-* Note that you can have comments above this line (so your default header
+- Note that you can have comments above this line (so your default header
 comment block can be above it, or below it, however you want.  It's a style
 choice).
 
 ---
 
-## Function / Method Arguments
+Function / Method Arguments
+---------------------------
 
 In JavaScript, **you can pass as many or as few arguments as you wish** to
 a given function / method.  It's up to that function / method to determine if
 the number of parameters / arguments match a given case or not.
 
-* You can access these arguments either by parameter names or through the
+- You can access these arguments either by parameter names or through the
 `arguments` keyword.
 
 **It's considered best practice to check the arguments of all functions /
@@ -76,7 +68,7 @@ function factorial(num) {
 }
 ```
 
-* The example above checks if the number of arguments is equal to 1 and if the
+- The example above checks if the number of arguments is equal to 1 and if the
 argument that's passed is an integer.  If either of these is false, it'll throw
 an error.
 
@@ -111,14 +103,15 @@ class Wine {
 }
 ```
 
-* The example above checks to see if Wine's constructor is used in one of 2
+- The example above checks to see if Wine's constructor is used in one of 2
 valid cases.  The first conditional is for the empty constructor, the second is
 when you pass the name (string) and age (integer) arguments.  Any other uses of
 the constructor will throw an error due to invalidity.
 
 ---
 
-## Equality ( == vs === )
+Equality ( == vs === )
+----------------------
 
 JavaScript doesn't use `==` the same way you're probably used to.  For example,
 if you typed the following in C, it'd return false, but in JavaScript, this
@@ -152,7 +145,8 @@ and `!=`).
 
 ---
 
-## null vs undefined
+null vs undefined
+-----------------
 
 In other languages, when you attempt to access something that doesn't exist,
 you'll get null (null pointer exception, etc.).  JavaScript is different;
@@ -171,7 +165,8 @@ console.log(typeof undefined); // undefined
 
 ---
 
-## Number Primitive
+Number Primitive
+----------------
 
 JavaScript doesn't have primitives for int, long, float, or double.  Instead,
 all of these fall under JavaScript's `Number` primitive.
@@ -199,7 +194,8 @@ console.log(Math.floor(5/2)); // prints 2
 
 ---
 
-## Importing
+Importing
+---------
 
 The `require` keyword is how you import dependencies to a given file.
 
@@ -210,9 +206,9 @@ const assert = require("assert");
 
 The code above imports two dependencies, `Person` and `assert`.
 
-* `Person` is a fictitious file we've made within this directory (the `./` is
+- `Person` is a fictitious file we've made within this directory (the `./` is
 a relative path, telling you it's in the current directory), and
-* `assert` is a standard file that's used for creating tests for your code.
+- `assert` is a standard file that's used for creating tests for your code.
 (Note that it doesn't use a relative path `./`)
 
 In order to be able to import a file you made, you need to add the following
@@ -222,11 +218,12 @@ line of code (typically at the bottom of your file):
 module.exports = Person;
 ```
 
-* `Person` is just a continuation of the example above.  You can change this.
+- `Person` is just a continuation of the example above.  You can change this.
 
 ---
 
-## Private Variables and Methods
+Private Variables and Methods
+------------------------------
 
 In JavaScript, variables and methods default to being public.
 
@@ -266,14 +263,15 @@ class Employee {
 }
 ```
 
-* In the above code, the variable `#_salary`, and method `#calculateBonus` are
+- In the above code, the variable `#_salary`, and method `#calculateBonus` are
 private.  Neither of these can be called outside the Employee class.
 
 Note that private instance variables need to be declared outside of methods.
 
 ---
 
-## Duck Typing
+Duck Typing
+-----------
 
 The term *Duck Typing* comes from the phrase **"If it walks like a duck, and
 talks like a duck, it's a duck."**  What this means for programming, is that
@@ -299,7 +297,7 @@ function printArray(list){
 }
 ```
 
-* The example above tries to call toString() on each item in the provided list.
+- The example above tries to call toString() on each item in the provided list.
 There's a for loop that iterates over all the items, and before attempting to
 call toString() on any given item, it checks if that item contains a feature
 called "toString" in it, and that the toString feature is a function.  Only if
@@ -307,7 +305,8 @@ it passes both of these checks will it call toString() on that item.
 
 ---
 
-## Abstract Objects / Methods
+Abstract Objects / Methods
+--------------------------
 
 JavaScript doesn't have an abstract keyword.  Instead, we need to throw errors
 if someone's trying to either create an abstract object, or use an abstract
@@ -329,12 +328,12 @@ class Shape{
 }
 ```
 
-* Shape is an abstract class.  You wouldn't want to initialize a Shape object.
+- Shape is an abstract class.  You wouldn't want to initialize a Shape object.
 Instead, you'd want to initialize a Circle, Square, Hexagon, etc. which all
 inherit from the Shape class.  In order to ensure you don't create an instance
 of the Shape object, you have to check if the constructor that's being used to
 initialize the object is of type Shape, using `if (this.constructor === Shape)`.
 If it is, you throw an error.
-* getArea() is an example of an abstract method.  As is, it'll throw an error
+- getArea() is an example of an abstract method.  As is, it'll throw an error
 when it's called.  This forces Shapes concrete subclasses to implement their
 own version of getArea().

@@ -1,5 +1,4 @@
 ALL: all
-
 markdownFiles := $(shell find . -type f -name \*.md ! -path "./docs/vendor/*" ! -path "./docs/_site/*")
 
 $(markdownFiles):
