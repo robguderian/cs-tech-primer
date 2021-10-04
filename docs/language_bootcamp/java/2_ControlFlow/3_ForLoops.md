@@ -96,6 +96,23 @@ It is acceptable to use single character variable names for *simple* loops. It i
 
 We will also cover nested loops in this section, where it will become clear that sometimes we must use better variable names in our loops. Otherwise, our loops may become confusing and/or unreadble.
 
+## Enhanced For Loop
+
+For the sake of organization, we will also discuss the enhanced for loop.
+
+This for loop iterates through some kind of *data structure*, in this case, an array.
+
+```java
+int[] x = {2, 5, 3, 7, 4, 8, 2, 3};
+for(int i : x){
+    // After every loop, we are essentially saying
+    // i = x[loop_number]
+    System.out.println(i);
+}
+```
+
+Rather than using a counter, we instead loop through the entire array once and perform whatever operations we need on that element.
+
 ## Fizzbuzz Challenge
 
 Now is a good time to test out some of the things you've learned with a small challenge, **Fizzbuzz**.
