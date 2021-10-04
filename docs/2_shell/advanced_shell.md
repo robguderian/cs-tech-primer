@@ -10,7 +10,6 @@ After doing this unit, students should be able to...
 * use pushd, popd
 * use `#!` to choose which interpreter to use (bash, python, other)
 
-
 Moving around a line
 --------------------
 

@@ -59,7 +59,9 @@ General flow to compile:
 
 ```bash
 $ clang myProgram.c -o nowIAmExecutable
+... compiles...
 $ ./nowIAmExecutable
+I am the program output
 ```
 
 The perks of compiled languages, is that the compiler will look at
@@ -187,7 +189,12 @@ attributes are available.
 ```txt
 >>> import math
 >>> dir(math)
-['__doc__', '__file__', '__name__', '__package__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'hypot', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc']
+['__doc__', '__file__', '__name__', '__package__', 'acos', 'acosh', 'asin',
+'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees',
+'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod',
+'frexp', 'fsum', 'gamma', 'hypot', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log',
+'log10', 'log1p', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt',
+'tan', 'tanh', 'trunc']
 ```
 
 or `help(math.floor)` will open a pager, and provide the documentation on that
