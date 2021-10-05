@@ -138,6 +138,21 @@ just happily runs whatever you've provided, however you've provided it.
 Scripting languages give us something nice, too. Since scripting languages
 read in commands line-by-line.... we could do this in real time...
 
+### Quirks
+
+Since the files are *interpreted*, and therefore all the commands
+are read in order, a quirk is circular imports.
+
+This isn't an issue with compiled languages, since it views the files
+holistically. Interpreted languages run into the problem of
+**circular imports**:
+
+```txt
+┌──────────┐ ────────────►┌──────────┐
+│ Module 1 │   Requires   │ Module 2 │
+└──────────┘◄──────────── └──────────┘
+```
+
 ### REPL
 
 Generally pronounced like 'repel', this is 'Read Execute Programming
