@@ -16,6 +16,34 @@
                     "fileName": "1_languages/what_is_a_program.md"
                 },
                 {
+                    "title": "example_code",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "main.py",
+                            "type": "topic",
+                            "fileName": "1_languages/example_code/main.py"
+                        },
+                        {
+                            "title": "libraries",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "module1.py",
+                                    "type": "topic",
+                                    "fileName": "1_languages/example_code/libraries/module1.py"
+                                },
+                                {
+                                    "title": "module2.py",
+                                    "type": "topic",
+                                    "fileName": "1_languages/example_code/libraries/module2.py"
+                                }
+
+                            ]
+                        }
+                    ]
+                },
+                {
                     "title": "images",
                     "type": "module",
                     "children": [
