@@ -268,9 +268,14 @@
                                     "fileName": "language_bootcamp/java/3_Arrays/1_SimpleArrays.md"
                                 },
                                 {
-                                    "title": "Lists (ArrayList)",
+                                    "title": "Strings as arrays",
                                     "type": "topic",
-                                    "fileName": "language_bootcamp/java/3_Arrays/2_ArrayLists.md"
+                                    "fileName": "language_bootcamp/java/3_Arrays/2_PrimitiveStrings.md"
+                                },
+                                {
+                                    "title": "Multi-dimensional Arrays",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/3_Arrays/3_NdArrays.md"
                                 }
                             ]
                         }
