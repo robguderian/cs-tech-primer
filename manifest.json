@@ -38,7 +38,6 @@
                                     "type": "topic",
                                     "fileName": "1_languages/example_code/libraries/module2.py"
                                 }
-
                             ]
                         }
                     ]
@@ -98,6 +97,16 @@
                             "type": "resource",
                             "fileName": "2_shell/images/uporp.jpg",
                             "title": "uporp.jpg"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "2_shell/images/tab.gif",
+                            "title": "tab.gif"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "2_shell/images/moreTab.gif",
+                            "title": "moreTab.gif"
                         }
                     ]
                 }

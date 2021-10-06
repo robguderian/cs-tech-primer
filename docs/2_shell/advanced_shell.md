@@ -86,8 +86,8 @@ falcon.cs.umanitoba.ca 110% pwd
 # back to where we came from!
 ```
 
-Which program to use
---------------------
+Which interpreter to use
+------------------------
 
 In UNIX, we can set which program we would like to
 [*interpret*](../1_languages/readme.md) the file if it is set to be *executable*.
@@ -109,3 +109,18 @@ thats, more technical that we actually require...
 
 The shell will *invoke* the interpreter specified, and pass it this file to
 process.
+
+**But**, that is not portable! Not every installation of `perl`, `python`,
+`bash`, etc, will be in the same place on the filesystem.
+
+But, `env` generally is available... and can loop up interpreters for us
+on the `PATH`.
+
+```bash
+#! /usr/bin/env python
+```
+
+Will search for `python` in the `PATH`, meaning that *where ever* the
+`python` executable is, it will be found and executed. There is more
+discussion in the `env` man page, or also on
+[gnu's documentation](https://www.gnu.org/software/coreutils/manual/html_node/env-invocation.html).

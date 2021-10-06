@@ -75,15 +75,117 @@ $ bash printEnv.sh  | grep variable
 variable=WeAreHere
 ```
 
-Viewing in languages
+Keeping your variables
+----------------------
+
+We like to customize our experience on our computers. This isn't new by
+any stretch. Shells, of course, let us do this automatically.
+
+This primer is bash-focused, but these ideas extend to your favourite shell,
+too.
+
+A dotfile is a file that is "hidden" by having a `.` as the first character
+of the file name. There are some well-known files that `bash` looks for, in
+order (information via, `man bash`):
+
+* /etc/profile
+* ~/.bash_profile
+* ~/.bash_login
+* ~/.profile
+
+These files are... just shell scripts. Things you might want to do in a profile
+script:
+
+* change the `PATH` to search a folder earlier, where you can promote executables
+  you want (often a development environment) to run
+* use an `alias` to run a command the way you'd like. For instance, `rm` could
+  be aliased to `rm -f` to always force remove items by using
+  `alias rm='rm -f'`. Or, if you like `ls` with
+  colours, you can `alias ls='ls --color=auto'`.
+* Print out a stupid message with `echo`
+* Run a script, or a program
+
+Literally, it's a shell script... so, do anything! Have a script that backs up
+your home folder? Have a script that logs you opening a terminal to a web
+service? Have a report of the space on the file system? Show the other
+users that are currently logged in? Random quote of the day? It's code,
+so literally anything you can do in code (which is nearly anything) you
+can do it here!
+
+We can also define bash functions for use in our shell.
+
+Get variables and settings from a file
+--------------------------------------
+
+`bash` automatically runs the profile files, but we may want to run more
+(even from within our `.bash_profile`). We can use the `source`
+command to do that.
+
+Consider having a file named `source_example.sh` with the contents:
+
+```sh
+echo "reading in the file"
+export myVariable=42
+```
+
+Then we can `source` to read in this file.
+
+```sh
+$ source source_example.sh 
+reading in the file
+$ echo $myVariable 
+42
+```
+
+Again, we could define bash functions, set or change variables,
+or run arbitrary code.
+
+Viewing environment variables in languages
 --------------------
 
-TODO
+Environment variables are not just used in shell scripts, they can
+be used to configure software running on our systems.
 
-`source` a file
----------------
+A common use is configuring resources or debug levels for our software.
+Consider a program that uses a database, we could configure which database
+to use in an environment variable:
 
-TODO
+```sh
+export db=postgres://db_prod_server.us:5432/userdb
+```
+
+Which can be easily read by the software.
+
+For instance, in Python we are given the environment variables in a
+`dict`-like structure:
+
+```python
+import os
+
+print(os.environ)
+print(os.environ['PATH'])
+```
+
+Java has a similar table-like lookup
+([source](https://docs.oracle.com/javase/tutorial/essential/environment/env.html))
+
+```java
+import java.util.Map;
+
+public class EnvMap {
+    public static void main (String[] args) {
+        Map<String, String> env = System.getenv();
+        for (String envName : env.keySet()) {
+            System.out.format("%s=%s%n",
+                              envName,
+                              env.get(envName));
+        }
+    }
+}
+```
+
+And, in general, the environment variables are readily available to be read
+to change program behaviour or configuration.
 
 Activities
 ----------

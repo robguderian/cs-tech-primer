@@ -167,9 +167,11 @@ $ python3 main.py
 Traceback (most recent call last):
   File "main.py", line 1, in <module>
     from libraries import module1
-  File "/home/cs/staff/robg/cs-tech-primer/docs/1_languages/example_code/libraries/module1.py", line 1, in <module>
+  File "/home/cs/staff/robg/cs-tech-primer/docs/1_languages/example_code/librar
+ies/module1.py", line 1, in <module>
     from . import module2
-  File "/home/cs/staff/robg/cs-tech-primer/docs/1_languages/example_code/libraries/module2.py", line 3, in <module>
+  File "/home/cs/staff/robg/cs-tech-primer/docs/1_languages/example_code/librar
+ies/module2.py", line 3, in <module>
     FIFTY = 40 + module1.TEN
 AttributeError: module 'libraries.module1' has no attribute 'TEN'
 ```

@@ -96,7 +96,7 @@ and from the `ls` and `tree` command (which shows all the files and folders
 in a neat tree format) that there are 5 directories, each with a folder in it.
 
 We could move into `1012` by just using `cd 1012`, since we're in the `demo`
-flder. Then, using relative paths, going back one `..` and then into `2140`,
+directory. Then, using relative paths, going back one `..` and then into `2140`,
 by `cd ../2140`:
 
 ```txt
@@ -210,6 +210,80 @@ that you *really* should have made a makefile for...) and press alt-and-p
 (opt-and-p if you're on an Mac). Now, it only brings up relevant searches!
 
 Use this! This is maybe the most useful thing you can learn to go fast!
+
+Completing commands
+-------------------
+
+The easiest way to *move fast* is to use `tab` to complete a command for you.
+Consider starting to type a long command like `ssh-keygen`:
+
+![Use tab to move quickly](./images/tab.gif)
+
+One tab press fills (if it can), double tab press shows you the options
+you can fill with.
+
+You can use tab to find **commands**, or **local files**, or **folders**.
+
+![Use tab to move quickly](./images/tab.gif)
+
+Where are commands found?
+-------------------------
+
+Tab completion finds executables... but where?
+
+Try:
+
+```sh
+echo $PATH
+```
+
+These are the directories where executables are search for
+when you press tab, or when you type a simple command like `ls`.
+
+What's with the `$`?, that shows that this is a variable, more on
+this later!
+
+The directories are searched in order. If there are two `ls` commands,
+the one in the directory that is earlier in the list will be found.
+
+You can verify... which... command will be run by using `which`.
+
+```sh
+$ which ls
+/usr/bin/ls
+```
+
+Arguments
+---------
+
+Arguments are *space delimited*, and provided after the command's name.
+Commands are *always* one 'word' long.
+
+Consider `ls`, that is one 'word' long, and shows the files and
+directories in the current working directory.
+
+But, we can pass it arguments of directories to list, as a space-
+delimited list:
+
+```sh
+$ ls /usr /var
+/usr:
+bin  games    lib    libexec  lost+found  share  tmp
+etc  include  lib64  local    sbin        src
+
+/var:
+account  crash  empty  gopher    local  lost+found  opt       spool   var
+adm      cvs    games  kerberos  lock   mail        preserve  target  www
+cache    db     gdm    lib       log    nis         run       tmp     yp
+```
+
+The rest of the line after the first space are passed to the program as
+arguments. The way the program reacts to your arguments is covered in the
+[man page](../3_reading_man_pages/readme.md), and varies from
+program-to-program.
+
+The arguments are passed to the program *as a string*, or may be handed
+to the program as a list of strings.
 
 Quick reference
 ---------------
