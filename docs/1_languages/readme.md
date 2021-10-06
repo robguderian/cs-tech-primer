@@ -138,6 +138,58 @@ just happily runs whatever you've provided, however you've provided it.
 Scripting languages give us something nice, too. Since scripting languages
 read in commands line-by-line.... we could do this in real time...
 
+### Quirks
+
+Since the files are *interpreted*, and therefore all the commands
+are read in order, a quirk is circular imports.
+
+This isn't an issue with compiled languages, since it views the files
+holistically. Interpreted languages run into the problem of
+**circular imports**:
+
+```txt
+┌──────────┐ ────────────►┌──────────┐
+│ Module 1 │   Requires   │ Module 2 │
+└──────────┘◄──────────── └──────────┘
+```
+
+Which, depending on your version of Python will throw an error:
+
+```txt
+AttributeError: partially initialized module 'libraries.module1' has no
+attribute 'TEN' (most likely due to a circular import)
+```
+
+Or just
+
+```txt
+$ python3 main.py 
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    from libraries import module1
+  File "/home/cs/staff/robg/cs-tech-primer/docs/1_languages/example_code/librar
+ies/module1.py", line 1, in <module>
+    from . import module2
+  File "/home/cs/staff/robg/cs-tech-primer/docs/1_languages/example_code/librar
+ies/module2.py", line 3, in <module>
+    FIFTY = 40 + module1.TEN
+AttributeError: module 'libraries.module1' has no attribute 'TEN'
+```
+
+Which is slightly less useful.
+
+The only way to fix this is to refactor your code to not have circular imports.
+Or, less optimally, it is possible to change where the import is placed,
+putting all the imports into the functions
+
+```python
+def moveImport():
+  from . import module2
+  module2.TEN
+```
+
+This.... is ugly and generally discouraged.
+
 ### REPL
 
 Generally pronounced like 'repel', this is 'Read Execute Programming
@@ -248,6 +300,8 @@ exploring a dataset, or prototyping an algorithm.
 
 Activities
 ----------
+
+* Change the code in `example_code` to run, removing the circular import.
 
 TODO
 
