@@ -141,7 +141,7 @@ Again, we could define bash functions, set or change variables,
 or run arbitrary code.
 
 Viewing environment variables in languages
---------------------
+------------------------------------------
 
 Environment variables are not just used in shell scripts, they can
 be used to configure software running on our systems.
