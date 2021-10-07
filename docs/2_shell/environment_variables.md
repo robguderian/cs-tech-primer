@@ -141,7 +141,7 @@ Again, we could define bash functions, set or change variables,
 or run arbitrary code.
 
 Viewing environment variables in languages
---------------------
+------------------------------------------
 
 Environment variables are not just used in shell scripts, they can
 be used to configure software running on our systems.
@@ -181,6 +181,17 @@ public class EnvMap {
                               env.get(envName));
         }
     }
+}
+```
+
+C requires an import of `stdlib.h` to get the environment variables:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+    printf(getenv("PATH"));
 }
 ```
 
