@@ -1,6 +1,6 @@
 package main
 
-import(
+import (
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -20,12 +20,12 @@ import(
 //            created.  It must include the extension (.txt).
 //
 //------------------------------------------------------
-func addLineNumbers(inputFile string, outputFile string){
+func addLineNumbers(inputFile string, outputFile string) {
 	// get the []byte content from the input file
 	buf, errRead := ioutil.ReadFile(inputFile)
 
 	// check no error occurred
-	if errRead != nil{
+	if errRead != nil {
 		log.Fatal(errRead)
 	}
 
@@ -34,7 +34,7 @@ func addLineNumbers(inputFile string, outputFile string){
 	output := "" // will contain the output string
 
 	// adds, to output string, a line number before each line from input file
-	for i := 0; i < len(input); i++{
+	for i := 0; i < len(input); i++ {
 		output += fmt.Sprintf("%d: %s\n", i, input[i])
 	}
 
@@ -53,9 +53,10 @@ func addLineNumbers(inputFile string, outputFile string){
 // PURPOSE: to run an example of file input/output by calling addLineNumbers().
 //
 //------------------------------------------------------
-func main(){
-	const inputFile = "inputFile.txt" // filename you want to open
-	const outputFile = "outputFile.txt" // filename you want to save as
+func main() {
+	const directory = "docs/language_bootcamp/go/"  // directory to work in
+	const inputFile = directory + "inputFile.txt"   // filename you want to open
+	const outputFile = directory + "outputFile.txt" // filename you want to save as
 
 	// copies input files content to output file, and adds line numbers
 	addLineNumbers(inputFile, outputFile)
