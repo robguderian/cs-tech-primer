@@ -14,6 +14,44 @@
                     "title": "What is a program?",
                     "type": "topic",
                     "fileName": "1_languages/what_is_a_program.md"
+                },
+                {
+                    "title": "example_code",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "main.py",
+                            "type": "topic",
+                            "fileName": "1_languages/example_code/main.py"
+                        },
+                        {
+                            "title": "libraries",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "module1.py",
+                                    "type": "topic",
+                                    "fileName": "1_languages/example_code/libraries/module1.py"
+                                },
+                                {
+                                    "title": "module2.py",
+                                    "type": "topic",
+                                    "fileName": "1_languages/example_code/libraries/module2.py"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "images",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "jupyter.gif",
+                            "type": "topic",
+                            "fileName": "1_languages/images/jupyter.gif"
+                        }
+                    ]
                 }
             ]
         },
@@ -59,6 +97,16 @@
                             "type": "resource",
                             "fileName": "2_shell/images/uporp.jpg",
                             "title": "uporp.jpg"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "2_shell/images/tab.gif",
+                            "title": "tab.gif"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "2_shell/images/moreTab.gif",
+                            "title": "moreTab.gif"
                         }
                     ]
                 }

@@ -8,6 +8,7 @@ After doing this unit, students should be able to...
 
 * move around a line on the shell quickly
 * use pushd, popd
+* use `#!` to choose which interpreter to use (bash, python, other)
 
 Moving around a line
 --------------------
@@ -84,3 +85,42 @@ falcon.cs.umanitoba.ca 110% pwd
 /home/cs/staff/robg/demo
 # back to where we came from!
 ```
+
+Which interpreter to use
+------------------------
+
+In UNIX, we can set which program we would like to
+[*interpret*](../1_languages/readme.md) the file if it is set to be *executable*.
+The file would likely be a program if it was executable!
+
+The **hash bang** line goes on the **first** line of the file:
+
+```python
+#!/usr/bin/python
+
+print('hello world')
+```
+
+This looks like a comment to scripting languages, but has special meaning when
+executing a file.
+
+Technically, the `#!` characters map to the ELF magic number of the file, but
+thats, more technical that we actually require...
+
+The shell will *invoke* the interpreter specified, and pass it this file to
+process.
+
+**But**, that is not portable! Not every installation of `perl`, `python`,
+`bash`, etc, will be in the same place on the filesystem.
+
+But, `env` generally is available... and can loop up interpreters for us
+on the `PATH`.
+
+```bash
+#! /usr/bin/env python
+```
+
+Will search for `python` in the `PATH`, meaning that *where ever* the
+`python` executable is, it will be found and executed. There is more
+discussion in the `env` man page, or also on
+[gnu's documentation](https://www.gnu.org/software/coreutils/manual/html_node/env-invocation.html).
