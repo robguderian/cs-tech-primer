@@ -319,7 +319,9 @@ function indexExample(inputString){
 //------------------------------------------------------
 // main
 //
-// PURPOSE: to provide the filename and path to call listThings() on.
+// PURPOSE: provides the filename for the file to open, and gets the contents
+//          of the file by calling getContentArray(). Passes the contents to
+//          listThings() and checkOwned(), then calls indexExample().
 //
 //------------------------------------------------------
 function main(){
