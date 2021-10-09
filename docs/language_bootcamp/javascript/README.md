@@ -6,8 +6,25 @@ albeit with some quirks...
 
 This should help you start quickly, and dodge a lot of the pitfalls.
 
+---
+
+Running JavaScript
+------------------
+
+There are many ways to run JavaScript.  Using Node is one of the more popular
+options.  You can download Node [here](https://nodejs.org).
+
+Once Node is installed, to run your program:
+
+1. open terminal,
+2. navigate to the directory your program is in, and
+3. type `Node filename.js`, where filename.js is the name of the program you
+want to run.
+
+---
+
 Strict Formatting
-----------------
+-----------------
 
 It's recommended to use strict formatting in your JavaScript files.  This has
 two main benefits:
@@ -223,7 +240,7 @@ module.exports = Person;
 ---
 
 Private Variables and Methods
-------------------------------
+-----------------------------
 
 In JavaScript, variables and methods default to being public.
 
