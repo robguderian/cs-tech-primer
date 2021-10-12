@@ -1,8 +1,7 @@
 # Conditionals
 
-To make programs do interesting things, we need a way to tell our programs what 
+To make programs do interesting things, we need a way to tell our programs what
 to do under specific conditions. This is where the if statement comes in.
-
 
 ## The If Statement
 
@@ -21,7 +20,7 @@ if(age >= 18){
 
 This block of code will execute differently depending on the value of `age`.
 
-Note that the snippet `age < 18` is actually returning a *boolean* result. 
+Note that the snippet `age < 18` is actually returning a *boolean* result.
 So, we could also check the value of a boolean directly.
 
 ```java
@@ -51,7 +50,7 @@ if(age > 1000){
 ## The Else statement
 
 Just using `if` statements is not very efficient. In the above example, it is not
-possible for a users age to meet more than one of the conditions. However, Java 
+possible for a users age to meet more than one of the conditions. However, Java
 will check each condition, even after one of them is met.\
 To improve performance, we will use the `else` statement.
 
@@ -65,7 +64,7 @@ else{
 }
 ```
 
-Now, if `age` is less than 18, Java will skip over the `else` block and move on 
+Now, if `age` is less than 18, Java will skip over the `else` block and move on
 to whatever is next.
 
 ## Else If
