@@ -1,15 +1,7 @@
 "use strict";
 
 let FileIO = require("./FileIO");
-
-/* TODO stuff left to do for string example:
- *
- * We need to show the following:
- * index a letter
- *
- * Then we need to do the following to the rockyou file:
- * see if you've been owned
- */
+const readlineSync = require('readline-sync');
 
 //------------------------------------------------------
 // listSubstring
@@ -179,29 +171,20 @@ function isPalindrome(word){
 //------------------------------------------------------
 // listThings
 //
-// PURPOSE: calls a function to get the contents of the provided file, splits
-//          the file on newline characters to create an array, then calls
-//          listSubstring(and provides the substring to search for),
-//          listLetterFreq, and listPalindrome.
+// PURPOSE: Provides the substring to search for, and calls listSubstring(),
+//          listLetterFreq(), and listPalindrome().
 //
 // PARAMETERS:
-//      - filename is the name of the file to read from.
+//      - content is the array to pass to other functions.
 //
 //------------------------------------------------------
-function listThings(filename){
-    if (arguments.length !== 1 || typeof(filename) !== "string"){
+function listThings(content){
+    if (arguments.length !== 1 || !Array.isArray(content)){
         throw new Error("Invalid use of Strings' listThings() function.  It" +
-            " takes 1 argument, the name of the file to read from.");
+            " takes 1 argument, an array to read from.");
     }
 
-    let content = FileIO.readFile(filename);
-    let searchFor = "pass"; // what substring do you want to search for
-
-    // make content an array, where each password has its own index
-    content = content.split("\n");
-
-    console.log("The provided file contains %d lines to look through.",
-        content.length);
+    const searchFor = "pass"; // what substring do you want to search for
 
     listSubstring(content, searchFor);
     listLetterFreq(content);
@@ -209,15 +192,145 @@ function listThings(filename){
 }
 
 //------------------------------------------------------
+// getContentArray
+//
+// PURPOSE: Calls a function to read the contents of the provided file, splits
+//          the file on newline characters to create an array, outputs the
+//          number of lines from said file, and returns the array of lines.
+//
+// PARAMETERS:
+//      - filename is the name of the file to try and read from.
+//
+// RETURN: Returns an array of strings from the provided file.
+//
+//------------------------------------------------------
+function getContentArray(filename){
+    if (arguments.length !== 1 || typeof(filename) !== "string"){
+        throw new Error("Invalid use of Strings' listThings() function.  It" +
+            " takes 1 argument, the name of the file to read from.");
+    }
+
+    let content = FileIO.readFile(filename);
+
+    // make content an array, where each password has its own index
+    content = content.split("\n");
+
+    console.log("The provided file contains %d lines to look through.",
+        content.length);
+
+    return content;
+}
+
+//------------------------------------------------------
+// checkOwned
+//
+// PURPOSE: prompts the user to input a password and checks if the password
+//          they entered is in the rockyou.txt file.  (The rockyou.txt file is
+//          ordered from least most common to least common, and we're using a
+//          truncated version, so this only checks the more common passwords).
+//
+// PARAMETERS:
+//      - content is an array of strings to check for a given password.
+//
+//------------------------------------------------------
+function checkOwned(content){
+    if (arguments.length !== 1 || !Array.isArray(content)){
+        throw new Error("Invalid use of Strings' checkOwned() function.  It " +
+            "takes 1 argument, an array.");
+    }
+
+    const message = "\nEnter the password you want to check";
+    const promptLine = ":\n> ";
+    const exitPrompt = ", or enter -1 to exit";
+    const initMessage = message + promptLine;
+    const continueMessage = message + exitPrompt + promptLine;
+
+    let found; // is the password found?
+    let keepChecking = true; // should we continue asking for passwords?
+    let userInput; // what password to check?
+
+    console.log("\n**** Checking passwords to see if you're owned. ****");
+
+    userInput = readlineSync.question(initMessage);
+
+    while (keepChecking){
+        found = false;
+
+        for (let i = 0; i < content.length && !found; i++){
+            if (content[i] === userInput){
+                found = true;
+
+                console.log("OWNED! \"%s\" was found on line \"%d\" in the " +
+                    "file.", userInput, i);
+            }
+        }
+
+        if (!found){
+            console.log("SAFE! \"%s\" wasn't found in the file!", userInput);
+        }
+
+        userInput = readlineSync.question(continueMessage);
+        keepChecking = userInput !== "-1";
+    }
+}
+
+//------------------------------------------------------
+// indexExample
+//
+// PURPOSE: Run an example showing how to index a symbol in a string.  Prompts
+//          the user to input the symbol they want to search for.
+//
+// PARAMETERS:
+//      - inputString is the string to search in.
+//
+//------------------------------------------------------
+function indexExample(inputString){
+    if (arguments.length !== 1 || typeof(inputString) !== "string"){
+        throw new Error("Invalid use of Strings' indexExample() function. It" +
+            " takes 1 argument, a string.");
+    }
+
+    let symbol; // what symbol you're searching the position of
+    let position; // the first position of the symbol you're searching for
+
+    console.log("\n**** Starting an index example. ****");
+    console.log("\nThe provided string you want to search in is \"%s\".",
+        inputString);
+
+    symbol = readlineSync.question("Which symbol do you want to know the " +
+        "position of in the provided string?\n> ");
+
+    while (symbol.length > 1){
+        symbol = readlineSync.question("Invalid input. A symbol is a single" +
+            " character. Try again:\n> ");
+    }
+
+    position = inputString.indexOf(symbol);
+
+    console.log("The symbol \"%s\" is at position \"%d\" in the inputString " +
+        "\"%s\".", symbol, position, inputString);
+
+    if (position === -1){
+        console.log("A position of \"-1\" means that it wasn't found in the " +
+            "inputString.");
+    }
+}
+
+//------------------------------------------------------
 // main
 //
-// PURPOSE: to provide the filename and path to call listThings() on.
+// PURPOSE: provides the filename for the file to open, and gets the contents
+//          of the file by calling getContentArray(). Passes the contents to
+//          listThings() and checkOwned(), then calls indexExample().
 //
 //------------------------------------------------------
 function main(){
     const filename = "../../../resources/passwords/rockyou.txt";
+    const content = getContentArray(filename);
 
-    listThings(filename);
+    listThings(content);
+    checkOwned(content);
+    indexExample(filename);
 }
 
 main(); // run main() function.
