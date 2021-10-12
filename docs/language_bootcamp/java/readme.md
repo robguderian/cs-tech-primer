@@ -27,6 +27,7 @@ This course is meant to get students up to speed on Java for courses like COMP 1
    2. Access Modifiers
    3. Static Keyword
    4. Basic Inheritance
+   5. Stack vs. Heap
 6. Built-in Objects
    1. Strings
    2. ArrayList
