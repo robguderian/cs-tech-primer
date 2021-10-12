@@ -115,6 +115,28 @@ Breaking it down...
 * The next `0` is the index of of newArray where copying will begin.
 * The last number is how many elements we want to copy. You could set this to `oldArray.length` if you wanted to copy the entire array.
 
+## Array Storage
+
+Without going into too much detail on the inner workings of our computers,
+it is important to understand how arrays are actually stored in our computers.
+
+Our programs, when running, will be in our computers memory (RAM). Memory
+itself can be thought of as an array, where each index of this array being a
+memory *address*. All the commands and data for our programs will be stored
+in this memory array.
+
+Within our computers memory (RAM), the data in our arrays is stored
+*contiguously*, that is, each element of the array is stored right after the
+previous one.
+
+Consider an int array of size 10. For the sake of simplicity, assume the
+*address* of the first element (index 0) is 100. Then the second int will be
+stored at address 104 (since ints have size 4). The third at 108, fourth at
+112, and so on.
+
+This is a highly simplified model of how memory works, but it should be
+enough to get you started.
+
 ## Some Examples
 
 ```java

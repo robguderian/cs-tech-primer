@@ -1,4 +1,4 @@
-# Section 1 Cheat Sheet
+# Section 1 - Basics
 
 ## Comments
 

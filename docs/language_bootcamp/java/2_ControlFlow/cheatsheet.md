@@ -1,4 +1,4 @@
-# Section 2 Cheat Sheet
+# Section 2 - Control Flow
 
 ## Conditionals
 
