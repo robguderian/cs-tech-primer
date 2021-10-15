@@ -1,6 +1,8 @@
 # Nested Loops
 
-*Nesting* loops means putting a loop inside another loop. There's nothing really special about nested loops, the syntax is exactly the same as before.
+*Nesting* loops means putting a loop inside another loop. There's
+nothing really special about nested loops, the syntax is exactly
+the same as before.
 
 ## Examples
 

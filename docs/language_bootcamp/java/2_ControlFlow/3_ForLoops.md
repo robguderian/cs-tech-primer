@@ -1,8 +1,12 @@
 # The For Loop
 
-Loops are sections of code that we want to execute a certain number of times in a row. We may want this block of code to loop a fixed number of times, or we may want the number of loops to vary, depending on some other variable in our program.
+Loops are sections of code that we want to execute a certain number
+of times in a row. We may want this block of code to loop a fixed
+number of times, or we may want the number of loops to vary,
+depending on some other variable in our program.
 
-Loops come in a few flavors, namely the *for loop* and the *while loop*.
+Loops come in a few flavors, namely the *for loop* and the *while
+loop*.
 
 ## The Basics
 
@@ -28,7 +32,8 @@ Let's walk through what's happening...
   * Every loop, we increment `i` by one.
 * So, the above example will loop 5 times.
 
-Notice that we declared the variable `i` in the parenthases of the loop. We could have also done
+Notice that we declared the variable `i` in the parenthases of the
+loop. We could have also done
 
 ```java
 System.out.println("\nExample 2");
@@ -38,11 +43,14 @@ for(j = 0; j < 5; j++) {
 }
 ```
 
-This isn't too common, and is in some ways considered bad practice due to the concept of *scope*. We will discuss scope when we get to the section on methods.
+This isn't too common, and is in some ways considered bad practice
+due to the concept of *scope*. We will discuss scope when we get to
+the section on methods.
 
 ## Experimenting with Loops
 
-Let's take a look at a few different for loops. Compile and run `For.java` to see the output!
+Let's take a look at a few different for loops. Compile and run
+`For.java` to see the output!
 
 ```java
 // Start at 5
@@ -77,7 +85,8 @@ for(int i = 1; i <= n; i *= 2) {
 
 ## Continue
 
-If there are certain conditions where we want to "skip" over, we can use the `continue` keyword to skip to the next loop.
+If there are certain conditions where we want to "skip" over, we
+can use the `continue` keyword to skip to the next loop.
 
 ```java
 // This will print all the odd multiples of 3
@@ -90,17 +99,27 @@ for(int i = 3; i < 60; i += 3){
 
 ## A Note on Syntax
 
-You have likely (and rightfully so) been told many, many times to always use concise and meaningful variable names. *This is true*, however, we can be a bit more lenient when it comes to loop counter variables.
+You have likely (and rightfully so) been told many, many times to
+always use concise and meaningful variable names. *This is true*,
+however, we can be a bit more lenient when it comes to loop counter
+variables.
 
-It is acceptable to use single character variable names for *simple* loops. It is very common to use the letters `i`, `j`, `k` and `l` for your loop counter variables.
+It is acceptable to use single character variable names for
+*simple* loops. It is very common to use the letters `i`, `j`, `k`
+and `l` for your loop counter variables.
 
-We will also cover nested loops in this section, where it will become clear that sometimes we must use better variable names in our loops. Otherwise, our loops may become confusing and/or unreadble.
+We will also cover nested loops in this section, where it will
+become clear that sometimes we must use better variable names in
+our loops. Otherwise, our loops may become confusing and/or
+unreadble.
 
 ## Enhanced For Loop
 
-For the sake of organization, we will also discuss the enhanced for loop.
+For the sake of organization, we will also discuss the enhanced for
+loop.
 
-This for loop iterates through some kind of *data structure*, in this case, an array.
+This for loop iterates through some kind of *data structure*, in
+this case, an array.
 
 ```java
 int[] x = {2, 5, 3, 7, 4, 8, 2, 3};
@@ -111,21 +130,25 @@ for(int i : x){
 }
 ```
 
-Rather than using a counter, we instead loop through the entire array once and perform whatever operations we need on that element.
+Rather than using a counter, we instead loop through the entire
+array once and perform whatever operations we need on that element.
 
 ## Fizzbuzz Challenge
 
-Now is a good time to test out some of the things you've learned with a small challenge, **Fizzbuzz**.
+Now is a good time to test out some of the things you've learned
+with a small challenge, **Fizzbuzz**.
 
-Your goal is to write a program that loops from 1 to n, checking if the number is divisible by 3, 5 or both.
+Your goal is to write a program that loops from 1 to n, checking if
+the number is divisible by 3, 5 or both.
 
 * If the number is divisible by 3, print "Fizz"
 * If the number is divisible by 5, print "Buzz"
 * If the number is divisible by 3 and 5, print "Fizzbuzz!"
 
-You should also print the number being checked at every loop. Here is some sample output...
+You should also print the number being checked at every loop. Here
+is some sample output...
 
-```
+```text
 1
 2
 3 Fizz
@@ -148,6 +171,9 @@ You should also print the number being checked at every loop. Here is some sampl
 20 Buzz
 ```
 
-Note that an integer **x** is divisible by **y** if the ***remainder*** of **x/y** is **0**.
+Note that an integer **x** is divisible by **y** if the
+***remainder*** of **x/y** is **0**.
 
-You are encouraged to try this out by yourself first, only using the notes you've read so far. If you get stuck, you can check Fizzbuzz.java for a solution.
+You are encouraged to try this out by yourself first, only using
+the notes you've read so far. If you get stuck, you can check
+Fizzbuzz.java for a solution.
