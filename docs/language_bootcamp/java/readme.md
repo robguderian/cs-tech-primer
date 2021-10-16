@@ -1,8 +1,11 @@
-# Java Language Bootcamp
+Java Language Bootcamp
+=========================
 
-This course is meant to get students up to speed on Java for courses like COMP 1020 and COMP 2140.
+This course is meant to get students up to speed on Java for courses like
+COMP 1020 and COMP 2140.
 
-## Contents
+Contents
+------------
 
 1. Basics
    1. Comments
