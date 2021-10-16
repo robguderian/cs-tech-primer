@@ -1,4 +1,5 @@
-# The Ternary Operator
+The Ternary Operator
+=======================
 
 The ternary operator is a nice looking alternative to a simple
 if-else block.
@@ -43,5 +44,5 @@ for fewer lines of code.
 
 ```java
 // Gross
-int z = (x < y || (x && y || w) && (x**x + 45 > y - somevar) ? (Object.getSomeValue().toUpper() + 456.333 - Other.get()) : (someLongMethodName().anotherOne() + x**X);
+z = ((x&&y || w) && (x*x > y-v2) ? (Obj.fn() + 45.3-Obj2.get()) : (fn2() + x);
 ```

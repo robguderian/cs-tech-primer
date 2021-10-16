@@ -1,9 +1,11 @@
-# Multi Dimensional Arrays
+Multi Dimensional Arrays
+===========================
 
 We can put pretty much any type of data in our arrays, so why not put an
 array inside an array?
 
-## 2D Array
+2D Array
+------------
 
 2D arrays (or *matrices* in mathy terms) are very common data structures in
 computer science. Think of your computer screen, all the pixels can be
@@ -46,7 +48,8 @@ int[][] x = {
 };
 ```
 
-## I've actually been lying to you
+I've actually been lying to you
+-----------------------------------
 
 Truth be told, Java doesn't actually have multi-dimensional arrays.
 
@@ -70,7 +73,8 @@ in a single, contiguous array.
 We will learn more about references, objects and memory in the objects
 section!
 
-## Initializing
+Initializing
+----------------
 
 Now that we know we're dealing with arrays-of-arrays, let's go through
 initializing.

@@ -1,4 +1,5 @@
-# The For Loop
+The For Loop
+===============
 
 Loops are sections of code that we want to execute a certain number
 of times in a row. We may want this block of code to loop a fixed
@@ -8,7 +9,8 @@ depending on some other variable in our program.
 Loops come in a few flavors, namely the *for loop* and the *while
 loop*.
 
-## The Basics
+The Basics
+--------------
 
 To illustrate a loop, let's start with the most basic example.
 
@@ -47,7 +49,8 @@ This isn't too common, and is in some ways considered bad practice
 due to the concept of *scope*. We will discuss scope when we get to
 the section on methods.
 
-## Experimenting with Loops
+Experimenting with Loops
+----------------------------
 
 Let's take a look at a few different for loops. Compile and run
 `For.java` to see the output!
@@ -83,7 +86,8 @@ for(int i = 1; i <= n; i *= 2) {
 }
 ```
 
-## Continue
+Continue
+------------
 
 If there are certain conditions where we want to "skip" over, we
 can use the `continue` keyword to skip to the next loop.
@@ -97,7 +101,8 @@ for(int i = 3; i < 60; i += 3){
 }
 ```
 
-## A Note on Syntax
+A Note on Syntax
+--------------------
 
 You have likely (and rightfully so) been told many, many times to
 always use concise and meaningful variable names. *This is true*,
@@ -113,7 +118,8 @@ become clear that sometimes we must use better variable names in
 our loops. Otherwise, our loops may become confusing and/or
 unreadble.
 
-## Enhanced For Loop
+Enhanced For Loop
+---------------------
 
 For the sake of organization, we will also discuss the enhanced for
 loop.
@@ -133,7 +139,8 @@ for(int i : x){
 Rather than using a counter, we instead loop through the entire
 array once and perform whatever operations we need on that element.
 
-## Fizzbuzz Challenge
+Fizzbuzz Challenge
+----------------------
 
 Now is a good time to test out some of the things you've learned
 with a small challenge, **Fizzbuzz**.

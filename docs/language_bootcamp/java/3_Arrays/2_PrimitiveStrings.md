@@ -1,10 +1,12 @@
-# Primitive Strings
+Primitive Strings
+====================
 
 Now that we understand arrays, we can start working with words, formally
 referred to as strings! We can use a char array to store the characters
 that make up a word, and we can print them using a for loop!
 
-## Hard-Coding
+Hard-Coding
+---------------
 
 The simplest example is to hard code a string.
 

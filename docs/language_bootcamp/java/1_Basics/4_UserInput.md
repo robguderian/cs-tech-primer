@@ -1,4 +1,5 @@
-# User Input
+User Input
+=============
 
 To make any useful programs, our programs will likely need some way
 of interacting with the user. You are probably accustomed to nice,

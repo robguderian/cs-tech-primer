@@ -1,11 +1,13 @@
-# Conditionals
+Conditionals
+===============
 
 To make programs do interesting things, we need a way to tell our
 programs what
 to do under specific conditions. This is where the if statement
 comes in.
 
-## The If Statement
+The If Statement
+--------------------
 
 Consider the following code...
 
@@ -34,7 +36,8 @@ if(b){
 }
 ```
 
-## Multiple Conditions
+Multiple Conditions
+-----------------------
 
 We can also string together different conditions using the `&&` and
 `||` operators.
@@ -52,7 +55,8 @@ if(age > 1000){
 }
 ```
 
-## The Else statement
+The Else statement
+----------------------
 
 Just using `if` statements is not very efficient. In the above
 example, it is not
@@ -74,7 +78,8 @@ else{
 Now, if `age` is less than 18, Java will skip over the `else` block and move on
 to whatever is next.
 
-## Else If
+Else If
+-----------
 
 But what if our program needs more than just an if and an else? \
 We can use the `else if` statement to add in more conditions for
@@ -98,7 +103,8 @@ Now, if `age` is found to be less than 18, we will skip over the
 `else if` and `else`
 blocks.
 
-## A Note on Syntax
+A Note on Syntax
+--------------------
 
 If the code to be executed in your condition is *one line* only, we
 can ommit

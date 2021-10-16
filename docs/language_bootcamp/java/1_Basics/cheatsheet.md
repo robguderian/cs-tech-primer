@@ -1,6 +1,8 @@
-# Section 1 - Basics
+Section 1 - Basics
+=====================
 
-## Comments
+Comments
+------------
 
 ```java
 // Single line comment
@@ -11,17 +13,18 @@
  */
 ```
 
-## Primitives Types and Operations
+Primitives Types and Operations
+-----------------------------------
 
 | key word  |  Type  | Bytes | Min | Max |
 |-----------|--------|-------|-----|-----|
 | byte      | Integer|  1    | -128| 127 |
-| short     | Integer|  2    | -2<sup>15</sup>   | 2<sup>15</sup>-1 |
-| char      | Integer|  2    | 0   | 2<sup>16</sup>-1 |
-| int       | Integer|  4    | -2<sup>31</sup>| 2<sup>31</sup>-1 |
-| long      | Integer|  8    | -2<sup>63</sup>| 2<sup>63</sup>-1 |
-| float     |Floating|  4    | -3.40282346638528860e+38| 3.40282346638528860e+38 |
-| double    |Floating|  8    | -1.79769313486231570e+308d| 1.79769313486231570e+308d |
+| short     | Integer|  2    | -2^15 | 2^15 - 1 |
+| char      | Integer|  2    | 0   | 2^16 - 1 |
+| int       | Integer|  4    | -2^31 | 2^31 - 1 |
+| long      | Integer|  8    | -2^63</sup>| 2^63 - 1 |
+| float |Floating| 4 | -3.40282346638528860e+38| 3.40282346638528860e+38 |
+| double |Floating| 8 | -1.79769313486231570e+308d| 1.79769313486231570e+308d |
 | boolean   |        |  1 bit| 0   | 1   |
 
 ```java
@@ -45,7 +48,8 @@ y = 13 % 10; // 3
 
 ```
 
-## Increment Operators
+Increment Operators
+-----------------------
 
 ```java
 int x = 10;
@@ -58,7 +62,8 @@ int y = ++x; // y is 11
 int z = x++; // y is 10
 ```
 
-## Arithmetic Short-Hand
+Arithmetic Short-Hand
+-------------------------
 
 ```java
 int x = 20;
@@ -68,7 +73,8 @@ x *= 5; // x is 100
 x /= 5; // x is 20
 ```
 
-## Casting
+Casting
+-----------
 
 ```java
 int x = 12;
@@ -81,7 +87,8 @@ float a = (float)x / (float)y;
 int b = (int)a;
 ```
 
-## Basic User Input
+Basic User Input
+--------------------
 
 Scanner documentation: <https://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html>
 

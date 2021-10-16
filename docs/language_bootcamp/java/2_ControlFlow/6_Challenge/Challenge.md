@@ -1,10 +1,12 @@
-# Brute Force Challenge
+Brute Force Challenge
+========================
 
 Now that you've learned how to add some control logic to your
 programs, it's time to test your skills by running a brute-force
 attack against a server!
 
-## The Goal
+The Goal
+------------
 
 You are given the file `Server.class`. This is a pre-compiled java
 program that you will run on your computer, and will act as the
@@ -14,7 +16,8 @@ You will write another program that will attempt to guess the 4
 character passcode of this server (which will be different every
 time it is run!).
 
-## Before You Start
+Before You Start
+--------------------
 
 * Read up on what ASCII is (LINK TO THAT ONCE DONE)
 * Ensure you are using Java version 8 or greater (Major version 52 or greater).
@@ -23,7 +26,8 @@ There are 2 pre-compiled java classes in this challenge, both were
 compiled on the UManitoba rodents machines. If you use an older
 java version, you will run into annoying errors!
 
-## How to Proceed
+How to Proceed
+------------------
 
 You are given 2 starting files, `Skeleton.java` and `Client.class`.
 The `Client.class` file is more pre-compiled java that will run
@@ -61,7 +65,8 @@ boolean response = client.sendMessage(c1, c2, c3, c4);
 The above would send the password `l33t` to the server and store
 the response in `response`.
 
-## Password Details
+Password Details
+--------------------
 
 The password is a 4 ASCII-character code, where each character is
 in the range [32, 126] inclusive. We also know the following...
@@ -76,13 +81,15 @@ in the range [32, 126] inclusive. We also know the following...
   decide you are maybe being malicious and terminate. (The server
   is indeed rather lenient)
 
-## Output
+Output
+----------
 
 For this challenge, you should not have to print any output. All
 needed output will be handled for you every time you send the
 server a message (using the `client.sendMessage` line)
 
-## Running Your Code
+Running Your Code
+---------------------
 
 Once you've written a program you think will work, follow these
 steps...

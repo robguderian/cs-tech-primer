@@ -1,4 +1,5 @@
-# Primitive Data Types
+Primitive Data Types
+=======================
 
 Java comes with 8 primitive data types built in. These data types differ in
 how much memory they use and, consequently, what range of values they can hold.
@@ -6,18 +7,19 @@ how much memory they use and, consequently, what range of values they can hold.
 | key word  |  Type  | Bytes | Min | Max |
 |-----------|--------|-------|-----|-----|
 | byte      | Integer|  1    | -128| 127 |
-| short     | Integer|  2    | -2<sup>15</sup>   | 2<sup>15</sup>-1 |
-| char      | Integer|  2    | 0   | 2<sup>16</sup>-1 |
-| int       | Integer|  4    | -2<sup>31</sup>| 2<sup>31</sup>-1 |
-| long      | Integer|  8    | -2<sup>63</sup>| 2<sup>63</sup>-1 |
-| float     |Floating|  4    | -3.40282346638528860e+38| 3.40282346638528860e+38 |
-| double    |Floating|  8    | -1.79769313486231570e+308d| 1.79769313486231570e+308d |
+| short     | Integer|  2    | -2^15 | 2^15 - 1 |
+| char      | Integer|  2    | 0   | 2^16 - 1 |
+| int       | Integer|  4    | -2^31 | 2^31 - 1 |
+| long      | Integer|  8    | -2^63</sup>| 2^63 - 1 |
+| float |Floating| 4 | -3.40282346638528860e+38| 3.40282346638528860e+38 |
+| double |Floating| 8 | -1.79769313486231570e+308d| 1.79769313486231570e+308d |
 | boolean   |        |  1 bit| 0   | 1   |
 
 Byte and short are not going to be used terribly often in your first and
 second year, but they do exist.
 
-## Short vs Char
+Short vs Char
+-----------------
 
 Notice these two have the same size, 2 bytes. However, they have a different
 range of values.
@@ -29,7 +31,8 @@ Chars are *unsigned*. They can only be positive.
 Chars can hold any unicode value in them, making them suitable for holding
 individual *characters*.
 
-## Integers
+Integers
+------------
 
 Addition, subtraction and multiplication of integers works as you would expect...
 
@@ -77,7 +80,8 @@ long k = h * i;      // This is fine, the result fits into a long
 int l = h + i;       // NOT GOOD, integer overflow, l is -2147483648
 ```
 
-The value of `l` turned negative, since we went above the maximum value of an integer and got an overflow.
+The value of `l` turned negative, since we went above the maximum value of an
+integer and got an overflow.
 
 ### Pre/Post Increment Operator
 
@@ -130,7 +134,8 @@ x *= 2;   // This is the same as x = x * 2 (x is now 40)
 x /= 2;   // This is the same as x = x / 2 (x is now 20)
 ```
 
-## Floating Point Precision
+Floating Point Precision
+----------------------------
 
 Floats and doubles do not have infinite precision.
 This is why `0.1 + 0.1 + 0.1 != 0.3`. Under the hood, numbers are stored in
@@ -142,7 +147,8 @@ finite number of digits, and so we lose precision.
 
 Arithmetic works the same as with integers.
 
-## Booleans
+Booleans
+------------
 
 Booleans hold a single bit, true or false.
 

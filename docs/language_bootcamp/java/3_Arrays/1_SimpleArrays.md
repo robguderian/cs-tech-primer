@@ -1,4 +1,5 @@
-# Simple Arrays
+Simple Arrays
+================
 
 So far, we have been dealing with single pieces of information at a
 time. We have had to initialize every variable we want to use and
@@ -11,7 +12,8 @@ This is where arrays come in. An array is a simple *data structure*
 that allows us to store lots of data in a single *variable*, and
 access that data using an *index*.
 
-## Syntax
+Syntax
+----------
 
 This is the general syntax for creating an array.
 
@@ -39,7 +41,8 @@ float[] prices = new float[100];
 char[] name = new char[20];
 ```
 
-## Accessing and Modifying
+Accessing and Modifying
+---------------------------
 
 So we can create arrays, but how do we use them?
 
@@ -65,7 +68,8 @@ of the array.
 * `numbers[3]` is saying "Get the data 3 spots away from the first
   element"
 
-## Out of Bounds
+Out of Bounds
+-----------------
 
 What happens if we get a little cheeky and try accessing a value
 that doesn't exist?
@@ -91,7 +95,8 @@ career. It often falls under the umbrella term "off-by-one errors",
 where you meant to get the last element of the array, but ended up
 being off by 1.
 
-## Array Length
+Array Length
+----------------
 
 Java array variables you create will also contain their length
 (some languages don't do this!), which can be accessed using
@@ -105,7 +110,8 @@ int[] numbers = new int[5];
 int len = numbers.length; // len == 5
 ```
 
-## Initializing
+Initializing
+----------------
 
 By default, the array we create will be full of zeroes. If we want
 to initialize the array to a specific set of values, we can do the
@@ -115,7 +121,8 @@ following...
 int[] numbers = {1, 1, 2, 3, 5, 8, 13}; // You will come to hate this pattern
 ```
 
-## Resizing
+Resizing
+------------
 
 *ARRAYS ARE NOT RESIZABLE*.
 
@@ -153,7 +160,8 @@ Breaking it down...
   set this to `oldArray.length` if you wanted to copy the entire
   array.
 
-## Array Storage
+Array Storage
+-----------------
 
 Without going into too much detail on the inner workings of our
 computers, it is important to understand how arrays are actually
@@ -176,7 +184,8 @@ stored at address 104 (since ints have size 4). The third at 108, fourth at
 This is a highly simplified model of how memory works, but it should be
 enough to get you started.
 
-## Some Examples
+Some Examples
+-----------------
 
 ```java
 // Copy the doubled values of x into y

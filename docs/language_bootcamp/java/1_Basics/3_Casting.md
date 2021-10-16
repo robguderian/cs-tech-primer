@@ -1,10 +1,12 @@
-# Casting
+Casting
+==========
 
 Casting is taking a variable of one type, and turning it into a different type.
 
 For example, we could cast an `int` to a `float` or a `long` to a `short`.
 
-## Widening / Implicit
+Widening / Implicit
+-----------------------
 
 When we go from a *smaller* type to a *bigger* type, this is known as...
 
@@ -46,7 +48,8 @@ will *not* compile. Even though in this particular case the values in `c` and
 `s` would fit into a `char` or a `short`,
 the java compiler will stil report an error and refuse to compile.
 
-## Narrowing / Explicit
+Narrowing / Explicit
+------------------------
 
 When we go from a *bigger* type to a *smaller* type, this is known as...
 
@@ -67,7 +70,8 @@ b = (byte)b;    // b is 10
 Note that although this will compile, these results are not terribly useful,
 so narrowing conversion should be done with caution.
 
-## Casting and Arithmetic
+Casting and Arithmetic
+--------------------------
 
 Say we wanted to do the following...
 

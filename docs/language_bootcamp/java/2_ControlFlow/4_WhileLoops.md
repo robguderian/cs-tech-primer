@@ -1,4 +1,5 @@
-# The While Loop
+The While Loop
+=================
 
 Our for loops are great for executing a block of code multiple
 times when we know how many times it has to loop. But what if we
@@ -26,7 +27,8 @@ would happen if we didn't do this? Well, then the condition
 `(x < y` will always be true, and our while loop will continue
 until Java gets mad at us for writing an infinite loop.
 
-## A Better Example
+A Better Example
+--------------------
 
 While loops are best for when we don't know how many times we need
 to loop. Let's look at an example involving user input.
@@ -51,7 +53,8 @@ System.out.println("You entered: " + choice);
 Seeing as we don't know how many times we will have to loop, a
 while loop makes much more sense than a for loop.
 
-## Break
+Break
+---------
 
 If we ever want to end the loop before our condition is met, we can
 use the `break` keyword to immediately end the loop.
@@ -78,7 +81,8 @@ while(choice < 0 || choice > 10) {
 System.out.println("You entered: " + choice);
 ```
 
-## Infinite Loops
+Infinite Loops
+------------------
 
 You may come accross pieces of code that look like this...
 
@@ -103,7 +107,8 @@ practice and should be avoided where possible. As the code becomes
 more complex, this will become harder to maintain and more bugs
 will pop up in your program.
 
-## Do-While Loops
+Do-While Loops
+------------------
 
 The do-while loop is a special type of while loop that is
 guaranteed to execute at least once.
