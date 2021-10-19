@@ -215,7 +215,7 @@ Look at all those dotfiles! They are not hidden by default, don't be surprised!
 Connection information, for using `sftp` to connect to the CS network at the
 U of M:
 
-* Host: sftp://aviary.cs.umanitoba.ca
+* Host: `sftp://aviary.cs.umanitoba.ca`
 * Username: ... your username
 * Password: .... your password
 * Port: 22
