@@ -1,16 +1,24 @@
-# Multi Dimensional Arrays
+Multi Dimensional Arrays
+===========================
 
-We can put pretty much any type of data in our arrays, so why not put an array inside an array?
+We can put pretty much any type of data in our arrays, so why not put an
+array inside an array?
 
-## 2D Array
+2D Array
+------------
 
-2D arrays (or *matrices* in mathy terms) are very common data structures in computer science. Think of your computer screen, all the pixels can be represented in terms of column location and row location, and so we can represent this using a 2D array.
+2D arrays (or *matrices* in mathy terms) are very common data structures in
+computer science. Think of your computer screen, all the pixels can be
+represented in terms of column location and row location, and so we can
+represent this using a 2D array.
 
 ```java
 int[][] screen = new int[1920][1080];
 ```
 
-The syntax is almost the same as before, only now we are adding a second pair of braces to tell java we are creating an array of an array of integers.
+The syntax is almost the same as before, only now we are adding a second
+pair of braces to tell java we are creating an array of an array of
+integers.
 
 Accessing elements in the 2D array is also very similar to simple arrays.
 
@@ -40,11 +48,13 @@ int[][] x = {
 };
 ```
 
-## I've actually been lying to you
+I've actually been lying to you
+-----------------------------------
 
 Truth be told, Java doesn't actually have multi-dimensional arrays.
 
-To be classified as a multidimensional array, *all* the data in the ND array must be contiguous. In Java, 1D arrays are contiguous, each element is
+To be classified as a multidimensional array, *all* the data in the ND
+array must be contiguous. In Java, 1D arrays are contiguous, each element is
 stored one after the other.
 
 But in Java, anything that is not a primitive is an ***OBJECT***. This
@@ -54,17 +64,20 @@ These objects are not going to be stored contiguously.
 
 So *technically*, Java has arrays-of-arrays, and not multidimensional arrays.
 
-![Array Memory](../assets/array_memory/array_memory.png)
+![Array Memory](assets/array_memory.PNG)
 
 We can see that in Java, the `int[][]` is an array holding ***references***
 to other arrays, while in C++, the multidimensional array holds all the data
 in a single, contiguous array.
 
-We will learn more about references, objects and memory in the objects section!
+We will learn more about references, objects and memory in the objects
+section!
 
-## Initializing
+Initializing
+----------------
 
-Now that we know we're dealing with arrays-of-arrays, let's go through initializing.
+Now that we know we're dealing with arrays-of-arrays, let's go through
+initializing.
 
 Say we want to make a "3 dimensional" array where...
 
@@ -77,7 +90,7 @@ Say we want to make a "3 dimensional" array where...
 
 Here's a pretty picture...
 
-![Array Memory](../assets/array_memory/3d_array.png)
+![Array Memory](assets/3d_array.PNG)
 
 Let's initialize it...
 

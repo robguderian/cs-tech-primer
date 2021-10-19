@@ -1,6 +1,8 @@
-# Java Cheat Sheet
+Java Cheat Sheet
+================
 
-## Section 1 - Basics
+Section 1 - Basics
+----------------------
 
 ### Comments
 
@@ -18,12 +20,12 @@
 | key word  |  Type  | Bytes | Min | Max |
 |-----------|--------|-------|-----|-----|
 | byte      | Integer|  1    | -128| 127 |
-| short     | Integer|  2    | -2<sup>15</sup>   | 2<sup>15</sup>-1 |
-| char      | Integer|  2    | 0   | 2<sup>16</sup>-1 |
-| int       | Integer|  4    | -2<sup>31</sup>| 2<sup>31</sup>-1 |
-| long      | Integer|  8    | -2<sup>63</sup>| 2<sup>63</sup>-1 |
-| float     |Floating|  4    | -3.40282346638528860e+38| 3.40282346638528860e+38 |
-| double    |Floating|  8    | -1.79769313486231570e+308d| 1.79769313486231570e+308d |
+| short     | Integer|  2    | -2^15 | 2^15 - 1 |
+| char      | Integer|  2    | 0   | 2^16 - 1 |
+| int       | Integer|  4    | -2^31 | 2^31 - 1 |
+| long      | Integer|  8    | -2^63</sup>| 2^63 - 1 |
+| float |Floating| 4 | -3.40282346638528860e+38| 3.40282346638528860e+38 |
+| double |Floating| 8 | -1.79769313486231570e+308d| 1.79769313486231570e+308d |
 | boolean   |        |  1 bit| 0   | 1   |
 
 ```java
@@ -52,8 +54,7 @@ y = 13 % 10; // 3
 ```java
 int x = 10;
 ++x; // x is 11
-x++; // x is 12
---x; // x is 11
+### x++; // x is 12
 x--; // x is 10
 
 int y = ++x; // y is 11
@@ -96,7 +97,8 @@ long y = scanner.nextLong(); // Prompt user for long
 float z = scanner.nextFloat(); // Prompt user for float
 ```
 
-## Section 2 - Control Flow
+Section 2 - Control Flow
+----------------------------
 
 ### Conditionals
 
@@ -200,7 +202,8 @@ for(int i = 0; i < 10; i++){
 }
 ```
 
-## Section 3 - Arrays
+Section 3 - Arrays
+----------------------
 
 ### Creating Arrays
 

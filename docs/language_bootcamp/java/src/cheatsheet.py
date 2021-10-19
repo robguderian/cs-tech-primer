@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 '''
 Generates a full cheatsheet document by combining the
 cheatsheets from each section.
@@ -6,6 +8,7 @@ cheatsheets from each section.
 import os
 import re
 import glob
+from sys import platform
 
 def write(in_handle, out_handle):
     '''
@@ -15,10 +18,29 @@ def write(in_handle, out_handle):
     :param out_handle: output file handle
     '''
     lines = in_handle.readlines()
+    num_lines = len(lines)
+    
+    for i in range(len(lines)):
+        line = lines[i]
+        line_len = len(line)
 
-    for line in lines:
-        if len(line) > 0 and line[0] == '#':
+        # Since apparently i can't just increment i after adjusting H2,
+        # i have to do this
+        if line_len > 0 and line[0] == "-":
+            continue
+
+        # Adjust H3+
+        if line_len >= 3 and line[0] == '#':
             line = "#" + line
+        
+        # Adjust H2 underline to H3
+        elif i < num_lines-1 and len(lines[i+1]) > 0 and lines[i+1][0] == "-":
+            line = "### " + line
+        
+        # Adjust H1 to H2
+        elif line_len > 0 and line[0] == "=":
+            line = ("-" * line_len + "\n")
+        
         out_handle.write(line)
     
     out_handle.write("\n")
@@ -28,7 +50,7 @@ os.chdir("../")
 
 output = open("./cheatsheet.md", "w")
 output.truncate(0)
-output.write("# Java Cheat Sheet\n\n")
+output.write("Java Cheat Sheet\n================\n\n")
 
 # Get all directories following [0-9]_* and sort them
 sections = [dir for dir in os.listdir() if re.match('([0-9]_)', dir)]
@@ -47,6 +69,9 @@ for section in sections:
     input.close()
 
 # Remove last extra newline
-output.truncate(output.tell() - 2)
+if platform == "win32":
+    output.truncate(output.tell() - 2) # CRLF
+else:
+    output.truncate(output.tell() - 1) # NL
 
 output.close()

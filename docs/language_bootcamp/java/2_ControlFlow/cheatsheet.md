@@ -1,6 +1,8 @@
-# Section 2 - Control Flow
+Section 2 - Control Flow
+===========================
 
-## Conditionals
+Conditionals
+----------------
 
 ```java
 // If - Else If - Else
@@ -35,7 +37,8 @@ if(x < 25 || y > 25 || x == y){
 }
 ```
 
-## Ternary Operator
+Ternary Operator
+--------------------
 
 ```java
 // Syntax...
@@ -48,7 +51,8 @@ int a = (x < y) ? x : y; // Take minimum of x and y
 int b = (x > y) ? x : y; // Take maximum of x and y
 ```
 
-## For Loops
+For Loops
+-------------
 
 ```java
 // Syntax
@@ -65,7 +69,8 @@ for(int i = 10; i <= 100; i += 10){
 }
 ```
 
-## While Loops
+While Loops
+---------------
 
 ```java
 // Syntax
@@ -87,7 +92,8 @@ do {
 } while(x > 10);
 ```
 
-## Nested Loops
+Nested Loops
+----------------
 
 ```java
 // Same syntax
