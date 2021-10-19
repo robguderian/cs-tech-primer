@@ -124,3 +124,26 @@ Will search for `python` in the `PATH`, meaning that *where ever* the
 `python` executable is, it will be found and executed. There is more
 discussion in the `env` man page, or also on
 [gnu's documentation](https://www.gnu.org/software/coreutils/manual/html_node/env-invocation.html).
+
+Strings, and ' vs "
+-------------------
+
+Bash treats ' and " differently, and it is a pitfall for new users!
+
+[Single quotes](https://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html)
+are literals - and whatever you type is kept verbatim. Which, is good.... usually...
+if you want that.
+
+[Double quotes](https://www.gnu.org/software/bash/manual/html_node/Double-Quotes.html)
+will allow us to place variables in the string, which will resolve to whatever is
+*stored* in the variable.
+
+Words are hard, examples are good:
+
+```sh
+bash-4.2$ name="Maynard"
+bash-4.2$ echo "$name James Keenan"
+Maynard James Keenan
+bash-4.2$ echo '$name James Keenan'
+$name James Keenan
+```
