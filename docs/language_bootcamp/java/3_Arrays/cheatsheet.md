@@ -1,6 +1,8 @@
-# Section 3 - Arrays
+Section 3 - Arrays
+=====================
 
-## Creating Arrays
+Creating Arrays
+-------------------
 
 ```java
 // Syntax
@@ -13,7 +15,8 @@ float[] floats = new float[10];
 int[] moreInts = {2, 4, 65, 7, 3};
 ```
 
-## Accessing / Modifying Arrays
+Accessing / Modifying Arrays
+--------------------------------
 
 * Arrays start at 0
 * The last element of an array is its size - 1
@@ -29,7 +32,8 @@ System.out.println(x[2]); // Print 66
 System.out.println(x[x.length - 1]); // Print 6
 ```
 
-## Multi Dimensional Arrays
+Multi Dimensional Arrays
+----------------------------
 
 ```java
 // Syntax

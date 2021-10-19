@@ -213,7 +213,7 @@
                             "fileName": "language_bootcamp/java/readme.md"
                         },
                         {
-                            "title": "Basics",
+                            "title": "1: Basics",
                             "type": "module",
                             "children": [
                                 {
@@ -235,11 +235,26 @@
                                     "title": "User Input",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/4_UserInput.md"
+                                },
+                                {
+                                    "title": "Example: Casting",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/Casting.java"
+                                },
+                                {
+                                    "title": "Example: User Input",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/Input.java"
+                                },
+                                {
+                                    "title": "S1 Cheat Sheet",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/cheatsheet.md"
                                 }
                             ]
                         },
                         {
-                            "title": "Control and Flow",
+                            "title": "2: Control and Flow",
                             "type": "module",
                             "children": [
                                 {
@@ -274,29 +289,54 @@
                                         {
                                             "title": "Basics",
                                             "type": "topic",
-                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_FinalChallenge/Challenge.md"
+                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_Challenge/Challenge.md"
                                         },
                                         {
                                             "title": "Client.class",
                                             "type": "topic",
-                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_FinalChallenge/Client.class"
+                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_Challenge/Client.class"
                                         },
                                         {
                                             "title": "Server.class",
                                             "type": "topic",
-                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_FinalChallenge/Server.class"
+                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_Challenge/Server.class"
                                         },
                                         {
                                             "title": "Skeleton.java",
                                             "type": "topic",
-                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_FinalChallenge/Skeleton.java"
+                                            "fileName": "language_bootcamp/java/2_ControlFlow/6_Challenge/Skeleton.java"
                                         }
                                     ]
+                                },
+                                {
+                                    "title": "Example: If Else",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/IfElse.java"
+                                },
+                                {
+                                    "title": "Example: For Loop",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/For.java"
+                                },
+                                {
+                                    "title": "Example: While Loop",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/While.java"
+                                },
+                                {
+                                    "title": "Example: Fizzbuzz",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/Fizzbuzz.java"
+                                },
+                                {
+                                    "title": "S2 Cheat Sheet",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/cheatsheet.md"
                                 }
                             ]
                         },
                         {
-                            "title": "Arrays",
+                            "title": "3: Arrays",
                             "type": "module",
                             "children": [
                                 {
@@ -305,7 +345,7 @@
                                     "fileName": "language_bootcamp/java/3_Arrays/1_SimpleArrays.md"
                                 },
                                 {
-                                    "title": "Strings as arrays",
+                                    "title": "Strings as Arrays",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/3_Arrays/2_PrimitiveStrings.md"
                                 },
@@ -313,6 +353,32 @@
                                     "title": "Multi-dimensional Arrays",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/3_Arrays/3_NdArrays.md"
+                                },
+                                {
+                                    "title": "Example: Multi-Dimensional Arrays",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/3_Arrays/NdArray.java"
+                                },
+                                {
+                                    "title": "S3 Cheat Sheet",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/3_Arrays/cheatsheet.md"
+                                },
+                                {
+                                    "title": "images",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "type": "resource",
+                                            "fileName": "language_bootcamp/java/3_Arrays/assets/3d_array.PNG",
+                                            "title": "arrow_key.jpg"
+                                        },
+                                        {
+                                            "type": "resource",
+                                            "fileName": "language_bootcamp/java/3_Arrays/assets/array_memory.PNG",
+                                            "title": "arrow_key.jpg"
+                                        }
+                                    ]
                                 }
                             ]
                         }
