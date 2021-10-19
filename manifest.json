@@ -107,6 +107,11 @@
                             "type": "resource",
                             "fileName": "2_shell/images/moreTab.gif",
                             "title": "moreTab.gif"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "2_shell/images/sftp.png",
+                            "title": "sftp.png"
                         }
                     ]
                 }
