@@ -36,7 +36,7 @@ Topics
   * Read man pages
   * understand SYNOPSIS syntax
   * search them on the command line
-* [Quality code](quality_code)
+* [Quality code](4_quality_code)
   * Linters, style checkers
   * adding these to makefiles/tests
   * profiling - finding slow parts in code
