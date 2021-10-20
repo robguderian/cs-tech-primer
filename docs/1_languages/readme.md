@@ -298,6 +298,106 @@ and much more.
 These are not useful for software development, generally, but are useful for
 exploring a dataset, or prototyping an algorithm.
 
+Strongly-typed vs Loosely-typed
+-------------------------------
+
+Though the divide between these two approximately follows the divide between
+scripting languages and compiled languages, it is worth breaking this out,
+because that is *not* a causal relationship.
+
+**Strongly-typed languages** are languages where your variables have a
+certain **type**, and can not change from that type. Obviously, when
+Object Orientation works into this, there's a little more depth, in that
+a variable must contain a certain type, or a subtype.
+
+Consider Java:
+
+```java
+public static void main(String[] args){
+  int number = 10;
+  number = "Hey look at me";
+}
+```
+
+This won't even compile. The error
+`error: incompatible types: String cannot be converted to int` or similar
+(depending on your compiler) will be thrown, and it will not create a class
+file for you. This is because **int number** can only contain a number...
+because we said it's an int.
+
+But in **Loosely-typed** languages, that's not the case. Variables can hold
+**whatever** we want them to. And that is a super powerful and convenient
+feature! Consider this Python code:
+
+```python
+number = 10
+number = "Why not"
+print(number)
+```
+
+Yep, this works, runs, no problem. But, of course, this is convenient, but
+can cause endless grief for us if we are sloppy. What *can* happen is that
+a variable will contain a type that we are not expecting.
+
+Consider this highly contrived example:
+
+```python
+yourWordsNotMine = input("Type something: ")
+
+if len(yourWordsNotMine) % 2 == 0:
+    yourWordsNotMine = 10
+
+print(yourWordsNotMine.split())
+```
+
+This code will work just fine if you have an odd number of characters in your
+input. But if you don't, it will spit out
+`AttributeError: 'int' object has no attribute 'split'`. And, this is
+because... `int` variables don't have a `split` method. But, when it's an
+`str` variable, then it *does* have that method.
+
+The tl;dr is that "don't change the type of your variable", and "don't re-use
+variable names", which is an easy lesson... but a trap for both new, and
+experienced users of loosely-typed languages.
+
+### Duck typing?
+
+Yeah, loosely-typed languages are also called "duck-typed". This is because of
+the cheesy saying: "If it walks like a duck, if it talks like a duck, it must
+be a duck". So, if your object has the method required, it must be the object
+you want!
+
+### Which to choose?
+
+This is a good question early in development, but after you have an idea of
+what the product is going to be. Opinions vary here, these are mine
+
+**Loosely-typed languages** are good for:
+
+* Short scripts (1 pagers) that solve a small problem
+* Proof-of-concepts
+* Glue to reshape data, passing it to other programs (maybe in a pipeline?)
+* Small-to-medium sized projects
+
+But, they have growth problems. Consider what happens if you're working with
+other people.... how do they know how to use your methods/functions? The
+compiler (which doesn't exist) won't tell them that they are passing the
+incorrect types. The only way to make sure it's working are
+thorough unit-tests/integration-tests.
+
+**Strongly-typed languages** are good for:
+
+* Large projects with lots of developers
+* Projects that span multiple months
+* Code that has to be performant
+
+Compiled languages are... just faster. There is no interpreter layer to
+slow things down.
+
+They are predictable in terms of what is being passed in
+arguments, you know what to pass in parameters. And, the compiler will kick you
+in the face ~~if~~ when you get it wrong.
+
 Activities
 ----------
 

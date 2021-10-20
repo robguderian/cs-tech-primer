@@ -88,6 +88,7 @@ Connecting software to tools:
 * Virtual environments (python/ruby) for isolation lite(tm)
 * CPU vs GPU vs ALU
 * Concurrency basics
+* Blockchain intro, discussion about contracts (solidity)
 
 Outputs
 -------

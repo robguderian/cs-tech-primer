@@ -35,8 +35,15 @@ bundle exec jekyll serve
 See Jekyll install documentation, and running with bundle
 [here](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/).
 
-Commiting
----------
+Making nice charts
+------------------
+
+For text ones, use [asciiflow](https://asciiflow.com/#/).
+
+For Visio-style charts, use [diagrams.net](https://app.diagrams.net/).
+
+Committing
+----------
 
 Be sure that `make style` is not complaining about any errors
 in your markdown documents.

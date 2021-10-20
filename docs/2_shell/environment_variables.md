@@ -202,3 +202,7 @@ Activities
 ----------
 
 TODO
+
+* Choose a correct SQLITE database via a path?
+* choose a tmp folder?
+* Change log level

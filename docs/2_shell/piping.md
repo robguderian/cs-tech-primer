@@ -187,6 +187,32 @@ echo "running task" && echo "email body" | mail -s "Subject" robg@cs.umanitoba.c
 
 When the first command that takes *hours* completes, the second command is run.
 
+Abusing ||
+----------
+
+What about lazy evaluation for "or"? The second operator would only ever run
+if the first operator **failed**. `false` and `true` are useful for this, where
+`false` always fails, and `true` always succeeds.
+
+```sh
+$ false || echo Nope
+Nope
+$ true || echo Nope
+[No output]
+```
+
+A common use-case for this is error checking. If you have a shell script,
+you may want it to *stop* if a requirement is failed.
+
+Consider:
+
+```sh
+cd /does/not/exist || exit
+[more shell script exists]
+```
+
+The program will stop if the `/does/not/exist` directory does not exist.
+
 Activities
 ----------
 
