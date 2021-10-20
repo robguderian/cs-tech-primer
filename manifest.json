@@ -412,12 +412,12 @@
                         {
                             "title": "makefile",
                             "type": "topic",
-                            "fileName": "language_bootcamp/python/src/makefile"
+                            "fileName": "language_bootcamp/python/makefile"
                         },
                         {
                             "title": "linting_info.md",
                             "type": "topic",
-                            "fileName": "language_bootcamp/python/src/linting_info.md"
+                            "fileName": "language_bootcamp/python/linting_info.md"
                         },
                         {
                             "title": "src",
