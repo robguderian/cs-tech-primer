@@ -397,6 +397,11 @@
                             "title": "Introduction to JS",
                             "type": "topic",
                             "fileName": "language_bootcamp/javascript/README.md"
+                        },
+                        {
+                            "title": "Javascript Linting info",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/linting_info.md"
                         }
                     ]
                 },
