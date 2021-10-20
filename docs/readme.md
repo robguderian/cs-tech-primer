@@ -19,18 +19,34 @@ Topics
     * When is it useful
 * [Shell](2_shell)
   * using a shell _Well_
-  * unix program structure
+  * [unix program structure](2_shell/piping.md)
     * Standard in, standard out, standard error
     * piping, file redirection, how that relates to stdin/stdout/stderr
     * output redirection
   * create a bash script to automate something
     * See bash/shell as a scripting language, not just a window
-  * Environment variables to choose resources
+  * [Environment variables to choose resources](./2_shell/environment_variables.md)
+  * [Remote systems](2_shell/remote.md)
+    * ssh
+    * moving files
+      * To the system
+      * From the system (No, you can't push home)
+  * [Getting around quickly, and pitfalls](2_shell/advanced_shell.md)
 * [Reading manual pages](3_reading_man_pages/readme.md)
   * Read man pages
   * understand SYNOPSIS syntax
   * search them on the command line
-* [Unix Power Tools](unix)
+* [Quality code](quality_code)
+  * Linters, style checkers
+  * adding these to makefiles/tests
+  * profiling - finding slow parts in code
+* [Debugging](5_debugging)
+  * Why it's better than print statements
+  * anti-pattern debugging
+  * gdb/pdb breakpoints, stepping stack traces
+  * some guis
+    * intro this. these change all the time
+* [Unix Power Tools](6_unix)
   * linux vs unix vs mac
   * tools
     * `awk` (alternatively `cut`)
@@ -38,36 +54,23 @@ Topics
     * `sed`
     * `xargs`
   * wrap with processing a csv/tsv file
-* [Remote systems](remote)
-  * ssh
-  * moving files
-    * To the system
-    * From the system (No, you can't push home)
-* [Building programs](building)
+* [Building programs](7_building)
   * Makefiles
   * Library paths?
-* [Debugging](debugging)
-  * Why it's better than print statements
-  * anti-pattern debugging
-  * gdb/pdb breakpoints, stepping stack traces
-  * some guis
-    * intro this. these change all the time
-* [Source code control](versioning_code)
+* [Virtual machines](8_virtualiztion)
+  * What are they?
+  * Why should we use them?
+* [Source code control](9_versioning_code)
   * Git!
   * Creating a repository
   * Add, check-in, revert
   * make a branch, merge, or abandon
   * Collisions with yourself (or as a team)
-* [Quality code](quality_code)
-  * Linters, style checkers
-  * adding these to makefiles/tests
-* [Virtual machines](virtualiztion)
-  * What are they?
-  * Why should we use them?
+* [Maintaining Servers](10_maintaining_servers/readme.md)
 * The rest
   * things that don't fit into here, and also don't fit into
     the program, either.
-    * profiling - finding slow parts in code
+    
 
 The above are general UNIX/linux and meta-programming topics.
 But, what if you need to learn a new programming language?

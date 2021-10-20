@@ -13,3 +13,6 @@ coverage:
 	coverage run --source=. -m unittest test_some_code.py
 	coverage html
 	echo Now check out the htmlcov folder
+
+profile:
+	python3 -m cProfile -s tottime some_code.py
