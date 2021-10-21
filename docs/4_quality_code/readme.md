@@ -23,8 +23,9 @@ Probably true! If you were taught Java first, you probably:
 And, you probably believe in yourself that you did it right every time.
 Or, you're sloppy and don't care.
 
-Now what if you're in a group project together. Your code will be wholly
-unreadable. It will switch between good, proper code... and :poop:.
+Now what if a tidy coder and a sloppy coder are in a group project
+together. The code will be wholly
+unreadable. It will switch between good, proper code... and 💩.
 
 Programming cruft
 -----------------
@@ -46,7 +47,7 @@ Now, the next step is writing a program that ensures that *style* is followed.
 Static analysis
 ---------------
 
-This is actually all part of a Software Engineering sub-field called 
+This is actually all part of a Software Engineering sub-field called
 ['static analysis'](https://queue.acm.org/detail.cfm?id=3487021).
 The 'static' part is about the code - it doesn't change. It's an
 artifact that creates an executable. So, we can run code *over* the program
@@ -93,7 +94,8 @@ which lines of code have been *tested*.
 
 Literally, coverage just shows you which lines have been run, and which lines
 have not been. A percentage can be made by stating
-`linesThatHaveBeenRun/allLines`.
+`linesThatHaveBeenRun/allLines`. Example: If you tested 11 lines of a 100 line
+file, you'd have 11% coverage.
 
 Ideally, about 80% of the core logic
 lines of code are tested. Some things are untestable,
@@ -121,12 +123,12 @@ The example has both bubble sort, and insertion sort examples.
 We can then see which took longer, and see some statistics about it:
 
 ```txt
-   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-      100    4.595    0.046    4.639    0.046 some_code.py:21(bubble)
-      100    3.183    0.032    3.225    0.032 some_code.py:35(insertion)
-   199800    0.039    0.000    0.053    0.000 random.py:237(_randbelow_with_getrandbits)
-      200    0.030    0.000    0.083    0.000 random.py:348(shuffle)
-   280196    0.009    0.000    0.009    0.000 {method 'getrandbits' of '_random.Random' objects}
+ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   100    4.595    0.046    4.639    0.046 some_code.py:21(bubble)
+   100    3.183    0.032    3.225    0.032 some_code.py:35(insertion)
+199800    0.039    0.000    0.053    0.000 random.py:237(_randbelow_with_getr...
+   200    0.030    0.000    0.083    0.000 random.py:348(shuffle)
+280196    0.009    0.000    0.009    0.000 {method 'getrandbits' of '_random....
 ```
 
 Interestingly, we can see that the random library is called often, and is
