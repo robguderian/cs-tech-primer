@@ -70,7 +70,6 @@ Topics
 * The rest
   * things that don't fit into here, and also don't fit into
     the program, either.
-    
 
 The above are general UNIX/linux and meta-programming topics.
 But, what if you need to learn a new programming language?
