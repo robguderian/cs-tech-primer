@@ -397,6 +397,75 @@
                             "title": "Introduction to JS",
                             "type": "topic",
                             "fileName": "language_bootcamp/javascript/README.md"
+                        },
+                        {
+                            "title": "Javascript Linting info",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/linting_info.md"
+                        }
+                    ]
+                },
+                {
+                    "title": "Python",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "Introduction to Python",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/python/readme.md"
+                        },
+                        {
+                            "title": "makefile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/python/makefile"
+                        },
+                        {
+                            "title": "linting_info.md",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/python/linting_info.md"
+                        },
+                        {
+                            "title": "src",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "hello.py",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/python/src/hello.py"
+                                },
+                                {
+                                    "title": "src",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "unit_test_demo",
+                                            "type": "module",
+                                            "children": [
+                                                {
+                                                    "title": "Python unit tests, coverage, profiling",
+                                                    "type": "topic",
+                                                    "fileName": "language_bootcamp/python/src/unit_test_demo/readme.md"
+                                                },
+                                                {
+                                                    "title": "makefile",
+                                                    "type": "topic",
+                                                    "fileName": "language_bootcamp/python/src/unit_test_demo/makefile"
+                                                },
+                                                {
+                                                    "title": "some_code.py",
+                                                    "type": "topic",
+                                                    "fileName": "language_bootcamp/python/src/unit_test_demo/some_code.py"
+                                                },
+                                                {
+                                                    "title": "test_some_code.py",
+                                                    "type": "topic",
+                                                    "fileName": "language_bootcamp/python/src/unit_test_demo/test_some_code.py"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
