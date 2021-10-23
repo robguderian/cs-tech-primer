@@ -23,7 +23,7 @@ class Student extends Person {
   }
 
   toString () {
-    return super.toString() + ", StudentID: " + this.#_studentID
+    return super.toString() + ', StudentID: ' + this.#_studentID
   }
 }
 

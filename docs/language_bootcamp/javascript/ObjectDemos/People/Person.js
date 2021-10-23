@@ -26,7 +26,7 @@ class Person {
   }
 
   toString () {
-    return "Name: " + this.#_name + ", Age: " + this.#_age
+    return 'Name: ' + this.#_name + ', Age: ' + this.#_age
   }
 }
 

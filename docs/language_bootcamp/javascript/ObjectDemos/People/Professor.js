@@ -23,7 +23,7 @@ class Professor extends Person {
   }
 
   toString () {
-    return super.toString() + ", Department: " + this.#_department
+    return super.toString() + ', Department: ' + this.#_department
   }
 }
 

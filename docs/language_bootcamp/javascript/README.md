@@ -43,7 +43,7 @@ You can enable strict formatting by adding the following text to the top of
 your file, before any code:
 
 ```javascript
-"use strict"
+'use strict'
 ```
 
 - Note that you can have comments above this line (so your default header
@@ -103,7 +103,7 @@ class Wine {
 
   constructor (name, age) {
     if (arguments.length === 0) {
-      this.#_name = ""
+      this.#_name = ''
       this.#_age = -1
     } else if (arguments.length === 2 && name instanceof String &&
         Number.isInteger(age)) {
@@ -135,7 +135,7 @@ if you typed the following in C, it'd return false, but in JavaScript, this
 line of code returns true:
 
 ```javascript
-"1" == 1 // returns true in JavaScript
+'1' == 1 // returns true in JavaScript
 ```
 
 This was a design choice to make the language more accessible to
@@ -145,7 +145,7 @@ JavaScript, we use `===` to check for strict equality (taking into account the
 data type):
 
 ```javascript
-"1" === 1 // returns false in JavaScript
+'1' === 1 // returns false in JavaScript
 ```
 
 Another important thing to note is that when using `==`, the equality is not
@@ -217,8 +217,8 @@ Importing
 The `require` keyword is how you import dependencies to a given file.
 
 ```javascript
-const Person = require("./Person")
-const assert = require("assert")
+const Person = require('./Person')
+const assert = require('assert')
 ```
 
 The code above imports two dependencies, `Person` and `assert`.
