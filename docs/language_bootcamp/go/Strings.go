@@ -223,11 +223,7 @@ func checkOwned(content []string) {
 
 	fmt.Println("\n**** Checking passwords to see if you're owned. ****")
 	fmt.Print(initMessage)
-
-	_, err := fmt.Scanln(&userInput)
-	if err != nil {
-		log.Fatal(err)
-	}
+	getUserInput(&userInput)
 
 	for keepChecking {
 		found = false
@@ -246,12 +242,7 @@ func checkOwned(content []string) {
 		}
 
 		fmt.Print(continueMessage)
-
-		_, err := fmt.Scanln(&userInput)
-		if err != nil {
-			log.Fatal(err)
-		}
-
+		getUserInput(&userInput)
 		keepChecking = userInput != "-1"
 	}
 }
@@ -276,19 +267,13 @@ func indexExample(inputString string) {
 	fmt.Print("Which symbol do you want to know the position of in the " +
 		"provided string?\n> ")
 
-	_, err := fmt.Scanln(&symbol)
-	if err != nil {
-		log.Fatal(err)
-	}
+	getUserInput(&symbol)
 
 	if len(symbol) != 1 {
 		fmt.Print("Invalid input. A symbol is a single character. " +
 			"Try again:\n> ")
 
-		_, err := fmt.Scanln(&symbol)
-		if err != nil {
-			log.Fatal(err)
-		}
+		getUserInput(&symbol)
 	}
 
 	position = strings.IndexByte(inputString, symbol[0])
@@ -299,6 +284,23 @@ func indexExample(inputString string) {
 	if position == -1 {
 		fmt.Printf("A position of \"-1\" means that it wasn't found in the " +
 			"inputString.\n")
+	}
+}
+
+//------------------------------------------------------
+// getUserInput
+//
+// PURPOSE: provides a way to get the user's command line input into the
+//			provided string.
+//
+// PARAMETERS:
+//      - destString is the string to write to.
+//
+//------------------------------------------------------
+func getUserInput(destString *string) {
+	_, err := fmt.Scanln(destString)
+	if err != nil {
+		log.Fatal(err)
 	}
 }
 
