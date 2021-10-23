@@ -29,10 +29,15 @@ Strict Formatting
 It's recommended to use strict formatting in your JavaScript files.  It helps
 prevent unwanted accidental declarations of variables.
 
-- To declare a variable, you have to use one of the following keywords:
-  - `let`
-  - `var`
-  - `const`
+Without strict formatting enabled, you can declare variables anytime you use
+the `=` sign.
+
+With strict formatting enabled, in order to be able to declare variables, you
+have to use one of the following keywords:
+
+- `let`
+- `var`
+- `const`
 
 You can enable strict formatting by adding the following text to the top of
 your file, before any code:
