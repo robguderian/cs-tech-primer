@@ -14,6 +14,9 @@ is the name of the go program you're trying to run.  While this will run your
 program, it won't create an executable.  If you want to create an executable,
 you use the command `go build filename.go`.
 
+If you have multiple separated files that depend on each other, you can either
+run it with `go run .`, or you can create an executable with `go build`.
+
 ---
 
 Assigning Variables
@@ -24,17 +27,17 @@ There are two ways to assign variables in Go:
 1. Use the `:=` operator, and Go will automatically determine the variable
 type for you:
 
-```go
-x := 10
-y := 1e14
-```
+    ```go
+    x := 10
+    y := 1e14
+    ```
 
 2. Use explicit declaration:
 
-```go
-var x int = 10
-const y int64 = 1e14
-```
+    ```go
+    var x int = 10
+    const y int64 = 1e14
+    ```
 
 - If you use explicit declaration, you must specify if the variable will be a
 constant (using `const`), or a regular variable (using `var`).
@@ -109,13 +112,13 @@ bracket.
 
 ```go
 func factorial(num int) int{
-	returnValue := 1 // value to be returned
+    returnValue := 1 // value to be returned
 
-	if num > 1{
-		returnValue = num * factorial(num - 1)
-	}
+    if num > 1{
+        returnValue = num * factorial(num - 1)
+    }
 
-	return returnValue
+    return returnValue
 }
 ```
 
@@ -123,14 +126,14 @@ You can return as many results as you want:
 
 ```go
 func foo() (string, int) {
-	// ... implementation
-	return "test", -1
+    // ... implementation
+    return "test", -1
 }
 ```
 
 - In this case, we're returning 2 (a string and an int).
 
-### Naked Returns ###
+### Naked Returns
 
 It's also possible to return from a function without stating a value after the
 return keyword.  This is called a naked return.  It will return the variables
@@ -138,9 +141,9 @@ that are specified in the function declaration:
 
 ```go
 func bar() (x, y int){
-	x := 10
-	y := 20
-	return // this returns x and y
+    x := 10
+    y := 20
+    return // this returns x and y
 }
 ```
 
@@ -177,7 +180,7 @@ Go doesn't have classes.  Instead, it uses:
 - Interfaces
 - Embedding
 
-### Structs ###
+### Structs
 
 Structs work like you'd expect from other languages.  You declare them with
 the keywords `type` and `struct` in the form `type stuctName struct`, where
@@ -186,8 +189,8 @@ the fields within it in curly brackets:
 
 ```go
 type Person struct {
-	name string
-	age uint8 // 0 to 128
+    name string
+    age uint8 // 0 to 128
 }
 ```
 
@@ -215,14 +218,14 @@ Fields can be accessed with the dot notation:
 fmt.Println(john.name) // prints "John Doe"
 ```
 
-### Methods ###
+### Methods
 
 Methods look similar to functions, but have an extra set of brackets before
 the function name that tells you which Struct this method is attached to:
 
 ```go
 func (person Person) GetName() string {
-	return person.name
+    return person.name
 }
 ```
 
