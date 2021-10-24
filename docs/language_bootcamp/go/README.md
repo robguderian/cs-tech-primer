@@ -38,6 +38,7 @@ const y int64 = 1e14
 
 - If you use explicit declaration, you must specify if the variable will be a
 constant (using `const`), or a regular variable (using `var`).
+  - constants cannot be declared using `:=`.
 - Note that the variable type comes after the variable name.  This is a common
 feature present in other areas of Go (example: parameters in functions).
 
@@ -77,6 +78,25 @@ Things of note:
 
 - byte is typically used in place of char, and is an alias for uint8
 - rune is typically used for unicode, and is an alias for int32
+- If you don't explicitly declare the value for a variable, it's assigned
+its zero value:
+  - 0 for numeric types
+  - false for boolean types
+  - "" (empty string) for strings
+
+---
+
+Bit Shifting
+------------
+
+Go can perform bit shifting with the operators `<<` and `>>` for left and right
+bit-wise shifting.
+
+```go
+x := 2
+y := x << 1 // y = x * 2 = 4
+z := y >> 1 // z = y / 2 = 2
+```
 
 ---
 
