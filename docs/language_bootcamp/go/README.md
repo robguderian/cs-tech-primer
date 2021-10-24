@@ -184,7 +184,7 @@ Go doesn't have classes.  Instead, it uses:
 
 Structs work like you'd expect from other languages.  You declare them with
 the keywords `type` and `struct` in the form `type stuctName struct`, where
-structName is the name of the struct you wish you create.  You can then specify
+structName is the name of the struct you wish to create.  You can then specify
 the fields within it in curly brackets:
 
 ```go
@@ -210,9 +210,9 @@ jane := Person{"Jane Doe", 22}
 - john is a Person struct, with name "John Doe", and age "23".
 - jane is a Person struct, with name "Jane Doe", and age "22".
 - Both declaration styles are valid, but the more explicit declaration shown
-on john is preferred as it's easier to tell fields are which.
+on john is preferred as it's easier to tell which fields are which.
 
-Fields can be accessed with the dot notation:
+Fields can be accessed with dot notation:
 
 ```go
 fmt.Println(john.name) // prints "John Doe"
@@ -221,7 +221,7 @@ fmt.Println(john.name) // prints "John Doe"
 ### Methods
 
 Methods look similar to functions, but have an extra set of brackets before
-the function name that tells you which Struct this method is attached to:
+the function name that tells you which Struct the method is attached to:
 
 ```go
 func (person Person) GetName() string {
