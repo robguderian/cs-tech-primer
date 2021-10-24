@@ -9,7 +9,10 @@ using it.
 Running Go
 ----------
 
-
+You can run a Go file using the command `go run filename.go`, where filename.go
+is the name of the go program you're trying to run.  While this will run your
+program, it won't create an executable.  If you want to create an executable,
+you use the command `go build filename.go`.
 
 ---
 
@@ -37,6 +40,12 @@ const y int64 = 1e14
 constant (using `const`), or a regular variable (using `var`).
 - Note that the variable type comes after the variable name.  This is a common
 feature present in other areas of Go (example: parameters in functions).
+
+You can also assign multiple variables in a single line:
+
+```go
+x, y int := 10, 20
+```
 
 ---
 
@@ -74,7 +83,9 @@ Things of note:
 Functions
 ---------
 
-Go uses the `func` keyword to define a new function.
+Go uses the `func` keyword to define a new function.  When defining a function,
+the value to be returned comes after the parenthesis and before the open curly
+bracket.
 
 ```go
 func factorial(num int) int{
@@ -85,6 +96,31 @@ func factorial(num int) int{
 	}
 
 	return returnValue
+}
+```
+
+You can return as many results as you want:
+
+```go
+func foo() (string, int) {
+	// ... implementation
+	return "test", -1
+}
+```
+
+- In this case, we're returning 2 (a string and an int).
+
+### Naked Returns ###
+
+It's also possible to return from a function without stating a value after the
+return keyword.  This is called a naked return.  It will return the variables
+that are specified in the function declaration:
+
+```go
+func bar() (x, y int){
+	x := 10
+	y := 20
+	return // this returns x and y
 }
 ```
 
@@ -107,7 +143,6 @@ import (
     "fmt"
     "strings"
 )
-
 ```
 
 ---
@@ -117,9 +152,65 @@ Classes
 
 Go doesn't have classes.  Instead, it uses:
 
-- Interfaces
-- Methods/Functions
 - Structs
+- Methods/Functions
+- Interfaces
 - Embedding
+
+### Structs ###
+
+Structs work like you'd expect from other languages.  You declare them with
+the keywords `type` and `struct` in the form `type stuctName struct`, where
+structName is the name of the struct you wish you create.  You can then specify
+the fields within it in curly brackets:
+
+```go
+type Person struct {
+	name string
+	age uint8 // 0 to 128
+}
+```
+
+- Above is the declaration of the Person struct, with fields name (string) and
+age (int).
+
+Structs are declared as follows:
+
+```go
+john := Person{name: "John Doe", age: 23}
+
+// OR
+
+jane := Person{"Jane Doe", 22}
+```
+
+- john is a Person struct, with name "John Doe", and age "23".
+- jane is a Person struct, with name "Jane Doe", and age "22".
+- Both declaration styles are valid, but the more explicit declaration shown
+on john is preferred as it's easier to tell fields are which.
+
+Fields can be accessed with the dot notation:
+
+```go
+fmt.Println(john.name) // prints "John Doe"
+```
+
+### Methods ###
+
+Methods look similar to functions, but have an extra set of brackets before
+the function name that tells you which Struct this method is attached to:
+
+```go
+func (person Person) GetName() string {
+	return person.name
+}
+```
+
+- In this case, the method `GetName()` is attached to the `Person` struct.
+
+---
+
+Go Routines
+-----------
 
 ---
