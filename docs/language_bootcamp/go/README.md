@@ -231,9 +231,19 @@ func (person Person) GetName() string {
 
 - In this case, the method `GetName()` is attached to the `Person` struct.
 
+### Interfaces
+
+[TODO]
+
+### Embedding
+
+[TODO]
+
 ---
 
 Go Routines
 -----------
+
+[TODO]
 
 ---
