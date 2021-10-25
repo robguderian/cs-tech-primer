@@ -275,7 +275,7 @@ class Employee {
   }
 
   #calculateBonus () {
-  // implementation
+    // implementation
   }
 }
 ```
