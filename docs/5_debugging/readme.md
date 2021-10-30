@@ -22,6 +22,8 @@ By the end of this module students should be able to:
 `printf("I am here")`
 ---------------------
 
+![Too true...](./images/red_pill.jpg)
+
 We all start here: have a print statement to show us how our program is
 executing. This can be as simple as the title of this section: showing us
 that the program got to this line of code, or, maybe print out the current
@@ -65,7 +67,8 @@ There is debuggers for (almost?) every language:
 
 This is the **number one** thing we use to debug our code. We can
 set breakpoints where we want our code to **stop** running, so we can inspect
-our code at that point. We can then do a number of things.  These are the
+our code at that point, including view the stack, so we can see
+*how we got here*. We can then do a number of things.  These are the
 usual names for the actions:
 
 * Step/step in: run the next line of code. If the next line of code is a
@@ -93,3 +96,17 @@ When we're stopped. We can inspect variables. If we are curious about
 certain variables, we can **watch** them. This is an easy-to-get-to
 list of variables we care about. We can inspect **any** variables that we are
 curious to see the state of, but the watch list makes it more convenient.
+
+Short chapter?
+--------------
+
+Maybe a little. Check out the demos - this is best seen, not read!
+
+Activities
+----------
+
+TODO
+
+* Python script to debug, pass as value/reference immutable issues.
+* C file that has malloc issue.
+* Java file with integer overflow
