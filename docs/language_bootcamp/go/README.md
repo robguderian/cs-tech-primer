@@ -190,7 +190,7 @@ the fields within it in curly brackets:
 ```go
 type Person struct {
     name string
-    age uint8 // 0 to 256
+    age uint8 // 0 to 255
 }
 ```
 
