@@ -4,7 +4,7 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'standard'
+    'xo'
   ],
   parserOptions: {
     ecmaVersion: 12,
