@@ -70,11 +70,11 @@ The tools
 These are all huge, and deep. All of these are superficial introductions to
 the tools:
 
-* [find](find.md) - find stuff, execute things.
-* [sed](sed.md) - Stream EDitor, takes text input, changes it, outputs it.
-* [awk](awk.md) - a very rich programming language for processing text.
-* [tar](tar.md) - Tape ARchiver... umm. More useful than you'd expect.
-* [xargs](xargs.md) - build commands from inputs.
+* [find](./find.md) - find stuff, execute things.
+* [sed](./sed.md) - Stream EDitor, takes text input, changes it, outputs it.
+* [awk](./awk.md) - a very rich programming language for processing text.
+* [tar](./tar.md) - Tape ARchiver... umm. More useful than you'd expect.
+* [xargs](./xargs.md) - build commands from inputs.
 
 Permissions
 -----------
