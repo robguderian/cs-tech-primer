@@ -95,6 +95,11 @@
                         },
                         {
                             "type": "resource",
+                            "fileName": "2_shell/images/meta_key.jpg",
+                            "title": "meta_key.jpg"
+                        },
+                        {
+                            "type": "resource",
                             "fileName": "2_shell/images/uporp.jpg",
                             "title": "uporp.jpg"
                         },
@@ -163,6 +168,31 @@
                     "title": "unix permissions",
                     "type": "topic",
                     "fileName": "6_unix/permissions.md"
+                },
+                {
+                    "title": "sed",
+                    "type": "topic",
+                    "fileName": "6_unix/sed.md"
+                },
+                {
+                    "title": "awk",
+                    "type": "topic",
+                    "fileName": "6_unix/awk.md"
+                },
+                {
+                    "title": "find",
+                    "type": "topic",
+                    "fileName": "6_unix/find.md"
+                },
+                {
+                    "title": "tar",
+                    "type": "topic",
+                    "fileName": "6_unix/tar.md"
+                },
+                {
+                    "title": "xargs",
+                    "type": "topic",
+                    "fileName": "6_unix/xargs.md"
                 }
             ]
         },

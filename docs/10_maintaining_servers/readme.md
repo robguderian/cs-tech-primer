@@ -20,3 +20,5 @@ By the end of this module, student will be able to...
 * understand how to create a daemon.
 * be able to send syslog to a log aggregator.
 * use a tools for creating a VM
+* `cron` to schedule tasks
+* how to start things on startup (intro, and @reboot)
