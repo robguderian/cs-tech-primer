@@ -82,7 +82,7 @@ Permissions
 UNIX file permissions are a frequent cause of friction. They are generally
 not that difficult, but only if you understand the way it works.
 
-[Though it requires its own chapter](permissions.md). I swear it's not that
+[Though it requires its own chapter](./permissions.md). I swear it's not that
 bad.
 
 Activities
