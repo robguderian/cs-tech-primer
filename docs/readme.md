@@ -46,7 +46,7 @@ Topics
   * gdb/pdb breakpoints, stepping stack traces
   * some guis
     * intro this. these change all the time
-* [Unix Power Tools](6_unix)
+* [Useful Unix Tools](6_unix)
   * linux vs unix vs mac
   * tools
     * `awk` (alternatively `cut`)
