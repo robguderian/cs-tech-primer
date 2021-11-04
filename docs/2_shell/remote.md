@@ -10,7 +10,7 @@ but the idea should be approximately the same.
 By the end of this module, student should be able to...
 
 * `ssh` into a remote system, using the appropriate user name
-  (`ssh bobYourUncle@system.domain)
+  (`ssh bobYourUncle@system.domain`)
 * use `scp` to copy the file/folder onto a remote system
 * use `scp` to copy the file/folder from a remote system
 * use `rsync` to copy a folder to a remote system
@@ -19,7 +19,7 @@ By the end of this module, student should be able to...
 * be able to use an FTP client to move files, open files for editing
 * be able to use mobixterm (or similar) to move files, edit files
 * be able to use VSCode to edit a remote file, using a plugin
-* know why 'pushing to home' doesn't work\
+* know why 'pushing to home' doesn't work
 * know about VNC and other remote windowing options
 
 The secure shell
