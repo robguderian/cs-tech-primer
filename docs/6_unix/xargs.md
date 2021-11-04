@@ -16,7 +16,7 @@ Example, find all `readme.md` files, and print them out:
 find . | grep readme.md | xargs cat
 ```
 
-([looks familiar](find.md))
+([looks familiar](./find.md))
 
 More advanced
 -------------
