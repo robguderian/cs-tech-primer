@@ -2,7 +2,7 @@ Products database
 ==================
 
 This is a database created by James Tully,
-with "As seen on TV products" data from 
+with "As seen on TV products" data from
 [As Seen On TV US](http://www.asseenontvus.com) amd
 [As Seen On TV Video](https://www.asseenontvvideo.com/all-products-a-z.html).
 
