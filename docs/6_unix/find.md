@@ -40,7 +40,7 @@ But I want the contents
 -----------------------
 
 Also possible. There is scope-creep within `find` to give us
-[`xargs`-like](xargs.md) functionality.
+[`xargs`-like](./xargs.md) functionality.
 
 The `{}` is placeholder for all the paths that are found by `find`.
 

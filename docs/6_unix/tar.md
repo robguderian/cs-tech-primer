@@ -85,7 +85,8 @@ Now, this is amazing...
 `tar czvf - some_file` will take `some_file` and tar/gz it ... and send the
 file to.... standard out!
 
-Reminder that [ssh can be passed an argument to be run](../2_shell/remote.md),
+Reminder that
+[ssh can be passed an argument to be run](../2_shell/remote.md),
 which could... be the `tar` command.
 
 So... idea: run `tar` to collect all your files, make them into 1 large file,

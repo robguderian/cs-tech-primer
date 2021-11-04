@@ -16,7 +16,7 @@ Example, find all `readme.md` files, and print them out:
 find . | grep readme.md | xargs cat
 ```
 
-([looks familiar](find.md))
+([looks familiar](./find.md))
 
 More advanced
 -------------
@@ -44,8 +44,8 @@ same as `rm -rf /this and that` (the latter removing the files `/this`, then the
 local files `that`, `and`). Quotes are your friend, in this case.
 
 You need to *break* the quotes to make sure they get passed to xargs, rather
-than interpreted immediately. Consider the files `Jean-Claude` and the file with a
-space in it `Van Damme`.
+than interpreted immediately. Consider the files `Jean-Claude` and the file
+with a space in it `Van Damme`.
 
 ```sh
 $ ls

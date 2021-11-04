@@ -80,6 +80,11 @@
                     "fileName": "2_shell/piping.md"
                 },
                 {
+                    "title": "Remote Systems",
+                    "type": "topic",
+                    "fileName": "2_shell/remote.md"
+                },
+                {
                     "title": "images",
                     "type": "module",
                     "children": [
@@ -92,6 +97,11 @@
                             "type": "resource",
                             "fileName": "2_shell/images/drake_up.png",
                             "title": "drake_up.png"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "2_shell/images/meta_key.png",
+                            "title": "meta_key.png"
                         },
                         {
                             "type": "resource",
@@ -163,6 +173,31 @@
                     "title": "unix permissions",
                     "type": "topic",
                     "fileName": "6_unix/permissions.md"
+                },
+                {
+                    "title": "sed",
+                    "type": "topic",
+                    "fileName": "6_unix/sed.md"
+                },
+                {
+                    "title": "awk",
+                    "type": "topic",
+                    "fileName": "6_unix/awk.md"
+                },
+                {
+                    "title": "find",
+                    "type": "topic",
+                    "fileName": "6_unix/find.md"
+                },
+                {
+                    "title": "tar",
+                    "type": "topic",
+                    "fileName": "6_unix/tar.md"
+                },
+                {
+                    "title": "xargs",
+                    "type": "topic",
+                    "fileName": "6_unix/xargs.md"
                 }
             ]
         },
