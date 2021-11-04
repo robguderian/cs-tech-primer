@@ -80,6 +80,11 @@
                     "fileName": "2_shell/piping.md"
                 },
                 {
+                    "title": "Remote Systems",
+                    "type": "topic",
+                    "fileName": "2_shell/remote.md"
+                },
+                {
                     "title": "images",
                     "type": "module",
                     "children": [
