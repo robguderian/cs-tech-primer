@@ -1,8 +1,10 @@
 CS tech primer
 =============
 
-Course content is all under [docs]. Be sure to read
-the [readme there][docs/readme.md]. That folder is the one
+Visit the [actual rendered site](https://robguderian.github.io/cs-tech-primer/)!
+
+Course content is all under [docs](./docs/readme.md). Be sure to read
+the [readme there](docs/readme.md). That folder is the one
 published to UMLearn.
 
 Adminstration, and other meta documentation can go in folders off

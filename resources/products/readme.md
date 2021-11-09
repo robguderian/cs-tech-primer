@@ -1,7 +1,7 @@
 Products database
 ==================
 
-This is a database created by James Tully,
+This is a database created by [James Tully](https://github.com/MagikEh),
 with "As seen on TV products" data from
 [As Seen On TV US](http://www.asseenontvus.com) amd
 [As Seen On TV Video](https://www.asseenontvvideo.com/all-products-a-z.html).
