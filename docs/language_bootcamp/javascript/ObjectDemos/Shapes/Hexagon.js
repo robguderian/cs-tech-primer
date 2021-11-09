@@ -31,4 +31,4 @@ class Hexagon extends Shape {
 	}
 }
 
-module.exports = Hexagon;
+module.exports = Hexagon

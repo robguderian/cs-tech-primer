@@ -27,4 +27,4 @@ class Professor extends Person {
 	}
 }
 
-module.exports = Professor;
+module.exports = Professor

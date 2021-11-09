@@ -232,7 +232,7 @@ In order to be able to import a file you made, you need to add the following
 line of code (typically at the bottom of your file):
 
 ```javascript
-module.exports = Person;
+module.exports = Person
 ```
 
 - `Person` is just a continuation of the example above.  You can change this.
@@ -269,9 +269,9 @@ variable or method private and therefore inaccessible from outside your class.
 class Employee {
     #_salary; // Private instance variables need to be declared outside methods
 
-    constructor(name, salary) {
-        this.name = name;
-        this.#_salary = salary;
+    constructor (name, salary) {
+        this.name = name
+        this.#_salary = salary
     }
 
     #calculateBonus() {

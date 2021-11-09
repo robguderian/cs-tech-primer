@@ -192,7 +192,9 @@ There's [a whole suite of things we can do with the history](https://www.gnu.org
 but I'll highlight the really useful ones here.
 
 The gnu page uses C for 'ctrl' and M for 'meta'. Meta key is 'alt' for Windows,
-and configurable on macs - often set to the 'options' key.
+and configurable on macs - often set to the 'option' key.
+
+![Meta as options key](./images/meta_key.png)
 
 You should, to be a fancy person, stay on the home row. Up and down are for
 scrubs.
