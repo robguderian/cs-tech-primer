@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-const FileIO = require('./FileIO')
-const readlineSync = require('readline-sync')
+const FileIO = require('./FileIO');
+const readlineSync = require('readline-sync');
 
 // ------------------------------------------------------
 // listSubstring
@@ -16,29 +16,30 @@ const readlineSync = require('readline-sync')
 //      - substr is the substring to check each string for.
 //
 // ------------------------------------------------------
-function listSubstring (content, substr) {
-  if (arguments.length !== 2 || !Array.isArray(content) ||
-        typeof (substr) !== 'string') {
-    throw new Error("Invalid use of Strings' listSubstring() function." +
-            '  It takes 2 arguments, an array os strings, and a string to ' +
-            'search for.')
-  }
+function listSubstring(content, substr) {
+	if (arguments.length !== 2 || !Array.isArray(content)
+        || typeof (substr) !== 'string') {
+		throw new Error('Invalid use of Strings\' listSubstring() function.'
+            + '  It takes 2 arguments, an array os strings, and a string to '
+            + 'search for.');
+	}
 
-  const list = [] // list of items containing substr
+	const list = []; // List of items containing substr
 
-  // check every item to see if there's a substring in it containing substr
-  for (let i = 0; i < content.length; i++) {
-    if (typeof (content[i]) === 'string' && content[i].includes(substr)) {
-      list.push(content[i])
-    }
-  }
+	// check every item to see if there's a substring in it containing substr
+	for (let i = 0; i < content.length; i++) {
+		if (typeof (content[i]) === 'string' && content[i].includes(substr)) {
+			list.push(content[i]);
+		}
+	}
 
-  console.log('\nThe substring "%s" was found %d times.  It was found in:',
-    substr, list.length)
+	console.log('\nThe substring "%s" was found %d times.  It was found in:',
+		substr,
+		list.length);
 
-  for (let i = 0; i < list.length; i++) {
-    console.log('\t%s', list[i])
-  }
+	for (let i = 0; i < list.length; i++) {
+		console.log('\t%s', list[i]);
+	}
 }
 
 // ------------------------------------------------------
@@ -52,37 +53,37 @@ function listSubstring (content, substr) {
 //      - content is the array of strings to check.
 //
 // ------------------------------------------------------
-function listLetterFreq (content) {
-  if (arguments.length !== 1 || !Array.isArray(content)) {
-    throw new Error("Invalid use of Strings' listLetterFreq() function." +
-            '  It takes 1 argument, an array of strings.')
-  }
+function listLetterFreq(content) {
+	if (arguments.length !== 1 || !Array.isArray(content)) {
+		throw new Error('Invalid use of Strings\' listLetterFreq() function.'
+            + '  It takes 1 argument, an array of strings.');
+	}
 
-  const knownLetter = {} // key-value pairs of letters and counts
-  let totalNumLetter = 0 // how many letters are in content
-  let letter // an individual letter in a string
+	const knownLetter = {}; // Key-value pairs of letters and counts
+	let totalNumLetter = 0; // How many letters are in content
+	let letter; // An individual letter in a string
 
-  for (let i = 0; i < content.length; i++) {
-    if (typeof (content[i]) === 'string') {
-      for (let j = 0; j < content[i].length; j++) {
-        letter = content[i][j]
+	for (let i = 0; i < content.length; i++) {
+		if (typeof (content[i]) === 'string') {
+			for (let j = 0; j < content[i].length; j++) {
+				letter = content[i][j];
 
-        if (knownLetter[letter] === undefined) {
-          knownLetter[letter] = 1
-        } else {
-          knownLetter[letter]++
-        }
-      }
+				if (knownLetter[letter] === undefined) {
+					knownLetter[letter] = 1;
+				} else {
+					knownLetter[letter]++;
+				}
+			}
 
-      totalNumLetter += content[i].length
-    }
-  }
+			totalNumLetter += content[i].length;
+		}
+	}
 
-  console.log('\nThe letter frequencies in the provided content are:')
+	console.log('\nThe letter frequencies in the provided content are:');
 
-  for (const item in knownLetter) {
-    console.log('\t%s: %d', item, knownLetter[item] / totalNumLetter)
-  }
+	for (const [key, value] of Object.entries(knownLetter)) {
+		console.log('\t%s: %d', key, value / totalNumLetter);
+	}
 }
 
 // ------------------------------------------------------
@@ -97,26 +98,26 @@ function listLetterFreq (content) {
 //      - content is the array of strings to check.
 //
 // ------------------------------------------------------
-function listPalindrome (content) {
-  if (arguments.length !== 1 || !Array.isArray(content)) {
-    throw new Error("Invalid use of Strings' listPalindrome() function." +
-            '  It takes 1 argument, an array of strings.')
-  }
+function listPalindrome(content) {
+	if (arguments.length !== 1 || !Array.isArray(content)) {
+		throw new Error('Invalid use of Strings\' listPalindrome() function.'
+            + '  It takes 1 argument, an array of strings.');
+	}
 
-  const list = [] // contains a list of all palindromes found
+	const list = []; // Contains a list of all palindromes found
 
-  for (let i = 0; i < content.length; i++) {
-    if (typeof (content[i]) === 'string' && isPalindrome(content[i])) {
-      list.push(content[i])
-    }
-  }
+	for (let i = 0; i < content.length; i++) {
+		if (typeof (content[i]) === 'string' && isPalindrome(content[i])) {
+			list.push(content[i]);
+		}
+	}
 
-  console.log('\nThere are %d palindromes in the provided content.  They ' +
-        'are:', list.length)
+	console.log('\nThere are %d palindromes in the provided content.  They '
+        + 'are:', list.length);
 
-  for (let i = 0; i < list.length; i++) {
-    console.log('\t%s', list[i])
-  }
+	for (let i = 0; i < list.length; i++) {
+		console.log('\t%s', list[i]);
+	}
 }
 
 // ------------------------------------------------------
@@ -131,39 +132,39 @@ function listPalindrome (content) {
 // RETURN: Returns a boolean (true if it's a palindrome, otherwise false)
 //
 // ------------------------------------------------------
-function isPalindrome (word) {
-  if (arguments.length !== 1 || typeof (word) !== 'string') {
-    throw new Error('Invalid use of isPalindrome().  It takes 1 argument' +
-            ', a string.')
-  }
+function isPalindrome(word) {
+	if (arguments.length !== 1 || typeof (word) !== 'string') {
+		throw new Error('Invalid use of isPalindrome().  It takes 1 argument'
+            + ', a string.');
+	}
 
-  let isGood = true // is it a palindrome?
-  const wordLength = word.length // length of the word we're checking
-  let rightIndex // index for the letter on the right half of the word
-  let leftIndex // index for the letter on the left half of the word
+	let isGood = true; // Is it a palindrome?
+	const wordLength = word.length; // Length of the word we're checking
+	let rightIndex; // Index for the letter on the right half of the word
+	let leftIndex; // Index for the letter on the left half of the word
 
-  // skip empty string and single letter words b/c they are palindromes
-  if (wordLength >= 2) {
-    if (wordLength % 2 === 0) { // left right setup for even words
-      rightIndex = wordLength / 2
-      leftIndex = rightIndex - 1
-    } else { // left right setup for odd word
-      // skip the middle character for odd words
-      rightIndex = Math.floor(wordLength / 2) + 1
-      leftIndex = rightIndex - 2
-    }
+	// skip empty string and single letter words b/c they are palindromes
+	if (wordLength >= 2) {
+		if (wordLength % 2 === 0) { // Left right setup for even words
+			rightIndex = wordLength / 2;
+			leftIndex = rightIndex - 1;
+		} else { // Left right setup for odd word
+			// skip the middle character for odd words
+			rightIndex = Math.floor(wordLength / 2) + 1;
+			leftIndex = rightIndex - 2;
+		}
 
-    // check the mirroring of the word
-    for (; rightIndex < wordLength && isGood; rightIndex++) {
-      if (word[rightIndex] !== word[leftIndex]) { // right not match left?
-        isGood = false // it's NOT a palindrome
-      }
+		// Check the mirroring of the word
+		for (; rightIndex < wordLength && isGood; rightIndex++) {
+			if (word[rightIndex] !== word[leftIndex]) { // Right not match left?
+				isGood = false; // It's NOT a palindrome
+			}
 
-      leftIndex-- // shift the left index
-    }
-  }
+			leftIndex--; // Shift the left index
+		}
+	}
 
-  return isGood // was it a palindrome or not (true/false)
+	return isGood; // Was it a palindrome or not (true/false)
 }
 
 // ------------------------------------------------------
@@ -176,17 +177,17 @@ function isPalindrome (word) {
 //      - content is the array to pass to other functions.
 //
 // ------------------------------------------------------
-function listThings (content) {
-  if (arguments.length !== 1 || !Array.isArray(content)) {
-    throw new Error("Invalid use of Strings' listThings() function.  It" +
-            ' takes 1 argument, an array to read from.')
-  }
+function listThings(content) {
+	if (arguments.length !== 1 || !Array.isArray(content)) {
+		throw new Error('Invalid use of Strings\' listThings() function.  It'
+            + ' takes 1 argument, an array to read from.');
+	}
 
-  const searchFor = 'pass' // what substring do you want to search for
+	const searchFor = 'pass'; // What substring do you want to search for
 
-  listSubstring(content, searchFor)
-  listLetterFreq(content)
-  listPalindrome(content)
+	listSubstring(content, searchFor);
+	listLetterFreq(content);
+	listPalindrome(content);
 }
 
 // ------------------------------------------------------
@@ -202,21 +203,21 @@ function listThings (content) {
 // RETURN: Returns an array of strings from the provided file.
 //
 // ------------------------------------------------------
-function getContentArray (filename) {
-  if (arguments.length !== 1 || typeof (filename) !== 'string') {
-    throw new Error("Invalid use of Strings' listThings() function.  It" +
-            ' takes 1 argument, the name of the file to read from.')
-  }
+function getContentArray(filename) {
+	if (arguments.length !== 1 || typeof (filename) !== 'string') {
+		throw new Error('Invalid use of Strings\' listThings() function.  It'
+            + ' takes 1 argument, the name of the file to read from.');
+	}
 
-  let content = FileIO.readFile(filename)
+	let content = FileIO.readFile(filename);
 
-  // make content an array, where each password has its own index
-  content = content.split('\n')
+	// Make content an array, where each password has its own index
+	content = content.split('\n');
 
-  console.log('The provided file contains %d lines to look through.',
-    content.length)
+	console.log('The provided file contains %d lines to look through.',
+		content.length);
 
-  return content
+	return content;
 }
 
 // ------------------------------------------------------
@@ -231,45 +232,45 @@ function getContentArray (filename) {
 //      - content is an array of strings to check for a given password.
 //
 // ------------------------------------------------------
-function checkOwned (content) {
-  if (arguments.length !== 1 || !Array.isArray(content)) {
-    throw new Error("Invalid use of Strings' checkOwned() function.  It " +
-            'takes 1 argument, an array.')
-  }
+function checkOwned(content) {
+	if (arguments.length !== 1 || !Array.isArray(content)) {
+		throw new Error('Invalid use of Strings\' checkOwned() function.  It '
+            + 'takes 1 argument, an array.');
+	}
 
-  const message = '\nEnter the password you want to check'
-  const promptLine = ':\n> '
-  const exitPrompt = ', or enter -1 to exit'
-  const initMessage = message + promptLine
-  const continueMessage = message + exitPrompt + promptLine
+	const message = '\nEnter the password you want to check';
+	const promptLine = ':\n> ';
+	const exitPrompt = ', or enter -1 to exit';
+	const initMessage = message + promptLine;
+	const continueMessage = message + exitPrompt + promptLine;
 
-  let found // is the password found?
-  let keepChecking = true // should we continue asking for passwords?
-  let userInput // what password to check?
+	let found; // Is the password found?
+	let keepChecking = true; // Should we continue asking for passwords?
+	let userInput; // What password to check?
 
-  console.log("\n**** Checking passwords to see if you're owned. ****")
+	console.log('\n**** Checking passwords to see if you\'re owned. ****');
 
-  userInput = readlineSync.question(initMessage)
+	userInput = readlineSync.question(initMessage);
 
-  while (keepChecking) {
-    found = false
+	while (keepChecking) {
+		found = false;
 
-    for (let i = 0; i < content.length && !found; i++) {
-      if (content[i] === userInput) {
-        found = true
+		for (let i = 0; i < content.length && !found; i++) {
+			if (content[i] === userInput) {
+				found = true;
 
-        console.log('OWNED! "%s" was found on line "%d" in the ' +
-                    'file.', userInput, i)
-      }
-    }
+				console.log('OWNED! "%s" was found on line "%d" in the '
+                    + 'file.', userInput, i);
+			}
+		}
 
-    if (!found) {
-      console.log("SAFE! \"%s\" wasn't found in the file!", userInput)
-    }
+		if (!found) {
+			console.log('SAFE! "%s" wasn\'t found in the file!', userInput);
+		}
 
-    userInput = readlineSync.question(continueMessage)
-    keepChecking = userInput !== '-1'
-  }
+		userInput = readlineSync.question(continueMessage);
+		keepChecking = userInput !== '-1';
+	}
 }
 
 // ------------------------------------------------------
@@ -282,36 +283,36 @@ function checkOwned (content) {
 //      - inputString is the string to search in.
 //
 // ------------------------------------------------------
-function indexExample (inputString) {
-  if (arguments.length !== 1 || typeof (inputString) !== 'string') {
-    throw new Error("Invalid use of Strings' indexExample() function. It" +
-            ' takes 1 argument, a string.')
-  }
+function indexExample(inputString) {
+	if (arguments.length !== 1 || typeof (inputString) !== 'string') {
+		throw new Error('Invalid use of Strings\' indexExample() function. It'
+            + ' takes 1 argument, a string.');
+	}
 
-  let symbol // what symbol you're searching the position of
+	let symbol; // What symbol you're searching the position of
 
-  console.log('\n**** Starting an index example. ****')
-  console.log('\nThe provided string you want to search in is "%s".',
-    inputString)
+	console.log('\n**** Starting an index example. ****');
+	console.log('\nThe provided string you want to search in is "%s".',
+		inputString);
 
-  symbol = readlineSync.question('Which symbol do you want to know the ' +
-        'position of in the provided string?\n> ')
+	symbol = readlineSync.question('Which symbol do you want to know the '
+        + 'position of in the provided string?\n> ');
 
-  while (symbol.length > 1) {
-    symbol = readlineSync.question('Invalid input. A symbol is a single' +
-            ' character. Try again:\n> ')
-  }
+	while (symbol.length > 1) {
+		symbol = readlineSync.question('Invalid input. A symbol is a single'
+            + ' character. Try again:\n> ');
+	}
 
-  // the first position of the symbol you're searching for
-  const position = inputString.indexOf(symbol)
+	// The first position of the symbol you're searching for
+	const position = inputString.indexOf(symbol);
 
-  console.log('The symbol "%s" is at position "%d" in the inputString ' +
-        '"%s".', symbol, position, inputString)
+	console.log('The symbol "%s" is at position "%d" in the inputString '
+        + '"%s".', symbol, position, inputString);
 
-  if (position === -1) {
-    console.log("A position of \"-1\" means that it wasn't found in the " +
-            'inputString.')
-  }
+	if (position === -1) {
+		console.log('A position of "-1" means that it wasn\'t found in the '
+            + 'inputString.');
+	}
 }
 
 // ------------------------------------------------------
@@ -322,13 +323,13 @@ function indexExample (inputString) {
 //          listThings() and checkOwned(), then calls indexExample().
 //
 // ------------------------------------------------------
-function main () {
-  const filename = '../../../resources/passwords/rockyou.txt'
-  const content = getContentArray(filename)
+function main() {
+	const filename = '../../../resources/passwords/rockyou.txt';
+	const content = getContentArray(filename);
 
-  listThings(content)
-  checkOwned(content)
-  indexExample(filename)
+	listThings(content);
+	checkOwned(content);
+	indexExample(filename);
 }
 
-main() // run main() function.
+main(); // Run main() function.

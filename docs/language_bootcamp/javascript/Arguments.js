@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 
 // ------------------------------------------------------
 // printArguments
@@ -11,14 +12,14 @@
 //              node Arguments.js 2 3 4
 //
 // ------------------------------------------------------
-function printArguments () {
-  const NUM_ARGUMENTS = process.argv.length // number of arguments
+function printArguments() {
+	const NUM_ARGUMENTS = process.argv.length; // Number of arguments
 
-  console.log('You passed %d arguments.  They were:', NUM_ARGUMENTS)
+	console.log('You passed %d arguments.  They were:', NUM_ARGUMENTS);
 
-  for (let i = 0; i < NUM_ARGUMENTS; i++) {
-    console.log('\t%s', process.argv[i])
-  }
+	for (let i = 0; i < NUM_ARGUMENTS; i++) {
+		console.log('\t%s', process.argv[i]);
+	}
 }
 
-printArguments() // run printArguments() function.
+printArguments(); // Run printArguments() function.
