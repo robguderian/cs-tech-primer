@@ -268,7 +268,7 @@ on Windows machines. Then, if a user has an account, they can log in with their
 username and password. Easy!
 
 Many people can be connected through RDP, each getting their own desktop
-environment.
+environment - but this all depends on the version of Windows you have!
 
 Activities
 ----------

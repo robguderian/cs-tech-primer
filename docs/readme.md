@@ -1,6 +1,11 @@
 
-University of Manitoba CS Missing semester
-==========================================
+University of Manitoba CS Topics Primer
+=======================================
+
+Stuff that is CS... but not CS? Let's talk about the ecosystem *around*
+programming, and how to do CS **well**. In university, we talk about
+*programming* and we talk about *algorithms*, but we often don't talk about
+all the tooling that is available *around* programming these algorithms.
 
 Inspired by [MIT's missing semester](https://missing.csail.mit.edu/), a toolkit for
 students to train students in hard tech skills that will help them succeed.
