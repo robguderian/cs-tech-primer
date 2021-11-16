@@ -13,6 +13,16 @@ We've seen 3rd year students in Operating Systems, Real Time Systems, and other
 technical courses struggle to use the tools - stumbling with the tools rather than
 focusing on the assignment at hand.
 
+The welcome video:
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/Q2AEZqczbvY"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
 Topics
 ------
 
