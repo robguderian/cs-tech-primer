@@ -235,6 +235,33 @@
             ]
         },
         {
+            "title": "Server Administration",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Server Administration",
+                    "type": "topic",
+                    "fileName": "10_maintaining_servers/readme.md"
+                },
+                {
+                    "title": "images",
+                    "type": "module",
+                    "children": [
+                        {
+                            "type": "resource",
+                            "fileName": "10_maintaining_servers/images/tail.gif",
+                            "title": "tail.gif"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "10_maintaining_servers/images/beastie.png",
+                            "title": "beastie.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Programming Language Bootcamp",
             "type": "module",
             "children": [
