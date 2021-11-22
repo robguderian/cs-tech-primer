@@ -22,7 +22,7 @@
                         {
                             "title": "main.py",
                             "type": "topic",
-                            "fileName": "1_languages/example_code/main.py"
+                            "fileName": "1_languages/example_code/imports/main.py"
                         },
                         {
                             "title": "libraries",
@@ -31,12 +31,12 @@
                                 {
                                     "title": "module1.py",
                                     "type": "topic",
-                                    "fileName": "1_languages/example_code/libraries/module1.py"
+                                    "fileName": "1_languages/example_code/imports/libraries/module1.py"
                                 },
                                 {
                                     "title": "module2.py",
                                     "type": "topic",
-                                    "fileName": "1_languages/example_code/libraries/module2.py"
+                                    "fileName": "1_languages/example_code/imports/libraries/module2.py"
                                 }
                             ]
                         }
