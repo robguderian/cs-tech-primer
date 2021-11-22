@@ -11,10 +11,10 @@ my_target: hello_world
 
 hello_world: hello_world.c
 	# now... build it
-	clang -o -WALL hello_world hello_world.c
+	clang -Wall -o hello_world hello_world.c
 
 run:
-	./my_target
+	./hello_world
 
 clean:
-	rm my_target
+	rm hello_world 

@@ -59,3 +59,17 @@ Note the `echo` to try out the command before you run it. That lets you inspect
 the command you've built before running it.
 
 Obviously you wouldn't delete files this way, `rm *` would do. But could!
+
+Executing one command per input
+-------------------------------
+
+What if we want to run one command per input (remember that inputs are
+whitespace-separated)? Depending on what you're hoping to pass
+the inputs to...
+
+```sh
+echo this that other | xargs -L 1 echo
+```
+
+Consider `tar`, you might want many tar files, not 1 huge `tar` file.
+So, you'd want to use `-L 1` to pass each input to a single `tar` command.

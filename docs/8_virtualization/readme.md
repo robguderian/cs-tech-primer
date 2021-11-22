@@ -16,6 +16,17 @@ By the end of this module, students will be able to...
 * know how docker works, and how it is just a VM
 * understand that we can build environments with Vagrant or similar
 
+Installing and running a VM:
+
+<iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/gEjvwp9a_Co"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
 This just sounds like a buzzword
 --------------------------------
 

@@ -86,6 +86,24 @@ thingIWant.o: thingItNeeds.c
 	path -to build thingIWant.o
 ```
 
+... that's it. You declare a rule set based on what you're
+building. If something needs to be built first, you can make it a dependency.
+Then, that rule will run *before* the one it is needed for.
+
+How make decides if something needs a recompilation
+---------------------------------------------------
+
+It's not as smart as you'd think. It just looks at the last modified
+time of the files.
+
+The documentation uses the term "out of date" to describe files items
+(really rules) that need to be re-run (aka recompiled).
+![The manual](https://www.gnu.org/software/make/manual/make.html#Rule-Syntax)
+explains that if the *dependent* file has a *more recent* modification than
+the target... run the rule.
+
+Ick, that's a lot of words. Example time
+
 Readings
 --------
 

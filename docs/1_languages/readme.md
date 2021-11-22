@@ -16,6 +16,15 @@ At the end of this module, students will be able to:
 * know how Notebooks interact like REPLs
   * Discuss magic numbers for files
 
+
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/QRrZ3KrvV3U"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
 What's the difference
 ---------------------
 

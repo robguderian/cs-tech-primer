@@ -19,6 +19,15 @@ By the end of the module, students should be able to:
 * be able to compress/uncompress folders with `tar`
 * be able to set variables, use loops, and other simple programming tools
 
+<iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/2x5TQzhYLZ8"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
 Why is UNIX a big deal? Why do people use it?
 ---------------------------------------------
 
