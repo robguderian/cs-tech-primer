@@ -19,9 +19,17 @@ By the end of this module, student will be able to...
 * be able to start and stop a daemon.
 * understand how to create a daemon.
 * be able to send syslog to a log aggregator.
-* use a tools for creating a VM
 * `cron` to schedule tasks
 * how to start things on startup (intro, and @reboot)
+
+
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/1YjWrQxxTTQ"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
 
 You need a server to run your software...
 --------------------------------------
@@ -204,4 +212,130 @@ So, how do we listen to them?
 
 Daemons have to *log* their output, and that goes into a file.
 
-TODO tail -f listener
+Consider `sshd`, it logs its events to `/var/log/auth.log`. We can simply
+view the file with `less`, `more`, `vi` or whatever... but `sshd` is still
+logging to it as we view it, and we don't see those new entries. There's
+got to be a better way
+
+`tail` lets us see the last 10 lines (which we can change with a flag...)
+of a file. Or... we can 'follow' a file. This will show the last 10 lines,
+then listen for more entries.
+
+![Using tail](./images/tail.gif)
+
+### What happens if a log file gets too big?
+
+Yeah, imagine that: a log file is listening and gets lots and lots of log
+lines. It'd fill up the drive fairly quickly.
+
+Solution: log turn over. [`logrotate`](https://linux.die.net/man/8/logrotate)
+handles this for us. It's run daily by `cron`, on debian systems
+this is configured by having an entry in `/etc/cron.daily`.
+
+It.... turns over files. It will zip up the existing file, notify the
+application via HUP to log to a new file (lingering file handles are
+an issue), and it'll keep going.
+
+If you have a popular server, you'd need to increase this interval.
+Hourly rotations isn't abnormal.
+
+But what does that mean for our `tail -f`? Well, that would have an old
+file handle.... so it'd stop getting messages. But, this is a known issue
+and `tail -F` was added to deal with files that might move while you are
+listening to it.
+
+### Sending logs to a log aggregator
+
+Now, imagine you have 1000 machines that are serving your software. How can you
+reasonably monitor all these at once?
+
+Use a log aggregator. You can redirect logs to go through a network to a log
+aggregation service. You can easily write your own, but there are a number
+of companies that are willing to sell you a solution.
+[Splunk](https://www.splunk.com/) is a pillar of this community, being around
+forever. There are a number of cloud solutions, and open source solutions for
+this - but these solutions go in and out of style quickly - google it!
+
+Scheduled tasks
+---------------
+
+Scheduling tasks is fairly easy! There's a few ways to do it, first as a
+user, then as an administrator.
+
+Everything works on the `cron` system, inspired from 'chronological', though
+there's some debate on this.
+
+The jobs are called "cron jobs", and are stored on the "crontab", which is
+short for "cron table".
+
+Any output from cronjobs are emailed to the job's owner. That's assuming
+that email is set up on this machine. Otherwise, it goes to the user's
+mailbox, and your terminal will say `You have mail` when you log in.
+
+
+### `crontab`
+
+`man 5 crontab` does such a good job of this. What is described is the
+file at `/etc/crontab`, and is one of the places an administrator can
+set cron tasks.
+
+```
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# m h dom mon dow usercommand
+17 * * * *  root  cd / && run-parts --report /etc/cron.hourly
+25 6 * * *  root  test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6 * * 7  root  test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6 1 * *  root  test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+```
+
+You can see you can specify which user the command run as, which is good for
+access control issues.
+
+Then, the command to run. You can set the search path by setting variables, but
+generally fully-qualified paths are a good idea.
+
+### Other cron options
+
+Interestingly, the `crontab` entries above are the ones that are the other
+possibilities.
+
+In `/etc/cron.daily` you can have scripts you'd like run daily.
+
+### As a user
+
+Enter `crontab -e`, and you'll be dropped into your favourite `$EDITOR`.
+
+You will see a `crontab` like above, but without the `user` column. All the
+cronjobs will run as you!
+
+```txt
+
+```
+
+There are some meta tags that can be useful, these are non-standard. These
+are for convenience: `@daily`, `@annualy`, `@weekly`, and a few more.
+
+The one that is REALLY interesting is `@reboot`, which allows a user to run
+some code when the machine starts up.
+
+```txt
+@reboot /home/rob/reportRestart.sh
+```
+
+This is VERY useful for running programs that you want to run all the time!
+
+A pattern I use is to have a `@reboot` entry that starts a `screen`, that has
+a few different windows running not-quite-daemons, such as a Minecraft server.
+
+Activities
+----------
+
+TODO
+
+Make a cron entry
