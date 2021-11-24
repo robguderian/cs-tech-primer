@@ -4,6 +4,8 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
 jobs:
   update_course_content:
     name: Upload files to the course

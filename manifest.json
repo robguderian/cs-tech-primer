@@ -2,24 +2,42 @@
     "$schema": "https://raw.githubusercontent.com/Brightspace/update-course-action/master/manifest_schema_v1_0.json",
     "modules": [
         {
+            "title": "Server Administration",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Images",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "Beastie",
+                            "type": "resource",
+                            "fileName": "10_maintaining_servers/images/beastie.png"
+                        },
+                        {
+                            "title": "Tail",
+                            "type": "resource",
+                            "fileName": "10_maintaining_servers/images/tail.gif"
+                        }
+                    ]
+                },
+                {
+                    "title": "Server Administration",
+                    "type": "topic",
+                    "fileName": "10_maintaining_servers/readme.md"
+                }
+            ]
+        },
+        {
             "title": "Programming Language Differences",
             "type": "module",
             "children": [
                 {
-                    "title": "Introduction",
-                    "type": "topic",
-                    "fileName": "1_languages/readme.md"
-                },
-                {
-                    "title": "What is a program?",
-                    "type": "topic",
-                    "fileName": "1_languages/what_is_a_program.md"
-                },
-                {
-                    "title": "example_code",
+                    "title": "Example Code",
                     "type": "module",
                     "children": [
                         {
+
                             "title": "main.py",
                             "type": "topic",
                             "fileName": "1_languages/example_code/imports/main.py"
@@ -34,8 +52,9 @@
                                     "fileName": "1_languages/example_code/imports/libraries/module1.py"
                                 },
                                 {
-                                    "title": "module2.py",
+                                    "title": "Main",
                                     "type": "topic",
+
                                     "fileName": "1_languages/example_code/imports/libraries/module2.py"
                                 }
                             ]
@@ -43,15 +62,30 @@
                     ]
                 },
                 {
-                    "title": "images",
+                    "title": "Images",
                     "type": "module",
                     "children": [
                         {
-                            "title": "jupyter.gif",
-                            "type": "topic",
+                            "title": "Jupyter",
+                            "type": "resource",
                             "fileName": "1_languages/images/jupyter.gif"
+                        },
+                        {
+                            "title": "Wait",
+                            "type": "resource",
+                            "fileName": "1_languages/images/wait.jpg"
                         }
                     ]
+                },
+                {
+                    "title": "Introduction",
+                    "type": "topic",
+                    "fileName": "1_languages/readme.md"
+                },
+                {
+                    "title": "What Is A Program",
+                    "type": "topic",
+                    "fileName": "1_languages/what_is_a_program.md"
                 }
             ]
         },
@@ -60,12 +94,7 @@
             "type": "module",
             "children": [
                 {
-                    "title": "Introduction",
-                    "type": "topic",
-                    "fileName": "2_shell/readme.md"
-                },
-                {
-                    "title": "Advanced",
+                    "title": "Advanced Shell",
                     "type": "topic",
                     "fileName": "2_shell/advanced_shell.md"
                 },
@@ -75,55 +104,60 @@
                     "fileName": "2_shell/environment_variables.md"
                 },
                 {
-                    "title": "Piping and Pipelines",
+                    "title": "Images",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "Arrow Key",
+                            "type": "resource",
+                            "fileName": "2_shell/images/arrow_key.jpg"
+                        },
+                        {
+                            "title": "Drake Up",
+                            "type": "resource",
+                            "fileName": "2_shell/images/drake_up.png"
+                        },
+                        {
+                            "title": "Meta Key",
+                            "type": "resource",
+                            "fileName": "2_shell/images/meta_key.png"
+                        },
+                        {
+                            "title": "Moretab",
+                            "type": "resource",
+                            "fileName": "2_shell/images/moreTab.gif"
+                        },
+                        {
+                            "title": "Sftp",
+                            "type": "resource",
+                            "fileName": "2_shell/images/sftp.png"
+                        },
+                        {
+                            "title": "Tab",
+                            "type": "resource",
+                            "fileName": "2_shell/images/tab.gif"
+                        },
+                        {
+                            "title": "Uporp",
+                            "type": "resource",
+                            "fileName": "2_shell/images/uporp.jpg"
+                        }
+                    ]
+                },
+                {
+                    "title": "Piping",
                     "type": "topic",
                     "fileName": "2_shell/piping.md"
                 },
                 {
-                    "title": "Remote Systems",
+                    "title": "Readme",
                     "type": "topic",
-                    "fileName": "2_shell/remote.md"
+                    "fileName": "2_shell/readme.md"
                 },
                 {
-                    "title": "images",
-                    "type": "module",
-                    "children": [
-                        {
-                            "type": "resource",
-                            "fileName": "2_shell/images/arrow_key.jpg",
-                            "title": "arrow_key.jpg"
-                        },
-                        {
-                            "type": "resource",
-                            "fileName": "2_shell/images/drake_up.png",
-                            "title": "drake_up.png"
-                        },
-                        {
-                            "type": "resource",
-                            "fileName": "2_shell/images/meta_key.png",
-                            "title": "meta_key.png"
-                        },
-                        {
-                            "type": "resource",
-                            "fileName": "2_shell/images/uporp.jpg",
-                            "title": "uporp.jpg"
-                        },
-                        {
-                            "type": "resource",
-                            "fileName": "2_shell/images/tab.gif",
-                            "title": "tab.gif"
-                        },
-                        {
-                            "type": "resource",
-                            "fileName": "2_shell/images/moreTab.gif",
-                            "title": "moreTab.gif"
-                        },
-                        {
-                            "type": "resource",
-                            "fileName": "2_shell/images/sftp.png",
-                            "title": "sftp.png"
-                        }
-                    ]
+                    "title": "Remote",
+                    "type": "topic",
+                    "fileName": "2_shell/remote.md"
                 }
             ]
         },
@@ -132,14 +166,14 @@
             "type": "module",
             "children": [
                 {
-                    "title": "Man pages",
+                    "title": "Man Pages",
                     "type": "topic",
                     "fileName": "3_reading_man_pages/readme.md"
                 }
             ]
         },
         {
-            "title": "Writing and Maintaining Quality Code",
+            "title": "Writing and Maintaining Quality code",
             "type": "module",
             "children": [
                 {
@@ -154,59 +188,64 @@
             "type": "module",
             "children": [
                 {
-                    "title": "Debugging, and debuggers",
+                    "title": "Debugging and Debuggers",
                     "type": "topic",
                     "fileName": "5_debugging/readme.md"
                 }
             ]
         },
         {
-            "title": "UNIX",
+            "title": "6 Unix",
             "type": "module",
             "children": [
                 {
-                    "title": "unix",
-                    "type": "topic",
-                    "fileName": "6_unix/readme.md"
-                },
-                {
-                    "title": "unix permissions",
-                    "type": "topic",
-                    "fileName": "6_unix/permissions.md"
-                },
-                {
-                    "title": "sed",
-                    "type": "topic",
-                    "fileName": "6_unix/sed.md"
-                },
-                {
-                    "title": "awk",
+                    "title": "Awk",
                     "type": "topic",
                     "fileName": "6_unix/awk.md"
                 },
                 {
-                    "title": "find",
+                    "title": "Find",
                     "type": "topic",
                     "fileName": "6_unix/find.md"
                 },
                 {
-                    "title": "tar",
+                    "title": "Lecture Talking Points",
+                    "type": "topic",
+                    "fileName": "6_unix/lecture_talking_points.md"
+                },
+                {
+                    "title": "Permissions",
+                    "type": "topic",
+                    "fileName": "6_unix/permissions.md"
+                },
+                {
+                    "title": "Readme",
+                    "type": "topic",
+                    "fileName": "6_unix/readme.md"
+                },
+                {
+                    "title": "Sed",
+                    "type": "topic",
+                    "fileName": "6_unix/sed.md"
+                },
+                {
+                    "title": "Tar",
                     "type": "topic",
                     "fileName": "6_unix/tar.md"
                 },
                 {
-                    "title": "xargs",
+                    "title": "Xargs",
                     "type": "topic",
                     "fileName": "6_unix/xargs.md"
                 }
             ]
         },
         {
-            "title": "Building programs",
+            "title": "Building",
             "type": "module",
             "children": [
                 {
-                    "title": "Building programs",
+                    "title": "Introduction",
                     "type": "topic",
                     "fileName": "7_building/readme.md"
                 }
@@ -217,18 +256,18 @@
             "type": "module",
             "children": [
                 {
-                    "title": "Virtualization, and virtual machines",
+                    "title": "Introduction",
                     "type": "topic",
                     "fileName": "8_virtualization/readme.md"
                 }
             ]
         },
         {
-            "title": "Versioning code",
+            "title": "Versioning Code",
             "type": "module",
             "children": [
                 {
-                    "title": "Versioning code",
+                    "title": "Introduction",
                     "type": "topic",
                     "fileName": "9_versioning_code/readme.md"
                 }
@@ -266,220 +305,323 @@
             "type": "module",
             "children": [
                 {
-                    "title": "Language Bootcamp Information",
-                    "type": "topic",
-                    "fileName": "language_bootcamp/readme.md"
+                    "title": "Go",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "Arguments",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/Arguments.go"
+                        },
+                        {
+                            "title": "Factorial",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/Factorial.go"
+                        },
+                        {
+                            "title": "Fileio",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/FileIO.go"
+                        },
+                        {
+                            "title": "Fizzbuzz",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/FizzBuzz.go"
+                        },
+                        {
+                            "title": "Inputfile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/inputFile.txt"
+                        },
+                        {
+                            "title": "Loops",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/Loops.go"
+                        },
+                        {
+                            "title": "Outputfile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/outputFile.txt"
+                        },
+                        {
+                            "title": "Readme",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/README.md"
+                        },
+                        {
+                            "title": "Strings",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/Strings.go"
+                        },
+                        {
+                            "title": "Structdemos",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "People",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "Main",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/go/StructDemos/People/Main.go"
+                                        },
+                                        {
+                                            "title": "Person",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/go/StructDemos/People/Person.go"
+                                        },
+                                        {
+                                            "title": "Professor",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/go/StructDemos/People/Professor.go"
+                                        },
+                                        {
+                                            "title": "Student",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/go/StructDemos/People/Student.go"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "title": "Java",
                     "type": "module",
                     "children": [
                         {
-                            "title": "Introduction",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/java/readme.md"
-                        },
-                        {
-                            "title": "1: Basics",
+                            "title": "1 Basics",
                             "type": "module",
                             "children": [
                                 {
-                                    "title": "Comments",
+                                    "title": "1 Comments",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/1_Comments.md"
                                 },
                                 {
-                                    "title": "Variable types",
+                                    "title": "2 Primitives",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/2_Primitives.md"
                                 },
                                 {
-                                    "title": "Casting",
+                                    "title": "3 Casting",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/3_Casting.md"
                                 },
                                 {
-                                    "title": "User Input",
+                                    "title": "4 Userinput",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/4_UserInput.md"
                                 },
                                 {
-                                    "title": "Example: Casting",
+                                    "title": "Casting",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/Casting.java"
                                 },
                                 {
-                                    "title": "Example: User Input",
-                                    "type": "topic",
-                                    "fileName": "language_bootcamp/java/1_Basics/Input.java"
-                                },
-                                {
-                                    "title": "Basics Cheat Sheet",
+                                    "title": "Cheatsheet",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/cheatsheet.md"
+                                },
+                                {
+                                    "title": "Input",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/Input.java"
                                 }
                             ]
                         },
                         {
-                            "title": "2: Control and Flow",
+                            "title": "2 Controlflow",
                             "type": "module",
                             "children": [
                                 {
-                                    "title": "Conditionals if/else if /else",
+                                    "title": "1 Conditionals",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/2_ControlFlow/1_Conditionals.md"
                                 },
                                 {
-                                    "title": "Ternary Operator",
+                                    "title": "2 Ternaryoperator",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/2_ControlFlow/2_TernaryOperator.md"
                                 },
                                 {
-                                    "title": "For Loops",
+                                    "title": "3 Forloops",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/2_ControlFlow/3_ForLoops.md"
                                 },
                                 {
-                                    "title": "While Loops",
+                                    "title": "4 Whileloops",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/2_ControlFlow/4_WhileLoops.md"
                                 },
                                 {
-                                    "title": "Nested Loops",
+                                    "title": "5 Nestedloops",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/2_ControlFlow/5_NestedLoops.md"
                                 },
                                 {
-                                    "title": "Challenge",
+                                    "title": "6 Challenge",
                                     "type": "module",
                                     "children": [
                                         {
-                                            "title": "Basics",
+                                            "title": "Challenge",
                                             "type": "topic",
                                             "fileName": "language_bootcamp/java/2_ControlFlow/6_Challenge/Challenge.md"
                                         },
                                         {
-                                            "title": "Client.class",
+                                            "title": "Client",
                                             "type": "topic",
                                             "fileName": "language_bootcamp/java/2_ControlFlow/6_Challenge/Client.class"
                                         },
                                         {
-                                            "title": "Server.class",
+                                            "title": "Server",
                                             "type": "topic",
                                             "fileName": "language_bootcamp/java/2_ControlFlow/6_Challenge/Server.class"
                                         },
                                         {
-                                            "title": "Skeleton.java",
+                                            "title": "Skeleton",
                                             "type": "topic",
                                             "fileName": "language_bootcamp/java/2_ControlFlow/6_Challenge/Skeleton.java"
                                         }
                                     ]
                                 },
                                 {
-                                    "title": "Example: If Else",
+                                    "title": "Cheatsheet",
                                     "type": "topic",
-                                    "fileName": "language_bootcamp/java/2_ControlFlow/IfElse.java"
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/cheatsheet.md"
                                 },
                                 {
-                                    "title": "Example: For Loop",
-                                    "type": "topic",
-                                    "fileName": "language_bootcamp/java/2_ControlFlow/For.java"
-                                },
-                                {
-                                    "title": "Example: While Loop",
-                                    "type": "topic",
-                                    "fileName": "language_bootcamp/java/2_ControlFlow/While.java"
-                                },
-                                {
-                                    "title": "Example: Fizzbuzz",
+                                    "title": "Fizzbuzz",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/2_ControlFlow/Fizzbuzz.java"
                                 },
                                 {
-                                    "title": "Control FLow Cheat Sheet",
+                                    "title": "For",
                                     "type": "topic",
-                                    "fileName": "language_bootcamp/java/2_ControlFlow/cheatsheet.md"
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/For.java"
+                                },
+                                {
+                                    "title": "Ifelse",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/IfElse.java"
+                                },
+                                {
+                                    "title": "While",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/While.java"
                                 }
                             ]
                         },
                         {
-                            "title": "3: Arrays",
+                            "title": "3 Arrays",
                             "type": "module",
                             "children": [
                                 {
-                                    "title": "Basics",
+                                    "title": "1 Simplearrays",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/3_Arrays/1_SimpleArrays.md"
                                 },
                                 {
-                                    "title": "Strings as Arrays",
+                                    "title": "2 Primitivestrings",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/3_Arrays/2_PrimitiveStrings.md"
                                 },
                                 {
-                                    "title": "Multi-dimensional Arrays",
+                                    "title": "3 Ndarrays",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/3_Arrays/3_NdArrays.md"
                                 },
                                 {
-                                    "title": "Example: Multi-Dimensional Arrays",
-                                    "type": "topic",
-                                    "fileName": "language_bootcamp/java/3_Arrays/NdArray.java"
+                                    "title": "Assets",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "3D Array",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/java/3_Arrays/assets/3d_array.drawio"
+                                        },
+                                        {
+                                            "title": "3D Array",
+                                            "type": "resource",
+                                            "fileName": "language_bootcamp/java/3_Arrays/assets/3d_array.PNG"
+                                        },
+                                        {
+                                            "title": "Array Memory",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/java/3_Arrays/assets/array_memory.drawio"
+                                        },
+                                        {
+                                            "title": "Array Memory",
+                                            "type": "resource",
+                                            "fileName": "language_bootcamp/java/3_Arrays/assets/array_memory.PNG"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "title": "Arrays Cheat Sheet",
+                                    "title": "Cheatsheet",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/3_Arrays/cheatsheet.md"
                                 },
                                 {
-                                    "title": "images",
-                                    "type": "module",
-                                    "children": [
-                                        {
-                                            "type": "resource",
-                                            "fileName": "language_bootcamp/java/3_Arrays/assets/3d_array.PNG",
-                                            "title": "3d_array.PNG"
-                                        },
-                                        {
-                                            "type": "resource",
-                                            "fileName": "language_bootcamp/java/3_Arrays/assets/array_memory.PNG",
-                                            "title": "array_memory.PNG"
-                                        }
-                                    ]
+                                    "title": "Ndarray",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/3_Arrays/NdArray.java"
                                 }
                             ]
                         },
                         {
-                            "title": "4: Methods",
+                            "title": "4 Methods",
                             "type": "module",
                             "children": [
                                 {
-                                    "title": "Methods",
+                                    "title": "1 Intro",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/4_Methods/1_Intro.md"
                                 },
                                 {
-                                    "title": "Recursion",
+                                    "title": "2 Recursion",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/4_Methods/2_Recursion.md"
                                 },
                                 {
-                                    "title": "images",
+                                    "title": "Assets",
                                     "type": "module",
                                     "children": [
                                         {
+                                            "title": "Fibonacci",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/java/4_Methods/assets/fibonacci.drawio"
+                                        },
+                                        {
+                                            "title": "Fibonacci",
                                             "type": "resource",
-                                            "fileName": "language_bootcamp/java/4_Methods/assets/fibonacci.PNG",
-                                            "title": "fibonacci.PNG"
+                                            "fileName": "language_bootcamp/java/4_Methods/assets/fibonacci.PNG"
                                         }
                                     ]
                                 },
                                 {
-                                    "title": "Recursion Cheatsheet",
+                                    "title": "Cheatsheet",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/4_Methods/cheatsheet.md"
+                                },
+                                {
+                                    "title": "Recursion",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/4_Methods/Recursion.java"
                                 }
                             ]
+                        },
+                        {
+                            "title": "Cheatsheet",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/java/cheatsheet.md"
+                        },
+                        {
+                            "title": "Readme",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/java/readme.md"
                         }
                     ]
                 },
@@ -488,14 +630,132 @@
                     "type": "module",
                     "children": [
                         {
-                            "title": "Introduction to JS",
+                            "title": ".Eslintrc",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/.eslintrc.js"
+                        },
+                        {
+                            "title": ".Gitignore",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/.gitignore"
+                        },
+                        {
+                            "title": "Arguments",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/Arguments.js"
+                        },
+                        {
+                            "title": "Factorial",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/Factorial.js"
+                        },
+                        {
+                            "title": "Fileio",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/FileIO.js"
+                        },
+                        {
+                            "title": "Fizzbuzz",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/FizzBuzz.js"
+                        },
+                        {
+                            "title": "Inputfile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/inputFile.txt"
+                        },
+                        {
+                            "title": "Linting Info",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/linting_info.md"
+                        },
+                        {
+                            "title": "Loops",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/Loops.js"
+                        },
+                        {
+                            "title": "Makefile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/makefile"
+                        },
+                        {
+                            "title": "Objectdemos",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "People",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "Main",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/javascript/ObjectDemos/People/Main.js"
+                                        },
+                                        {
+                                            "title": "Person",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/javascript/ObjectDemos/People/Person.js"
+                                        },
+                                        {
+                                            "title": "Professor",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/javascript/ObjectDemos/People/Professor.js"
+                                        },
+                                        {
+                                            "title": "Student",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/javascript/ObjectDemos/People/Student.js"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Shapes",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "Hexagon",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/javascript/ObjectDemos/Shapes/Hexagon.js"
+                                        },
+                                        {
+                                            "title": "Main",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/javascript/ObjectDemos/Shapes/Main.js"
+                                        },
+                                        {
+                                            "title": "Shape",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/javascript/ObjectDemos/Shapes/Shape.js"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Outputfile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/outputFile.txt"
+                        },
+                        {
+                            "title": "Package-Lock",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/package-lock.json"
+                        },
+                        {
+                            "title": "Package",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/package.json"
+                        },
+                        {
+                            "title": "Readme",
                             "type": "topic",
                             "fileName": "language_bootcamp/javascript/README.md"
                         },
                         {
-                            "title": "Javascript Linting info",
+                            "title": "Strings",
                             "type": "topic",
-                            "fileName": "language_bootcamp/javascript/linting_info.md"
+                            "fileName": "language_bootcamp/javascript/Strings.js"
                         }
                     ]
                 },
@@ -504,64 +764,68 @@
                     "type": "module",
                     "children": [
                         {
-                            "title": "Introduction to Python",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/python/readme.md"
-                        },
-                        {
-                            "title": "makefile",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/python/makefile"
-                        },
-                        {
-                            "title": "linting_info.md",
+                            "title": "Linting Info",
                             "type": "topic",
                             "fileName": "language_bootcamp/python/linting_info.md"
                         },
                         {
-                            "title": "src",
+                            "title": "Makefile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/python/makefile"
+                        },
+                        {
+                            "title": "Readme",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/python/readme.md"
+                        },
+                        {
+                            "title": "Src",
                             "type": "module",
                             "children": [
                                 {
-                                    "title": "hello.py",
+                                    "title": "Hello",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/python/src/hello.py"
                                 },
                                 {
-                                    "title": "src",
+                                    "title": "Unit Test Demo",
                                     "type": "module",
                                     "children": [
                                         {
-                                            "title": "unit_test_demo",
-                                            "type": "module",
-                                            "children": [
-                                                {
-                                                    "title": "Python unit tests, coverage, profiling",
-                                                    "type": "topic",
-                                                    "fileName": "language_bootcamp/python/src/unit_test_demo/readme.md"
-                                                },
-                                                {
-                                                    "title": "makefile",
-                                                    "type": "topic",
-                                                    "fileName": "language_bootcamp/python/src/unit_test_demo/makefile"
-                                                },
-                                                {
-                                                    "title": "some_code.py",
-                                                    "type": "topic",
-                                                    "fileName": "language_bootcamp/python/src/unit_test_demo/some_code.py"
-                                                },
-                                                {
-                                                    "title": "test_some_code.py",
-                                                    "type": "topic",
-                                                    "fileName": "language_bootcamp/python/src/unit_test_demo/test_some_code.py"
-                                                }
-                                            ]
+                                            "title": ".Gitignore",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/python/src/unit_test_demo/.gitignore"
+                                        },
+                                        {
+                                            "title": "Makefile",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/python/src/unit_test_demo/makefile"
+                                        },
+                                        {
+                                            "title": "Readme",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/python/src/unit_test_demo/readme.md"
+                                        },
+                                        {
+                                            "title": "Some Code",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/python/src/unit_test_demo/some_code.py"
+                                        },
+                                        {
+                                            "title": "Test Some Code",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/python/src/unit_test_demo/test_some_code.py"
                                         }
                                     ]
                                 }
                             ]
                         }
                     ]
+                },
+                {
+                    "title": "Readme",
+                    "type": "topic",
+                    "fileName": "language_bootcamp/readme.md"
                 }
             ]
         }
