@@ -60,3 +60,8 @@ cover/
 # IPython
 profile_default/
 ipython_config.py
+
+# End of Python.gitignore
+
+# JetBrains
+.idea/
