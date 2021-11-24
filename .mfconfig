@@ -19,12 +19,12 @@ RENAME 4_quality_code/ Writing_and_Maintaining_Quality_code
 RENAME 4_quality_code/readme.md Quality_Code
 
 # 5_debugging
-IGNORE 5_debugging/images/
 RENAME 5_debugging Debugging
 RENAME 5_debugging/readme.md Debugging_and_Debuggers
 
 # 6_unix
 IGNORE 6_unix/images/
+IGNORE 6_unix/lecture_talking_points.md
 
 # 7_building
 RENAME 7_building Building
