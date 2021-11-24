@@ -1,0 +1,52 @@
+# ROOT
+IGNORE .bundle/
+
+# 1_languages
+RENAME 1_languages/ Programming_Language_Differences
+IGNORE 1_languages/lecture_talking_notes.md
+IGNORE 1_languages/example_code/notebook/
+RENAME 1_languages/readme.md Introduction
+
+# 2_shell
+RENAME 2_shell/ Shell
+
+# 3_man_pages
+RENAME 3_reading_man_pages/ Reading_Manual_Pages
+RENAME 3_reading_man_pages/readme.md Man_Pages
+
+# 4_quality_code
+RENAME 4_quality_code/ Writing_and_Maintaining_Quality_code
+RENAME 4_quality_code/readme.md Quality_Code
+
+# 5_debugging
+IGNORE 5_debugging/images/
+RENAME 5_debugging Debugging
+RENAME 5_debugging/readme.md Debugging_and_Debuggers
+
+# 6_unix
+IGNORE 6_unix/images/
+
+# 7_building
+RENAME 7_building Building
+RENAME 7_building/readme.md Introduction
+IGNORE 7_building/examples/
+IGNORE 7_building/images/
+
+# 8_virtualization
+RENAME 8_virtualization Virtualization
+RENAME 8_virtualization/readme.md Introduction
+IGNORE 8_virtualization/images/
+
+# 9_versioning
+RENAME 9_versioning_code Versioning_Code
+RENAME 9_versioning_code/readme.md Introduction
+
+# 10_servers
+RENAME 10_maintaining_servers Server_Administration
+RENAME 10_maintaining_servers/readme.md Server_Administration
+IGNORE 10_maintaining_servers/lecture_talking_points.md
+
+# 11_lang_bootcamp
+IGNORE language_bootcamp/java/.gitignore
+IGNORE language_bootcamp/java/.markdownlint.json
+IGNORE language_bootcamp/java/src/
