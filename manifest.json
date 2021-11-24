@@ -37,29 +37,25 @@
                     "type": "module",
                     "children": [
                         {
-                            "title": "Imports",
+
+                            "title": "main.py",
+                            "type": "topic",
+                            "fileName": "1_languages/example_code/imports/main.py"
+                        },
+                        {
+                            "title": "libraries",
                             "type": "module",
                             "children": [
                                 {
-                                    "title": "Libraries",
-                                    "type": "module",
-                                    "children": [
-                                        {
-                                            "title": "Module1",
-                                            "type": "topic",
-                                            "fileName": "1_languages/example_code/imports/libraries/module1.py"
-                                        },
-                                        {
-                                            "title": "Module2",
-                                            "type": "topic",
-                                            "fileName": "1_languages/example_code/imports/libraries/module2.py"
-                                        }
-                                    ]
+                                    "title": "module1.py",
+                                    "type": "topic",
+                                    "fileName": "1_languages/example_code/imports/libraries/module1.py"
                                 },
                                 {
                                     "title": "Main",
                                     "type": "topic",
-                                    "fileName": "1_languages/example_code/imports/main.py"
+
+                                    "fileName": "1_languages/example_code/imports/libraries/module2.py"
                                 }
                             ]
                         }
@@ -278,7 +274,34 @@
             ]
         },
         {
-            "title": "Language Bootcamp",
+            "title": "Server Administration",
+            "type": "module",
+            "children": [
+                {
+                    "title": "Server Administration",
+                    "type": "topic",
+                    "fileName": "10_maintaining_servers/readme.md"
+                },
+                {
+                    "title": "images",
+                    "type": "module",
+                    "children": [
+                        {
+                            "type": "resource",
+                            "fileName": "10_maintaining_servers/images/tail.gif",
+                            "title": "tail.gif"
+                        },
+                        {
+                            "type": "resource",
+                            "fileName": "10_maintaining_servers/images/beastie.png",
+                            "title": "beastie.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Programming Language Bootcamp",
             "type": "module",
             "children": [
                 {
