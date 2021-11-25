@@ -6,56 +6,33 @@
             "type": "module",
             "children": [
                 {
-                    "title": "Images",
-                    "type": "module",
-                    "children": [
-                        {
-                            "title": "Beastie",
-                            "type": "resource",
-                            "fileName": "10_maintaining_servers/images/beastie.png"
-                        },
-                        {
-                            "title": "Tail",
-                            "type": "resource",
-                            "fileName": "10_maintaining_servers/images/tail.gif"
-                        }
-                    ]
-                },
-                {
-                    "title": "Server Administration",
-                    "type": "topic",
-                    "fileName": "10_maintaining_servers/readme.md"
-                }
-            ]
-        },
-        {
-            "title": "Programming Language Differences",
-            "type": "module",
-            "children": [
-                {
                     "title": "Example Code",
                     "type": "module",
                     "children": [
                         {
-
-                            "title": "main.py",
-                            "type": "topic",
-                            "fileName": "1_languages/example_code/imports/main.py"
-                        },
-                        {
-                            "title": "libraries",
+                            "title": "Imports",
                             "type": "module",
                             "children": [
                                 {
-                                    "title": "module1.py",
-                                    "type": "topic",
-                                    "fileName": "1_languages/example_code/imports/libraries/module1.py"
+                                    "title": "Libraries",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "Module1",
+                                            "type": "topic",
+                                            "fileName": "1_languages/example_code/imports/libraries/module1.py"
+                                        },
+                                        {
+                                            "title": "Module2",
+                                            "type": "topic",
+                                            "fileName": "1_languages/example_code/imports/libraries/module2.py"
+                                        }
+                                    ]
                                 },
                                 {
                                     "title": "Main",
                                     "type": "topic",
-
-                                    "fileName": "1_languages/example_code/imports/libraries/module2.py"
+                                    "fileName": "1_languages/example_code/imports/main.py"
                                 }
                             ]
                         }
@@ -188,6 +165,17 @@
             "type": "module",
             "children": [
                 {
+                    "title": "Images",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "Red Pill",
+                            "type": "resource",
+                            "fileName": "5_debugging/images/red_pill.jpg"
+                        }
+                    ]
+                },
+                {
                     "title": "Debugging and Debuggers",
                     "type": "topic",
                     "fileName": "5_debugging/readme.md"
@@ -207,11 +195,6 @@
                     "title": "Find",
                     "type": "topic",
                     "fileName": "6_unix/find.md"
-                },
-                {
-                    "title": "Lecture Talking Points",
-                    "type": "topic",
-                    "fileName": "6_unix/lecture_talking_points.md"
                 },
                 {
                     "title": "Permissions",
@@ -278,30 +261,30 @@
             "type": "module",
             "children": [
                 {
-                    "title": "Server Administration",
-                    "type": "topic",
-                    "fileName": "10_maintaining_servers/readme.md"
-                },
-                {
-                    "title": "images",
+                    "title": "Images",
                     "type": "module",
                     "children": [
                         {
+                            "title": "Beastie",
                             "type": "resource",
-                            "fileName": "10_maintaining_servers/images/tail.gif",
-                            "title": "tail.gif"
+                            "fileName": "10_maintaining_servers/images/beastie.png"
                         },
                         {
+                            "title": "Tail",
                             "type": "resource",
-                            "fileName": "10_maintaining_servers/images/beastie.png",
-                            "title": "beastie.png"
+                            "fileName": "10_maintaining_servers/images/tail.gif"
                         }
                     ]
+                },
+                {
+                    "title": "Server Administration",
+                    "type": "topic",
+                    "fileName": "10_maintaining_servers/readme.md"
                 }
             ]
         },
         {
-            "title": "Programming Language Bootcamp",
+            "title": "Language Bootcamp",
             "type": "module",
             "children": [
                 {
@@ -329,19 +312,9 @@
                             "fileName": "language_bootcamp/go/FizzBuzz.go"
                         },
                         {
-                            "title": "Inputfile",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/go/inputFile.txt"
-                        },
-                        {
                             "title": "Loops",
                             "type": "topic",
                             "fileName": "language_bootcamp/go/Loops.go"
-                        },
-                        {
-                            "title": "Outputfile",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/go/outputFile.txt"
                         },
                         {
                             "title": "Readme",
@@ -384,6 +357,16 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "title": "Inputfile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/inputFile.txt"
+                        },
+                        {
+                            "title": "Outputfile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/go/outputFile.txt"
                         }
                     ]
                 },
@@ -421,12 +404,12 @@
                                     "fileName": "language_bootcamp/java/1_Basics/Casting.java"
                                 },
                                 {
-                                    "title": "Cheatsheet",
+                                    "title": "Input",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/cheatsheet.md"
                                 },
                                 {
-                                    "title": "Input",
+                                    "title": "Cheatsheet",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/Input.java"
                                 }
@@ -488,11 +471,6 @@
                                     ]
                                 },
                                 {
-                                    "title": "Cheatsheet",
-                                    "type": "topic",
-                                    "fileName": "language_bootcamp/java/2_ControlFlow/cheatsheet.md"
-                                },
-                                {
                                     "title": "Fizzbuzz",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/2_ControlFlow/Fizzbuzz.java"
@@ -500,7 +478,7 @@
                                 {
                                     "title": "For",
                                     "type": "topic",
-                                    "fileName": "language_bootcamp/java/2_ControlFlow/For.java"
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/Fizzbuzz.java"
                                 },
                                 {
                                     "title": "Ifelse",
@@ -509,6 +487,11 @@
                                 },
                                 {
                                     "title": "While",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/While.java"
+                                },
+                                {
+                                    "title": "Cheatsheet",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/2_ControlFlow/While.java"
                                 }
@@ -534,28 +517,33 @@
                                     "fileName": "language_bootcamp/java/3_Arrays/3_NdArrays.md"
                                 },
                                 {
+                                    "title": "Ndarray",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/3_Arrays/NdArray.java"
+                                },
+                                {
                                     "title": "Assets",
                                     "type": "module",
                                     "children": [
-                                        {
-                                            "title": "3D Array",
-                                            "type": "topic",
-                                            "fileName": "language_bootcamp/java/3_Arrays/assets/3d_array.drawio"
-                                        },
                                         {
                                             "title": "3D Array",
                                             "type": "resource",
                                             "fileName": "language_bootcamp/java/3_Arrays/assets/3d_array.PNG"
                                         },
                                         {
-                                            "title": "Array Memory",
+                                            "title": "3D Array",
                                             "type": "topic",
-                                            "fileName": "language_bootcamp/java/3_Arrays/assets/array_memory.drawio"
+                                            "fileName": "language_bootcamp/java/3_Arrays/assets/3d_array.drawio"
                                         },
                                         {
                                             "title": "Array Memory",
                                             "type": "resource",
                                             "fileName": "language_bootcamp/java/3_Arrays/assets/array_memory.PNG"
+                                        },
+                                        {
+                                            "title": "Array Memory",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/java/3_Arrays/assets/array_memory.drawio"
                                         }
                                     ]
                                 },
@@ -563,11 +551,6 @@
                                     "title": "Cheatsheet",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/3_Arrays/cheatsheet.md"
-                                },
-                                {
-                                    "title": "Ndarray",
-                                    "type": "topic",
-                                    "fileName": "language_bootcamp/java/3_Arrays/NdArray.java"
                                 }
                             ]
                         },
@@ -586,18 +569,23 @@
                                     "fileName": "language_bootcamp/java/4_Methods/2_Recursion.md"
                                 },
                                 {
+                                    "title": "Recursion",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/4_Methods/Recursion.java"
+                                },
+                                {
                                     "title": "Assets",
                                     "type": "module",
                                     "children": [
                                         {
                                             "title": "Fibonacci",
-                                            "type": "topic",
-                                            "fileName": "language_bootcamp/java/4_Methods/assets/fibonacci.drawio"
+                                            "type": "resource",
+                                            "fileName": "language_bootcamp/java/4_Methods/assets/fibonacci.PNG"
                                         },
                                         {
                                             "title": "Fibonacci",
-                                            "type": "resource",
-                                            "fileName": "language_bootcamp/java/4_Methods/assets/fibonacci.PNG"
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/java/4_Methods/assets/fibonacci.drawio"
                                         }
                                     ]
                                 },
@@ -660,24 +648,9 @@
                             "fileName": "language_bootcamp/javascript/FizzBuzz.js"
                         },
                         {
-                            "title": "Inputfile",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/inputFile.txt"
-                        },
-                        {
-                            "title": "Linting Info",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/linting_info.md"
-                        },
-                        {
                             "title": "Loops",
                             "type": "topic",
                             "fileName": "language_bootcamp/javascript/Loops.js"
-                        },
-                        {
-                            "title": "Makefile",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/makefile"
                         },
                         {
                             "title": "Objectdemos",
@@ -733,6 +706,61 @@
                             ]
                         },
                         {
+                            "title": "Readme",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/.eslintrc.js"
+                        },
+                        {
+                            "title": ".Gitignore",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/.gitignore"
+                        },
+                        {
+                            "title": "Arguments",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/Arguments.js"
+                        },
+                        {
+                            "title": "Factorial",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/Factorial.js"
+                        },
+                        {
+                            "title": "Fileio",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/FileIO.js"
+                        },
+                        {
+                            "title": "Fizzbuzz",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/FizzBuzz.js"
+                        },
+                        {
+                            "title": "Inputfile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/inputFile.txt"
+                        },
+                        {
+                            "title": "Strings",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/Strings.js"
+                        },
+                        {
+                            "title": "Inputfile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/inputFile.txt"
+                        },
+                        {
+                            "title": "Linting Info",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/linting_info.md"
+                        },
+                        {
+                            "title": "Makefile",
+                            "type": "topic",
+                            "fileName": "language_bootcamp/javascript/makefile"
+                        },
+                        {
                             "title": "Outputfile",
                             "type": "topic",
                             "fileName": "language_bootcamp/javascript/outputFile.txt"
@@ -746,16 +774,6 @@
                             "title": "Package",
                             "type": "topic",
                             "fileName": "language_bootcamp/javascript/package.json"
-                        },
-                        {
-                            "title": "Readme",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/README.md"
-                        },
-                        {
-                            "title": "Strings",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/Strings.js"
                         }
                     ]
                 },
@@ -792,6 +810,11 @@
                                     "type": "module",
                                     "children": [
                                         {
+                                            "title": ".Coverage",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/python/src/unit_test_demo/.coverage"
+                                        },
+                                        {
                                             "title": ".Gitignore",
                                             "type": "topic",
                                             "fileName": "language_bootcamp/python/src/unit_test_demo/.gitignore"
@@ -812,9 +835,19 @@
                                             "fileName": "language_bootcamp/python/src/unit_test_demo/some_code.py"
                                         },
                                         {
+                                            "title": "Some Code",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/python/src/unit_test_demo/some_code.pyc"
+                                        },
+                                        {
                                             "title": "Test Some Code",
                                             "type": "topic",
                                             "fileName": "language_bootcamp/python/src/unit_test_demo/test_some_code.py"
+                                        },
+                                        {
+                                            "title": "Test Some Code",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/python/src/unit_test_demo/test_some_code.pyc"
                                         }
                                     ]
                                 }
