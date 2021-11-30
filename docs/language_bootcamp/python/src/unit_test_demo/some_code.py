@@ -11,6 +11,7 @@ def multiply(this, that):
     '''
     Some untested code that multiplies two values
     '''
+    import pdb; pdb.set_trace()
     return this * that
 
 def crapFib(n):
