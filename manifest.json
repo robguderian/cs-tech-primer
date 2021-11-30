@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/Brightspace/update-course-action/master/manifest_schema_v1_0.json",
     "modules": [
         {
-            "title": "Server Administration",
+            "title": "Programming Language Differences",
             "type": "module",
             "children": [
                 {
@@ -401,17 +401,27 @@
                                 {
                                     "title": "Casting",
                                     "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/Casting.class"
+                                },
+                                {
+                                    "title": "Casting",
+                                    "type": "topic",
                                     "fileName": "language_bootcamp/java/1_Basics/Casting.java"
                                 },
                                 {
                                     "title": "Input",
                                     "type": "topic",
-                                    "fileName": "language_bootcamp/java/1_Basics/cheatsheet.md"
+                                    "fileName": "language_bootcamp/java/1_Basics/Input.class"
+                                },
+                                {
+                                    "title": "Input",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/1_Basics/Input.java"
                                 },
                                 {
                                     "title": "Cheatsheet",
                                     "type": "topic",
-                                    "fileName": "language_bootcamp/java/1_Basics/Input.java"
+                                    "fileName": "language_bootcamp/java/1_Basics/cheatsheet.md"
                                 }
                             ]
                         },
@@ -478,7 +488,7 @@
                                 {
                                     "title": "For",
                                     "type": "topic",
-                                    "fileName": "language_bootcamp/java/2_ControlFlow/Fizzbuzz.java"
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/For.java"
                                 },
                                 {
                                     "title": "Ifelse",
@@ -493,7 +503,7 @@
                                 {
                                     "title": "Cheatsheet",
                                     "type": "topic",
-                                    "fileName": "language_bootcamp/java/2_ControlFlow/While.java"
+                                    "fileName": "language_bootcamp/java/2_ControlFlow/cheatsheet.md"
                                 }
                             ]
                         },
@@ -593,11 +603,6 @@
                                     "title": "Cheatsheet",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/java/4_Methods/cheatsheet.md"
-                                },
-                                {
-                                    "title": "Recursion",
-                                    "type": "topic",
-                                    "fileName": "language_bootcamp/java/4_Methods/Recursion.java"
                                 }
                             ]
                         },
@@ -708,37 +713,7 @@
                         {
                             "title": "Readme",
                             "type": "topic",
-                            "fileName": "language_bootcamp/javascript/.eslintrc.js"
-                        },
-                        {
-                            "title": ".Gitignore",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/.gitignore"
-                        },
-                        {
-                            "title": "Arguments",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/Arguments.js"
-                        },
-                        {
-                            "title": "Factorial",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/Factorial.js"
-                        },
-                        {
-                            "title": "Fileio",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/FileIO.js"
-                        },
-                        {
-                            "title": "Fizzbuzz",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/FizzBuzz.js"
-                        },
-                        {
-                            "title": "Inputfile",
-                            "type": "topic",
-                            "fileName": "language_bootcamp/javascript/inputFile.txt"
+                            "fileName": "language_bootcamp/javascript/README.md"
                         },
                         {
                             "title": "Strings",
@@ -809,11 +784,6 @@
                                     "title": "Unit Test Demo",
                                     "type": "module",
                                     "children": [
-                                        {
-                                            "title": ".Coverage",
-                                            "type": "topic",
-                                            "fileName": "language_bootcamp/python/src/unit_test_demo/.coverage"
-                                        },
                                         {
                                             "title": ".Gitignore",
                                             "type": "topic",
