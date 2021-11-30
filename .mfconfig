@@ -49,3 +49,6 @@ IGNORE 10_maintaining_servers/lecture_talking_points.md
 IGNORE language_bootcamp/java/.gitignore
 IGNORE language_bootcamp/java/.markdownlint.json
 IGNORE language_bootcamp/java/src/
+# this doesn't exist on clean repos, but is cruft after
+# running coverage
+IGNORE language_bootcamp/python/src/unit_test_demo/.coverage
