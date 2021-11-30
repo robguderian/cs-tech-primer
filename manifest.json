@@ -775,11 +775,6 @@
                                     "type": "module",
                                     "children": [
                                         {
-                                            "title": ".Coverage",
-                                            "type": "topic",
-                                            "fileName": "language_bootcamp/python/src/unit_test_demo/.coverage"
-                                        },
-                                        {
                                             "title": ".Gitignore",
                                             "type": "topic",
                                             "fileName": "language_bootcamp/python/src/unit_test_demo/.gitignore"
@@ -800,19 +795,9 @@
                                             "fileName": "language_bootcamp/python/src/unit_test_demo/some_code.py"
                                         },
                                         {
-                                            "title": "Some Code",
-                                            "type": "topic",
-                                            "fileName": "language_bootcamp/python/src/unit_test_demo/some_code.pyc"
-                                        },
-                                        {
                                             "title": "Test Some Code",
                                             "type": "topic",
                                             "fileName": "language_bootcamp/python/src/unit_test_demo/test_some_code.py"
-                                        },
-                                        {
-                                            "title": "Test Some Code",
-                                            "type": "topic",
-                                            "fileName": "language_bootcamp/python/src/unit_test_demo/test_some_code.pyc"
                                         }
                                     ]
                                 }

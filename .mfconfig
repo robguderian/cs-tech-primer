@@ -1,6 +1,5 @@
 # ROOT
 IGNORE .bundle/
-
 # 1_languages
 RENAME 1_languages/ Programming_Language_Differences
 IGNORE 1_languages/lecture_talking_notes.md
@@ -21,7 +20,7 @@ RENAME 4_quality_code/readme.md Quality_Code
 # 5_debugging
 RENAME 5_debugging Debugging
 RENAME 5_debugging/readme.md Debugging_and_Debuggers
-
+IGNORE 5_debugging/lecture_talking_points.md
 # 6_unix
 IGNORE 6_unix/images/
 IGNORE 6_unix/lecture_talking_points.md
@@ -50,3 +49,10 @@ IGNORE 10_maintaining_servers/lecture_talking_points.md
 IGNORE language_bootcamp/java/.gitignore
 IGNORE language_bootcamp/java/.markdownlint.json
 IGNORE language_bootcamp/java/src/
+
+# these doesn't exist on clean repos, but is cruft after
+# running coverage
+IGNORE language_bootcamp/python/src/unit_test_demo/.coverage
+# after running the tests
+IGNORE language_bootcamp/python/src/unit_test_demo/some_code.pyc
+IGNORE language_bootcamp/python/src/unit_test_demo/test_some_code.pyc

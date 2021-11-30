@@ -102,6 +102,46 @@ Short chapter?
 
 Maybe a little. Check out the demos - this is best seen, not read!
 
+### C/C++
+
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/_RMhB3ahmpM"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
+### Python
+
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/z4I8BvCVifQ"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
+### Javascript in-browser
+
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/ByB3JIJI6lA"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
+### Java
+
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/T0bDHkLlhuw"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
 Activities
 ----------
 
