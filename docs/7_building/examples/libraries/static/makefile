@@ -13,7 +13,7 @@ build: compile
 
 
 compile:
-	gcc -Wall -c static_library.c -o libadd.o
+	gcc -Wall -c libadd.c -o libadd.o
 
 clean:
 	rm libadd.o libadd.a
