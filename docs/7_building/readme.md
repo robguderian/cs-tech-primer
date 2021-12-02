@@ -103,7 +103,7 @@ explains that if the *dependent* file has a *more recent* modification than
 the target... run the rule.
 
 Ick, that's a lot of words. Example time. In the
-[makefile for the hello example](./examples/hello/makefile). This is not an
+[makefile for the hello example](./examples/hello/readme.md). This is not an
 optimized makefile, but demonstrates rules, and re-running compilations.
 
 The `hello_world: hello_world.c` rule shows something simple. `hello_world`
