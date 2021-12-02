@@ -15,4 +15,4 @@ compile:
 	gcc -Wall -c libadd.c -o libadd.o
 
 clean:
-	rm libadd.o libadd.a
+	-rm libadd.o libadd.a

@@ -15,4 +15,5 @@ build:
 
 
 clean:
-	rm libmulti.so
+	-rm libmulti.so.1.0.1
+	-rm libmulti1.o
