@@ -11,7 +11,6 @@
 build: compile
 	ar -cvq libadd.a libadd.o
 
-
 compile:
 	gcc -Wall -c libadd.c -o libadd.o
 
