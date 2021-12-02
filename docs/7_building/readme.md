@@ -98,11 +98,83 @@ time of the files.
 
 The documentation uses the term "out of date" to describe files items
 (really rules) that need to be re-run (aka recompiled).
-![The manual](https://www.gnu.org/software/make/manual/make.html#Rule-Syntax)
+[The manual](https://www.gnu.org/software/make/manual/make.html#Rule-Syntax)
 explains that if the *dependent* file has a *more recent* modification than
 the target... run the rule.
 
-Ick, that's a lot of words. Example time
+Ick, that's a lot of words. Example time. In the
+[makefile for the hello example](./examples/hello/makefile). This is not an
+optimized makefile, but demonstrates rules, and re-running compilations.
+
+The `hello_world: hello_world.c` rule shows something simple. `hello_world`
+is the name of the executable, and requires `hello_world.c`. If the edited time
+of `hello_world.c` is more recent (newer...) than the `hello_world` executable,
+then it will run the rule. Try it!
+
+Libraries
+---------
+
+Of course, we want to use libraries, and maybe want to create libraries.
+
+* Static libraries are compiled into your, and make your program larger.
+  This is all done **at compile time**.
+* Dynamic libraries are "linked" into your program. Your program keeps
+  a library name, and searches library folders for the required code
+  **at run time**.
+
+If a single library is going to be used by a few different applications,
+having a shared library makes a lot of sense. You would only need to
+maintain 1 version of that code, and both would use it.
+
+Static libraries
+----------------
+
+This is used to make code nice and modular, and allows us to have a
+program that will *run the same everywhere* because your libraries will
+ship with your executable. 
+
+![The Dartmouth College](https://www.cs.dartmouth.edu/~campbell/cs50/buildlib.html)
+has a nice example of building shared libraries.
+
+The process is:
+
+* Compile your application into .o files (machine language)
+* Roll your `.o` files into a library with `ar` (archiver), which bundles all
+  the `.o` files into 1 useable library
+* When compiling your program you must:
+  * -I include the header files for the library
+  * -L include the path to the library
+  * include the library -l, removing the `lib` from the name
+
+Easy? It's not too bad, check out the
+[example building the library](./examples/libraries/static/makefile),
+then [example building the application](./examples/libraries/makefile).
+
+Dynamic libraries
+-----------------
+
+These function in largely the same way. There is an excellent example
+by tdlp.org
+[demonstrating how to build them](https://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html).
+
+The keys are versioned! The file names are of the form
+`libgreat.so.1`, where `1` is the version number. You will have to pay
+attention to which versions you will use!
+
+Shared/dynamic libraries exist outside of your program. This means that
+it *could change*. Versioning protects us from this a little bit, but
+is no guarantee that the libraries will work the way we expect.
+Sounds risky? It's actually not - unix systems have a RICH and
+RELIABLE set of libraries!
+
+See
+[the example](./examples/dynamic/makefile)
+of building... and switching... the dynamic libraries. This demonstrates
+building and linking to the libraries. We have to modify the library path
+`LD_LIBRARY_PATH` to make sure our application can *find* the libraries.
+Checkout how
+[`make run`](./examples/libraries/makefile)
+functions to ensure we can find the library.
 
 Readings
 --------

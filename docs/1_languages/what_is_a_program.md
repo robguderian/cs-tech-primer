@@ -80,13 +80,24 @@ using a microcontroller or smaller processor. You may want to inspect
 The **linker** is really the thing doing the hard work here. The linker is the
 tool that creates an executable from all the assembly. Consider a
 "hello world" program. We didn't write `printf`, but the library exists.
-The linker will connect these things!
+The linker will connect these things! Check out
+[building](../7_building/readme.md).
 
-TODO - show example of using `ld` manually to build an executable
+In short, we can have static libraries that are compilied *into* our
+programs, making the executable size larger, and dynamic libraries that
+exist outside our executable and are "linked" at runtime for use.
 
-Notes to self
---------------
+The tools
+---------
 
-Talk about [GNU_Binutils](https://en.wikipedia.org/wiki/GNU_Binutils) and
-... do things? Rip apart a program? Have a library that is required that
-is discoverable via readelf?
+[GNU_Binutils](https://en.wikipedia.org/wiki/GNU_Binutils) are the key tools
+we use to crate binaries (binary utilities...).
+This can be used to rip apart a program, view libraries that are linked
+dynamically.
+
+Activities
+---------
+
+TODO
+
+Have a library that is required that is discoverable via readelf?
