@@ -28,8 +28,6 @@ IGNORE 6_unix/lecture_talking_points.md
 # 7_building
 RENAME 7_building Building
 RENAME 7_building/readme.md Introduction
-IGNORE 7_building/examples/
-IGNORE 7_building/images/
 
 # 8_virtualization
 RENAME 8_virtualization Virtualization
