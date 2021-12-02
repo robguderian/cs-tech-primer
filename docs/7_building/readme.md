@@ -168,7 +168,7 @@ Sounds risky? It's actually not - unix systems have a RICH and
 RELIABLE set of libraries!
 
 See
-[the example](./examples/dynamic/makefile)
+[the example](./examples/libraries/dynamic/makefile)
 of building... and switching... the dynamic libraries. This demonstrates
 building and linking to the libraries. We have to modify the library path
 `LD_LIBRARY_PATH` to make sure our application can *find* the libraries.
