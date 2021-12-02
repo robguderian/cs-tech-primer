@@ -5,7 +5,6 @@ These are here for you to reenforce the topics discussed in the video.
 These files aren't linked into the website, but you can find them if you're
 being sneaky, and looking at the repository.
 
-
 Introduction
 ------------
 
@@ -29,4 +28,3 @@ Welcome them to look through the material
 Show the rendered pages, mention the URL will likely change
 
 It's all open source! See a problem? Change it? Bug report it!
-

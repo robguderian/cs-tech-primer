@@ -30,7 +30,7 @@ list - show where we are
 locals - show local variables
 
 C
-
+-
 
 Compile with `-g` flag
 

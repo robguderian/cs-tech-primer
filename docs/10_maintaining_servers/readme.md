@@ -22,7 +22,6 @@ By the end of this module, student will be able to...
 * `cron` to schedule tasks
 * how to start things on startup (intro, and @reboot)
 
-
 <iframe width="560"
 height="315"
 src="https://www.youtube.com/embed/1YjWrQxxTTQ"
@@ -31,7 +30,7 @@ frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 
-You need a server to run your software...
+You need a server to run your software
 --------------------------------------
 
 and you have no idea how to do that? Well, good news and bad news here:
@@ -172,7 +171,7 @@ always be available and running to do a task. Running tasks in the background
 operating system as it boots.
 
 You've seen these. If not... try `ps x` right now. You'll likely see
-`sshd`, the `ssh` daemon. Or `kauditd`, the kernel audit daemon. 
+`sshd`, the `ssh` daemon. Or `kauditd`, the kernel audit daemon.
 Maybe you have the Apache web server running... `httpd`, a http daemon.
 It's good practice to suffix your daemons with `d`, but it's not required.
 
@@ -272,14 +271,13 @@ Any output from cronjobs are emailed to the job's owner. That's assuming
 that email is set up on this machine. Otherwise, it goes to the user's
 mailbox, and your terminal will say `You have mail` when you log in.
 
-
 ### `crontab`
 
 `man 5 crontab` does such a good job of this. What is described is the
 file at `/etc/crontab`, and is one of the places an administrator can
 set cron tasks.
 
-```
+```txt
 # Example of job definition:
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)

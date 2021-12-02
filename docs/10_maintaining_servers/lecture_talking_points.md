@@ -1,4 +1,5 @@
-# Lecture talking points
+Lecture talking points
+======================
 
 demo su, and sudo.
 

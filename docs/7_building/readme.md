@@ -52,7 +52,7 @@ So what are they, what's out there?
 -----------------------------------
 
 There's lots. Some are designed with a language in mind, some are more general.
-Java has a bunch, for some reason. 
+Java has a bunch, for some reason.
 Some do package management (3rd party library stuff). Some just handle the
 building order.
 
@@ -131,7 +131,7 @@ Static libraries
 
 This is used to make code nice and modular, and allows us to have a
 program that will *run the same everywhere* because your libraries will
-ship with your executable. 
+ship with your executable.
 
 ![The Dartmouth College](https://www.cs.dartmouth.edu/~campbell/cs50/buildlib.html)
 has a nice example of building shared libraries.
