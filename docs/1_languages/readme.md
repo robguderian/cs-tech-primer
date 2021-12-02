@@ -16,7 +16,6 @@ At the end of this module, students will be able to:
 * know how Notebooks interact like REPLs
   * Discuss magic numbers for files
 
-
 <iframe width="560"
 height="315"
 src="https://www.youtube.com/embed/QRrZ3KrvV3U"

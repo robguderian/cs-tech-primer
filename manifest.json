@@ -228,6 +228,144 @@
             "type": "module",
             "children": [
                 {
+                    "title": "Examples",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "Hello",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": ".Gitignore",
+                                    "type": "topic",
+                                    "fileName": "7_building/examples/hello/.gitignore"
+                                },
+                                {
+                                    "title": "Hello World",
+                                    "type": "topic",
+                                    "fileName": "7_building/examples/hello/hello_world"
+                                },
+                                {
+                                    "title": "Hello World",
+                                    "type": "topic",
+                                    "fileName": "7_building/examples/hello/hello_world.c"
+                                },
+                                {
+                                    "title": "Makefile",
+                                    "type": "topic",
+                                    "fileName": "7_building/examples/hello/makefile"
+                                },
+                                {
+                                    "title": "Readme",
+                                    "type": "topic",
+                                    "fileName": "7_building/examples/hello/readme.md"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Libraries",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "Dynamic",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "Libmulti",
+                                            "type": "topic",
+                                            "fileName": "7_building/examples/libraries/dynamic/libmulti.h"
+                                        },
+                                        {
+                                            "title": "Makefile",
+                                            "type": "topic",
+                                            "fileName": "7_building/examples/libraries/dynamic/makefile"
+                                        },
+                                        {
+                                            "title": "Option1",
+                                            "type": "module",
+                                            "children": [
+                                                {
+                                                    "title": "Libmulti1",
+                                                    "type": "topic",
+                                                    "fileName": "7_building/examples/libraries/dynamic/option1/libmulti1.c"
+                                                },
+                                                {
+                                                    "title": "Makefile",
+                                                    "type": "topic",
+                                                    "fileName": "7_building/examples/libraries/dynamic/option1/makefile"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "title": "Option2",
+                                            "type": "module",
+                                            "children": [
+                                                {
+                                                    "title": "Libmulti2",
+                                                    "type": "topic",
+                                                    "fileName": "7_building/examples/libraries/dynamic/option2/libmulti2.c"
+                                                },
+                                                {
+                                                    "title": "Makefile",
+                                                    "type": "topic",
+                                                    "fileName": "7_building/examples/libraries/dynamic/option2/makefile"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Makefile",
+                                    "type": "topic",
+                                    "fileName": "7_building/examples/libraries/makefile"
+                                },
+                                {
+                                    "title": "Readme",
+                                    "type": "topic",
+                                    "fileName": "7_building/examples/libraries/readme.md"
+                                },
+                                {
+                                    "title": "Run Library Stuff",
+                                    "type": "topic",
+                                    "fileName": "7_building/examples/libraries/run_library_stuff.c"
+                                },
+                                {
+                                    "title": "Static",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "Libadd",
+                                            "type": "topic",
+                                            "fileName": "7_building/examples/libraries/static/libadd.c"
+                                        },
+                                        {
+                                            "title": "Libadd",
+                                            "type": "topic",
+                                            "fileName": "7_building/examples/libraries/static/libadd.h"
+                                        },
+                                        {
+                                            "title": "Makefile",
+                                            "type": "topic",
+                                            "fileName": "7_building/examples/libraries/static/makefile"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Images",
+                    "type": "module",
+                    "children": [
+                        {
+                            "title": "No",
+                            "type": "resource",
+                            "fileName": "7_building/images/no.gif"
+                        }
+                    ]
+                },
+                {
                     "title": "Introduction",
                     "type": "topic",
                     "fileName": "7_building/readme.md"

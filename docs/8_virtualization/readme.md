@@ -99,7 +99,7 @@ other strange dependency things.
 
 In fact... that's kind of how Docker was created. To wit:
 
-![](./images/docker.jpg)
+![Docker](./images/docker.jpg)
 
 Docker images are built from a script, so the developers have as similar
 as possible an environment to production/deployment. More on this with
@@ -131,7 +131,7 @@ You run a program that is your favourite (or mandated) virtual machine
 software. Sometimes called a "Hypervisor"... which is like calling a computer
 a CPU... that's just part of it. Kernels (the part of your operating system
 that manages processes and stuff) are sometimes called "supervisors". So,
-Virtualization software manages supervisors... so 
+Virtualization software manages supervisors... so
 [hypervisor](https://www.ibm.com/cloud/learn/hypervisors)? Sure. Why not.
 
 tl;dr: It's a program that runs operating systems.
