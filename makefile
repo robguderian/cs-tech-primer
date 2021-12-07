@@ -1,5 +1,5 @@
 ALL: all
-markdownFiles := $(shell find . -type f -name \*.md ! -path "./docs/vendor/*" ! -path "./docs/_site/*" ! -path "*/node_modules/*")
+markdownFiles := $(shell find . -type f -name \*.md ! -path "./docs/vendor/*" ! -path "./docs/_site/*" ! -path "*/node_modules/*" ! -path "*/language_bootcamp/python/lecture/*")
 
 $(markdownFiles):
 	echo $(realpath $@)

@@ -51,6 +51,13 @@ IGNORE language_bootcamp/java/src/
 # these doesn't exist on clean repos, but is cruft after
 # running coverage
 IGNORE language_bootcamp/python/src/unit_test_demo/.coverage
-# after running the tests
-IGNORE language_bootcamp/python/src/unit_test_demo/some_code.pyc
-IGNORE language_bootcamp/python/src/unit_test_demo/test_some_code.pyc
+
+# Python bootcamp, mostly lecture
+IGNORE language_bootcamp/python/lecture/index.md
+RENAME language_bootcamp/python/lecture/index.pdf video_notes.pdf
+IGNORE language_bootcamp/python/lecture/index.html
+IGNORE language_bootcamp/python/lecture/reveal.js
+IGNORE language_bootcamp/python/lecture/style.css
+IGNORE language_bootcamp/python/lecture/images
+IGNORE language_bootcamp/python/lecture/makefile
+

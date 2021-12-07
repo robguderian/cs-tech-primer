@@ -1,0 +1,65 @@
+.reveal h1 {
+    font-size: 2em !important;
+}
+
+.reveal h2 {
+    font-size: 1.5em;
+}
+
+.reveal h3 {
+    font-size: 1em;
+}
+
+img {
+    max-width: 350px !important;
+    max-height: 350px !important;
+    width: auto;
+    height: auto;
+}
+
+/* float right images*/
+figure {
+    margin: 0 !important;
+    float: right;
+}
+
+figure figcaption {
+    font-size: 0.4em !important;
+}
+
+.figright {
+    margin: 0 !important;
+    float: right !important;
+}
+
+
+.big-img, .big-img svg, .big-img img{
+    max-height: 600px !important;
+    max-width: 600px !important;
+    height: auto !important;
+    width: auto !important;
+    float: none !important;
+    padding: 10px !important;
+}
+
+/* float left text */
+
+.reveal ul,dl,ol,table {
+    display: block !important;
+    text-align: left;
+}
+
+.slide-background[data-background-hash] {
+    filter: opacity(0.3) blur(5px);
+}
+
+.print-pdf .slide-background {
+    background-image: none !important;
+}
+
+/* letters for order */
+
+ol
+{
+	list-style-type: upper-alpha !important;
+}

@@ -885,6 +885,22 @@
                     "type": "module",
                     "children": [
                         {
+                            "title": "Lecture",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "video notes.pdf",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/python/lecture/index.pdf"
+                                },
+                                {
+                                    "title": "Python Primer",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/python/lecture/python_primer.pdf"
+                                }
+                            ]
+                        },
+                        {
                             "title": "Linting Info",
                             "type": "topic",
                             "fileName": "language_bootcamp/python/linting_info.md"
@@ -904,9 +920,24 @@
                             "type": "module",
                             "children": [
                                 {
+                                    "title": "Factorialrecursive",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/python/src/FactorialRecursive.py"
+                                },
+                                {
+                                    "title": "Fizzbuzz",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/python/src/FizzBuzz.py"
+                                },
+                                {
                                     "title": "Hello",
                                     "type": "topic",
                                     "fileName": "language_bootcamp/python/src/hello.py"
+                                },
+                                {
+                                    "title": "Strings",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/python/src/strings.py"
                                 },
                                 {
                                     "title": "Unit Test Demo",
