@@ -1,0 +1,3 @@
+[submodule "docs/language_bootcamp/python/lecture/reveal.js"]
+	path = docs/language_bootcamp/python/lecture/reveal.js
+	url = https://github.com/hakimel/reveal.js
