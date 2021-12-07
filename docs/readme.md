@@ -72,7 +72,7 @@ Topics
 * [Building programs](7_building)
   * Makefiles
   * Library paths?
-* [Virtual machines](8_virtualiztion)
+* [Virtual machines](8_virtualization)
   * What are they?
   * Why should we use them?
 * [Source code control](9_versioning_code)
