@@ -12,11 +12,11 @@
 ///
 ///------------------------------------------------------
 fn fizz_buzz(limit:i8){
-const FIZZ_NUM:i8 = 3; // the number value for Fizz
-const BUZZ_NUM:i8 = 5; // the number value for Buzz
-const FIZZ_STR:&str = "Fizz"; // the string for Fizz
-const BUZZ_STR:&str = "Buzz"; // the string for Buzz
-const FIZZBUZZ_STR:&str = "FizzBuzz"; // the string for FizzBuzz
+    const FIZZ_NUM:i8 = 3; // the number value for Fizz
+    const BUZZ_NUM:i8 = 5; // the number value for Buzz
+    const FIZZ_STR:&str = "Fizz"; // the string for Fizz
+    const BUZZ_STR:&str = "Buzz"; // the string for Buzz
+    const FIZZBUZZ_STR:&str = "FizzBuzz"; // the string for FizzBuzz
 
     for i in 1..limit + 1 {
         if i % FIZZ_NUM == 0 && i % BUZZ_NUM == 0 { // if i divides both
