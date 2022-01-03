@@ -1,5 +1,8 @@
 use std::fs;
 use std::collections::HashMap;
+// use std::collections::hash_map::Entry::Occupied;
+// use std::collections::hash_map::Entry::Vacant;
+use std::io;
 
 ///------------------------------------------------------
 /// list_substring
@@ -15,7 +18,7 @@ use std::collections::HashMap;
 ///
 ///------------------------------------------------------
 fn list_substring(content:Vec<&str>, substr:&str) {
-    let mut list:Vec<string> = Vec::new(); // list of items containing substr
+    let mut list:Vec<&str> = Vec::new(); // list of items containing substr
 
     // check every item to see if there's a substring in it containing substr
     for string in content {
@@ -47,14 +50,31 @@ fn list_letter_freq(content:Vec<&str>) {
     let mut known_letter = HashMap::new();// key-value pairs of letters and counts
     let mut total_num_letter = 0; // how many letters are in content
     let mut letter:u8; // an individual ascii letter in a string
+    let mut word;
+    // let mut count:i32;
 
     for i in 0..content.len() {
-        for j in 0..content[i].len() {
-            letter = content[i][j];
+        word = content[i].as_bytes();
 
-            match known_letter.get(letter) {
-                Some(count) => count += 1, // was letter found
-                None => known_letter.insert(letter.copy(), 1) // initialize letter count
+        for j in 0..content[i].len() {
+            letter = word[j];
+
+            // if !known_letter.contains_key(&letter){
+            //     known_letter.insert(&letter, 1);
+            // } else {
+            //     known_letter[&letter] += 1;
+            // }
+            // match known_letter[&letter] {
+            //     Some(count) => { count += 1; },
+            //     None => { known_letter.insert(letter, 1); },
+            // }
+            // match known_letter.entry(&letter) {
+            //     Occupied(mut count) => { count += 1 }, // letter was found
+            //     Vacant(mut count) => { count.set(1) }, // initialize letter count
+            // }
+            match known_letter.get(&letter) {
+                Some(&count) => { count += 1; }, // letter was found
+                None => { known_letter.insert(letter, 1); }, // initialize letter count
             }
         }
 
@@ -64,7 +84,7 @@ fn list_letter_freq(content:Vec<&str>) {
     println!("\nThe letter frequencies in the provided content are:");
 
     for (symbol, count) in &known_letter {
-        println!("\t{}: {.}", symbol, (count as f32) / totalNumLetter);
+        println!("\t{}: {}", symbol, (*count as f32) / (total_num_letter as f32));
     }
 }
 
@@ -89,8 +109,8 @@ fn list_palindrome(content:Vec<&str>) {
         }
     }
 
-    println!("\nThere are {} palindromes in the provided content.  They "+
-        "are:\n", list.len());
+    println!("\nThere are {} palindromes in the provided content.  They \
+    are:\n", list.len());
 
     for string in list {
         println!("\t{}", string);
@@ -114,6 +134,7 @@ fn is_palindrome(word:&str) -> bool {
     let word_length = word.len(); // length of the word we're checking
     let mut right_index; // index for the letter on the right half of the word
     let mut left_index; // index for the letter on the left half of the word
+    let word = word.as_bytes();
 
     // skip empty string and single letter words b/c they are palindromes
     if word_length >= 2 {
@@ -127,9 +148,10 @@ fn is_palindrome(word:&str) -> bool {
         }
 
         // check the mirroring of the word
-        while right_index < word_length && is_good.copy() {
+        while right_index < word_length {
             if word[right_index] != word[left_index] { // right not match left?
                 is_good = false; // it's NOT a palindrome
+                break;
             }
 
             right_index += 1;
@@ -153,9 +175,9 @@ fn is_palindrome(word:&str) -> bool {
 fn list_things(content:Vec<&str>) {
     const SEARCH_FOR: &str = "pass"; // what substring do you want to search for
 
-    listSubstring(content, SEARCH_FOR);
-    listLetterFreq(content);
-    listPalindrome(content);
+    list_substring(content, SEARCH_FOR);
+    list_letter_freq(content);
+    list_palindrome(content);
 }
 
 //------------------------------------------------------
@@ -171,13 +193,19 @@ fn list_things(content:Vec<&str>) {
 // RETURN: Returns an array of strings from the provided file.
 //
 //------------------------------------------------------
-fn get_content_array(filename:&str) -> Vec<&str> {
-    let content = fs::read_to_string(filename).lines();
+fn get_content_vector(filename:&str) -> Vec<&'static str> {
+    let contents = fs::read_to_string(filename)
+        .expect("Something went wrong reading the file.");
+    let mut result = Vec::new();
+
+    for line in contents.lines(){
+        result.push(line);
+    }
 
     println!("The provided file contains {} lines to look through.",
-             len(content));
+             result.len());
 
-    return content;
+    return result;
 }
 
 //------------------------------------------------------
@@ -204,27 +232,29 @@ fn check_owned(content:Vec<&str>) {
     let mut user_input:String; // what password to check?
 
     println!("\n**** Checking passwords to see if you're owned. ****");
-    print!(init_message);
-    get_user_input(&user_input);
+    print!("{}", init_message);
+    get_user_input(&mut user_input);
 
-    while keepChecking {
+    while keep_checking {
         found = false;
 
-        for i in 0..content.len() && !found {
-            if content[i] == userInput {
+        for i in 0..content.len() {
+            if content[i] == user_input {
                 found = true;
 
-                println!("OWNED! \"{}\" was found on line \"{}\" in the "+
-                "file.", userInput, i);
+                println!("OWNED! \"{}\" was found on line \"{}\" in the \
+                file.", user_input, i);
+
+                break;
             }
         }
 
-        if !found.copy() {
-            println!("SAFE! \"{}\" wasn't found in the file!", userInput);
+        if !found {
+            println!("SAFE! \"{}\" wasn't found in the file!", user_input);
         }
 
-        print!(continue_message);
-        get_user_input(&user_input);
+        print!("{}", continue_message);
+        get_user_input(&mut user_input);
         keep_checking = user_input != "-1";
     }
 }
@@ -239,34 +269,44 @@ fn check_owned(content:Vec<&str>) {
 //      - input_string is the string to search in.
 //
 //------------------------------------------------------
-fn index_example(input_string:String) {
-    let mut symbol = ""; // what symbol you're searching the position of
-    let position;  // the first position of the symbol you're searching for
+fn index_example(input_string:&str) {
+    let mut symbol:u8; // what symbol you're searching the position of
+    let mut input:String;
+    let position:i32;  // the first position of the symbol you're searching for
 
     println!("\n**** Starting an index example. ****");
     println!("\nThe provided string you want to search in is \"{}\".",
             input_string);
-    println!("Which symbol do you want to know the position of in the " +
-            "provided string?\n> ");
+    println!("Which symbol do you want to know the position of in the \
+    provided string?\n> ");
 
-    symbol = read!();
+    get_user_input(&mut input);
 
-    if symbol.len() != 1 {
-        println!("Invalid input. A symbol is a single character. " +
-            "Try again:\n> ");
+    symbol = input.as_bytes()[0];
 
-        symbol = read!();
+    println!("You input {}", symbol);
+
+    match input_string.find(symbol as char){
+        Some(position) => println!("The symbol \"{}\" is at position \"{}\" \
+        in the input_string \"{}\".", symbol, position, input_string),
+
+        None => println!("The symbol \"{}\" wasn't found in the input_string.",
+        symbol),
     }
+}
 
-    position = input_string.find(symbol[0]);
-
-    println!("The symbol \"{}\" is at position \"{}\" in the input_string "+
-            "\"{}\".", symbol, position, input_string);
-
-    if position == -1 {
-        println!("A position of \"-1\" means that it wasn't found in the " +
-            "input_string.");
-    }
+//------------------------------------------------------
+// getUserInput
+//
+// PURPOSE: provides a way to get the user's command line input into the
+//			provided string.
+//
+// PARAMETERS:
+//      - destString is the string to write to.
+//
+//------------------------------------------------------
+fn get_user_input(input:&mut String) {
+    io::stdin().read_line(input);
 }
 
 //------------------------------------------------------
@@ -278,10 +318,10 @@ fn index_example(input_string:String) {
 //
 //------------------------------------------------------
 fn main() {
-    const FILENAME: &str = "../resources/passwords/rockyou.txt";
-    let content = read_to_string(filename);
+    const FILENAME:&str = "../resources/passwords/rockyou.txt";
+    let content:Vec<&str> = get_content_vector(FILENAME);
 
     list_things(content);
     check_owned(content);
-    index_example(filename);
+    index_example(FILENAME);
 }
