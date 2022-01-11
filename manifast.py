@@ -78,6 +78,15 @@ def validate_tokens(tokens, line_num):
     return TokenCheck(True, "", cmd, args)
 
 
+def prompt_exit():
+	c = ''
+	while c.lower() != 'y' and c.lower() != 'n':
+		print("Proceed anyway? [y|n]: ", end="")
+		c = input()
+	
+	if c == 'n':
+		exit(-1)
+
 def get_config():
     result = {
         "IGNORE": set(),
@@ -92,7 +101,7 @@ def get_config():
             token_check = validate_tokens(tokens, i+1)
             if not token_check.is_valid:
                 print(token_check.err_msg)
-                exit(-1)
+                prompt_exit()
             elif token_check.cmd == "":
                 continue
             elif token_check.cmd == "IGNORE":
