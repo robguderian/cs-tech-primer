@@ -17,7 +17,7 @@ use std::io;
 ///      - substr is the substring to check each string for.
 ///
 ///------------------------------------------------------
-fn list_substring(content:Vec<&str>, substr:&str) {
+fn list_substring(content:&Vec<&str>, substr:&str) {
     let mut list:Vec<&str> = Vec::new(); // list of items containing substr
 
     // check every item to see if there's a substring in it containing substr
@@ -46,8 +46,8 @@ fn list_substring(content:Vec<&str>, substr:&str) {
 //      - content is the array of strings to check.
 //
 //------------------------------------------------------
-fn list_letter_freq(content:Vec<&str>) {
-    let mut known_letter = HashMap::new();// key-value pairs of letters and counts
+fn list_letter_freq(content:&Vec<&str>) {
+    let mut known_letter :HashMap<u8, i32> = HashMap::new();// key-value pairs of letters and counts
     let mut total_num_letter = 0; // how many letters are in content
     let mut letter:u8; // an individual ascii letter in a string
     let mut word;
@@ -59,7 +59,7 @@ fn list_letter_freq(content:Vec<&str>) {
         for j in 0..content[i].len() {
             letter = word[j];
 
-            // if !known_letter.contains_key(&letter){
+            // if !known_letter.contains_key(letter){
             //     known_letter.insert(&letter, 1);
             // } else {
             //     known_letter[&letter] += 1;
@@ -72,8 +72,8 @@ fn list_letter_freq(content:Vec<&str>) {
             //     Occupied(mut count) => { count += 1 }, // letter was found
             //     Vacant(mut count) => { count.set(1) }, // initialize letter count
             // }
-            match known_letter.get(&letter) {
-                Some(&count) => { count += 1; }, // letter was found
+            match known_letter.get_mut(&letter) {
+                Some(count) => { *count += 1; }, // letter was found
                 None => { known_letter.insert(letter, 1); }, // initialize letter count
             }
         }
@@ -100,7 +100,7 @@ fn list_letter_freq(content:Vec<&str>) {
 //      - content is the array of strings to check.
 //
 //------------------------------------------------------
-fn list_palindrome(content:Vec<&str>) {
+fn list_palindrome(content:&Vec<&str>) {
     let mut list = Vec::new(); // contains a list of all palindromes found
 
     for string in content {
@@ -172,7 +172,7 @@ fn is_palindrome(word:&str) -> bool {
 //      - content is the array to pass to other functions.
 //
 //------------------------------------------------------
-fn list_things(content:Vec<&str>) {
+fn list_things(content:&Vec<&str>) {
     const SEARCH_FOR: &str = "pass"; // what substring do you want to search for
 
     list_substring(content, SEARCH_FOR);
@@ -193,20 +193,17 @@ fn list_things(content:Vec<&str>) {
 // RETURN: Returns an array of strings from the provided file.
 //
 //------------------------------------------------------
-fn get_content_vector(filename:&str) -> Vec<&'static str> {
-    let contents = fs::read_to_string(filename)
-        .expect("Something went wrong reading the file.");
-    let mut result = Vec::new();
-
-    for line in contents.lines(){
-        result.push(line);
-    }
-
-    println!("The provided file contains {} lines to look through.",
-             result.len());
-
-    return result;
-}
+// fn get_content_vector(filename:&str, content_vector:&mut Vec<&str>) {
+//     let contents : String = fs::read_to_string(filename)
+//         .expect("Something went wrong reading the file.");
+//
+//     for line in contents.lines(){
+//         content_vector.push(line.clone());
+//     }
+//
+//     println!("The provided file contains {} lines to look through.",
+//              content_vector.len());
+// }
 
 //------------------------------------------------------
 // check_owned
@@ -220,16 +217,16 @@ fn get_content_vector(filename:&str) -> Vec<&'static str> {
 //      - content is an array of strings to check for a given password.
 //
 //------------------------------------------------------
-fn check_owned(content:Vec<&str>) {
+fn check_owned(content:&Vec<&str>) {
     const MESSAGE: &str = "\nEnter the password you want to check";
     const PROMPT_LINE: &str = ":\n> ";
     const EXIT_PROMPT: &str = ", or enter -1 to exit";
     let init_message = format!("{}{}", MESSAGE, PROMPT_LINE);
     let continue_message = format!("{}{}{}", MESSAGE, EXIT_PROMPT, PROMPT_LINE);
 
-    let mut found = false;       // is the password found?
+    let mut found;       // is the password found?
     let mut keep_checking = true; // should we continue asking for passwords?
-    let mut user_input:String; // what password to check?
+    let mut user_input = String::new(); // what password to check?
 
     println!("\n**** Checking passwords to see if you're owned. ****");
     print!("{}", init_message);
@@ -270,9 +267,9 @@ fn check_owned(content:Vec<&str>) {
 //
 //------------------------------------------------------
 fn index_example(input_string:&str) {
-    let mut symbol:u8; // what symbol you're searching the position of
-    let mut input:String;
-    let position:i32;  // the first position of the symbol you're searching for
+    let symbol:u8; // what symbol you're searching the position of
+    let mut input = String::new();
+    // let position:i32;  // the first position of the symbol you're searching for
 
     println!("\n**** Starting an index example. ****");
     println!("\nThe provided string you want to search in is \"{}\".",
@@ -306,7 +303,8 @@ fn index_example(input_string:&str) {
 //
 //------------------------------------------------------
 fn get_user_input(input:&mut String) {
-    io::stdin().read_line(input);
+    io::stdin().read_line(input).expect("There was a problem reading the \
+    user input.");
 }
 
 //------------------------------------------------------
@@ -319,9 +317,20 @@ fn get_user_input(input:&mut String) {
 //------------------------------------------------------
 fn main() {
     const FILENAME:&str = "../resources/passwords/rockyou.txt";
-    let content:Vec<&str> = get_content_vector(FILENAME);
+    let mut content:Vec<&str> = Vec::new();
 
-    list_things(content);
-    check_owned(content);
+    // get_content_vector(FILENAME, &mut content);
+    let file_string: String = fs::read_to_string(FILENAME)
+        .expect("Something went wrong reading the file.");
+
+    for line in file_string.lines(){
+        content.push(line);
+    }
+
+    println!("The provided file contains {} lines to look through.",
+             content.len());
+
+    list_things(&content);
+    check_owned(&content);
     index_example(FILENAME);
 }
