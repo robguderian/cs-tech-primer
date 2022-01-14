@@ -101,13 +101,13 @@ fn list_letter_freq(content:&Vec<&str>) {
 //
 //------------------------------------------------------
 fn list_palindrome(content:&Vec<&str>) {
-    let mut list = Vec::new(); // contains a list of all palindromes found
+    let mut list : Vec<String> = Vec::new(); // contains a list of all palindromes found
 
-    for string in content {
-        if is_palindrome(string) {
-            list.push(string);
-        }
-    }
+    // for string in content {
+    //     if is_palindrome(string) {
+    //         list.push(string);
+    //     }
+    // }
 
     println!("\nThere are {} palindromes in the provided content.  They \
     are:\n", list.len());
@@ -226,11 +226,11 @@ fn check_owned(content:&Vec<&str>) {
 
     let mut found;       // is the password found?
     let mut keep_checking = true; // should we continue asking for passwords?
-    let mut user_input = String::new(); // what password to check?
+    let mut user_input; // what password to check?
 
     println!("\n**** Checking passwords to see if you're owned. ****");
     print!("{}", init_message);
-    get_user_input(&mut user_input);
+    user_input = get_user_input();
 
     while keep_checking {
         found = false;
@@ -251,7 +251,7 @@ fn check_owned(content:&Vec<&str>) {
         }
 
         print!("{}", continue_message);
-        get_user_input(&mut user_input);
+        user_input = get_user_input();
         keep_checking = user_input != "-1";
     }
 }
@@ -268,7 +268,7 @@ fn check_owned(content:&Vec<&str>) {
 //------------------------------------------------------
 fn index_example(input_string:&str) {
     let symbol:u8; // what symbol you're searching the position of
-    let mut input = String::new();
+    let input;
     // let position:i32;  // the first position of the symbol you're searching for
 
     println!("\n**** Starting an index example. ****");
@@ -277,7 +277,7 @@ fn index_example(input_string:&str) {
     println!("Which symbol do you want to know the position of in the \
     provided string?\n> ");
 
-    get_user_input(&mut input);
+    input = get_user_input();
 
     symbol = input.as_bytes()[0];
 
@@ -302,9 +302,16 @@ fn index_example(input_string:&str) {
 //      - destString is the string to write to.
 //
 //------------------------------------------------------
-fn get_user_input(input:&mut String) {
-    io::stdin().read_line(input).expect("There was a problem reading the \
+fn get_user_input() -> String {
+    let mut input = String::new();
+    let temp : &str;
+
+    io::stdin().read_line(&mut input).expect("There was a problem reading the \
     user input.");
+
+    temp = &input[..];
+
+    temp[..temp.len() - 1].to_string()
 }
 
 //------------------------------------------------------
@@ -316,7 +323,7 @@ fn get_user_input(input:&mut String) {
 //
 //------------------------------------------------------
 fn main() {
-    const FILENAME:&str = "../resources/passwords/rockyou.txt";
+    const FILENAME:&str = "../../../resources/passwords/rockyou.txt";
     let mut content:Vec<&str> = Vec::new();
 
     // get_content_vector(FILENAME, &mut content);
