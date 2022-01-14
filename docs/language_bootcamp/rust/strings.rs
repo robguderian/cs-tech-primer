@@ -3,6 +3,7 @@ use std::collections::HashMap;
 // use std::collections::hash_map::Entry::Occupied;
 // use std::collections::hash_map::Entry::Vacant;
 use std::io;
+use std::io::Write;
 
 ///------------------------------------------------------
 /// list_substring
@@ -274,7 +275,7 @@ fn index_example(input_string:&str) {
     println!("\n**** Starting an index example. ****");
     println!("\nThe provided string you want to search in is \"{}\".",
             input_string);
-    println!("Which symbol do you want to know the position of in the \
+    print!("Which symbol do you want to know the position of in the \
     provided string?\n> ");
 
     input = get_user_input();
@@ -306,6 +307,10 @@ fn get_user_input() -> String {
     let mut input = String::new();
     let temp : &str;
 
+    // flush stdout to have text line up properly for user input
+    io::stdout().flush().expect("Had an issue flushing stdout");
+
+    // get users input into variable "input"
     io::stdin().read_line(&mut input).expect("There was a problem reading the \
     user input.");
 
