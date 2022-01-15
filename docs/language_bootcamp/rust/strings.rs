@@ -104,14 +104,15 @@ fn list_letter_freq(content:&Vec<&str>) {
 fn list_palindrome(content:&Vec<&str>) {
     let mut list : Vec<String> = Vec::new(); // contains a list of all palindromes found
 
-    // for string in content {
-    //     if is_palindrome(string) {
-    //         list.push(string);
-    //     }
-    // }
+    for string in content {
+        if is_palindrome(string) {
+            // println!("{}", string);
+            list.push(string.to_string());
+        }
+    }
 
     println!("\nThere are {} palindromes in the provided content.  They \
-    are:\n", list.len());
+    are:", &list.len());
 
     for string in list {
         println!("\t{}", string);
@@ -156,7 +157,12 @@ fn is_palindrome(word:&str) -> bool {
             }
 
             right_index += 1;
-            left_index -= 1; // shift the left index
+
+            if left_index == 0 {
+                break; // not allowed to get a negative usize value
+            } else {
+                left_index -= 1; // shift the left index
+            }
         }
     }
 
