@@ -85,7 +85,7 @@ fn list_letter_freq(content:&Vec<&str>) {
     println!("\nThe letter frequencies in the provided content are:");
 
     for (symbol, count) in &known_letter {
-        println!("\t{}: {}", symbol, (*count as f32) / (total_num_letter as f32));
+        println!("\t{}: {}", *symbol as char, (*count as f32) / (total_num_letter as f32));
     }
 }
 
@@ -282,11 +282,11 @@ fn index_example(input_string:&str) {
 
     symbol = input.as_bytes()[0];
 
-    println!("You input {}", symbol);
+    println!("You input {}", *&symbol as char);
 
     match input_string.find(symbol as char){
         Some(position) => println!("The symbol \"{}\" is at position \"{}\" \
-        in the input_string \"{}\".", symbol, position, input_string),
+        in the input_string \"{}\".", *&symbol as char, position, input_string),
 
         None => println!("The symbol \"{}\" wasn't found in the input_string.",
         symbol),
