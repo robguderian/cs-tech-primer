@@ -1,7 +1,5 @@
 use std::fs;
 use std::collections::HashMap;
-// use std::collections::hash_map::Entry::Occupied;
-// use std::collections::hash_map::Entry::Vacant;
 use std::io;
 use std::io::Write;
 
@@ -52,7 +50,6 @@ fn list_letter_freq(content:&Vec<&str>) {
     let mut total_num_letter = 0; // how many letters are in content
     let mut letter:u8; // an individual ascii letter in a string
     let mut word;
-    // let mut count:i32;
 
     for i in 0..content.len() {
         word = content[i].as_bytes();
@@ -60,19 +57,6 @@ fn list_letter_freq(content:&Vec<&str>) {
         for j in 0..content[i].len() {
             letter = word[j];
 
-            // if !known_letter.contains_key(letter){
-            //     known_letter.insert(&letter, 1);
-            // } else {
-            //     known_letter[&letter] += 1;
-            // }
-            // match known_letter[&letter] {
-            //     Some(count) => { count += 1; },
-            //     None => { known_letter.insert(letter, 1); },
-            // }
-            // match known_letter.entry(&letter) {
-            //     Occupied(mut count) => { count += 1 }, // letter was found
-            //     Vacant(mut count) => { count.set(1) }, // initialize letter count
-            // }
             match known_letter.get_mut(&letter) {
                 Some(count) => { *count += 1; }, // letter was found
                 None => { known_letter.insert(letter, 1); }, // initialize letter count
@@ -106,7 +90,6 @@ fn list_palindrome(content:&Vec<&str>) {
 
     for string in content {
         if is_palindrome(string) {
-            // println!("{}", string);
             list.push(string.to_string());
         }
     }
@@ -276,7 +259,6 @@ fn check_owned(content:&Vec<&str>) {
 fn index_example(input_string:&str) {
     let symbol:u8; // what symbol you're searching the position of
     let input;
-    // let position:i32;  // the first position of the symbol you're searching for
 
     println!("\n**** Starting an index example. ****");
     println!("\nThe provided string you want to search in is \"{}\".",
@@ -320,8 +302,10 @@ fn get_user_input() -> String {
     io::stdin().read_line(&mut input).expect("There was a problem reading the \
     user input.");
 
+    // get a &str version
     temp = &input[..];
 
+    // remove the newline character from the input, and return it
     temp[..temp.len() - 1].to_string()
 }
 
@@ -336,8 +320,6 @@ fn get_user_input() -> String {
 fn main() {
     const FILENAME:&str = "../../../resources/passwords/rockyou.txt";
     let mut content:Vec<&str> = Vec::new();
-
-    // get_content_vector(FILENAME, &mut content);
     let file_string: String = fs::read_to_string(FILENAME)
         .expect("Something went wrong reading the file.");
 
