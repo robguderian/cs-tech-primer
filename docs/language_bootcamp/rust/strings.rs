@@ -6,13 +6,13 @@ use std::io::Write;
 ///------------------------------------------------------
 /// list_substring
 ///
-/// PURPOSE: iterates over the provided array of strings (content), checking
+/// PURPOSE: iterates over the provided vector of strings (content), checking
 ///          each string to see if they contain the provided a specified
 ///          substring.  Keeps a list of strings that do.  Outputs information
 ///          about what was found.
 ///
 /// PARAMETERS:
-///      - content is the array of strings to check.
+///      - content is the vector of strings to check.
 ///      - substr is the substring to check each string for.
 ///
 ///------------------------------------------------------
@@ -34,19 +34,19 @@ fn list_substring(content:&Vec<&str>, substr:&str) {
     }
 }
 
-//------------------------------------------------------
-// list_letter_freq
-//
-// PURPOSE: iterates over the provided array of strings (content), keeping a
-//          count of the total number of letters, and how many of each are
-//          contained in content.  Outputs information about what was found.
-//
-// PARAMETERS:
-//      - content is the array of strings to check.
-//
-//------------------------------------------------------
+///------------------------------------------------------
+/// list_letter_freq
+///
+/// PURPOSE: iterates over the provided vector of strings (content), keeping a
+///          count of the total number of letters, and how many of each are
+///          contained in content.  Outputs information about what was found.
+///
+/// PARAMETERS:
+///      - content is the vector of strings to check.
+///
+///------------------------------------------------------
 fn list_letter_freq(content:&Vec<&str>) {
-    let mut known_letter :HashMap<u8, i32> = HashMap::new();// key-value pairs of letters and counts
+    let mut known_letter :HashMap<u8, i32> = HashMap::new(); // letter-count pairs
     let mut total_num_letter = 0; // how many letters are in content
     let mut letter:u8; // an individual ascii letter in a string
     let mut word;
@@ -59,7 +59,7 @@ fn list_letter_freq(content:&Vec<&str>) {
 
             match known_letter.get_mut(&letter) {
                 Some(count) => { *count += 1; }, // letter was found
-                None => { known_letter.insert(letter, 1); }, // initialize letter count
+                None => { known_letter.insert(letter, 1); } // initialize count
             }
         }
 
@@ -69,24 +69,25 @@ fn list_letter_freq(content:&Vec<&str>) {
     println!("\nThe letter frequencies in the provided content are:");
 
     for (symbol, count) in &known_letter {
-        println!("\t{}: {}", *symbol as char, (*count as f32) / (total_num_letter as f32));
+        println!("\t{}: {}", *symbol as char,
+                 (*count as f32) / (total_num_letter as f32));
     }
 }
 
-//------------------------------------------------------
-// list_palindrome
-//
-// PURPOSE: iterates over the provided array of strings (content), checking
-//          each string to see if they're a palindrome (call isPalindrome()),
-//          and adding them to a list of palindromes found so far.  Outputs
-//          information about what was found.
-//
-// PARAMETERS:
-//      - content is the array of strings to check.
-//
-//------------------------------------------------------
+///------------------------------------------------------
+/// list_palindrome
+///
+/// PURPOSE: iterates over the provided vector of strings (content), checking
+///          each string to see if they're a palindrome (call is_palindrome()),
+///          and adding them to a list of palindromes found so far.  Outputs
+///          information about what was found.
+///
+/// PARAMETERS:
+///      - content is the vector of strings to check.
+///
+///------------------------------------------------------
 fn list_palindrome(content:&Vec<&str>) {
-    let mut list : Vec<String> = Vec::new(); // contains a list of all palindromes found
+    let mut list : Vec<String> = Vec::new(); // list of all palindromes found
 
     for string in content {
         if is_palindrome(string) {
@@ -102,18 +103,18 @@ fn list_palindrome(content:&Vec<&str>) {
     }
 }
 
-//------------------------------------------------------
-// is_palindrome
-//
-// PURPOSE: To check if the provided string is a palindrome (does it read the
-//          same forwards and backwards).  Example: "hannah" is a palindrome.
-//
-// PARAMETERS:
-//          - word is the string we want to check
-//
-// RETURN: Returns a boolean (true if it's a palindrome, otherwise false)
-//
-//------------------------------------------------------
+///------------------------------------------------------
+/// is_palindrome
+///
+/// PURPOSE: To check if the provided string is a palindrome (does it read the
+///          same forwards and backwards).  Example: "hannah" is a palindrome.
+///
+/// PARAMETERS:
+///          - word is the string we want to check
+///
+/// RETURN: Returns a boolean (true if it's a palindrome, otherwise false)
+///
+///------------------------------------------------------
 fn is_palindrome(word:&str) -> bool {
     let mut is_good = true; // is it a palindrome?
     let word_length = word.len(); // length of the word we're checking
@@ -152,16 +153,16 @@ fn is_palindrome(word:&str) -> bool {
     return is_good; // was it a palindrome or not (true/false)
 }
 
-//------------------------------------------------------
-// listThings
-//
-// PURPOSE: Provides the substring to search for, and calls listSubstring(),
-//          listLetterFreq(), and listPalindrome().
-//
-// PARAMETERS:
-//      - content is the array to pass to other functions.
-//
-//------------------------------------------------------
+///------------------------------------------------------
+/// list_things
+///
+/// PURPOSE: Provides the substring to search for, and calls list_substring(),
+///          list_letter_freq(), and list_palindrome().
+///
+/// PARAMETERS:
+///      - content is the vector of strings to pass to other functions.
+///
+///------------------------------------------------------
 fn list_things(content:&Vec<&str>) {
     const SEARCH_FOR: &str = "pass"; // what substring do you want to search for
 
@@ -170,43 +171,18 @@ fn list_things(content:&Vec<&str>) {
     list_palindrome(content);
 }
 
-//------------------------------------------------------
-// get_content_array
-//
-// PURPOSE: Calls a function to read the contents of the provided file, splits
-//          the file on newline characters to create an array, outputs the
-//          number of lines from said file, and returns the array of lines.
-//
-// PARAMETERS:
-//      - filename is the name of the file to try and read from.
-//
-// RETURN: Returns an array of strings from the provided file.
-//
-//------------------------------------------------------
-// fn get_content_vector(filename:&str, content_vector:&mut Vec<&str>) {
-//     let contents : String = fs::read_to_string(filename)
-//         .expect("Something went wrong reading the file.");
-//
-//     for line in contents.lines(){
-//         content_vector.push(line.clone());
-//     }
-//
-//     println!("The provided file contains {} lines to look through.",
-//              content_vector.len());
-// }
-
-//------------------------------------------------------
-// check_owned
-//
-// PURPOSE: prompts the user to input a password and checks if the password
-//          they entered is in the rockyou.txt file.  (The rockyou.txt file is
-//          ordered from least most common to least common, and we're using a
-//          truncated version, so this only checks the more common passwords).
-//
-// PARAMETERS:
-//      - content is an array of strings to check for a given password.
-//
-//------------------------------------------------------
+///------------------------------------------------------
+/// check_owned
+///
+/// PURPOSE: prompts the user to input a password and checks if the password
+///          they entered is in the rockyou.txt file.  (The rockyou.txt file is
+///          ordered from least most common to least common, and we're using a
+///          truncated version, so this only checks the more common passwords).
+///
+/// PARAMETERS:
+///      - content is a vector of strings to check for a given password.
+///
+///------------------------------------------------------
 fn check_owned(content:&Vec<&str>) {
     const MESSAGE: &str = "\nEnter the password you want to check";
     const PROMPT_LINE: &str = ":\n> ";
@@ -246,16 +222,16 @@ fn check_owned(content:&Vec<&str>) {
     }
 }
 
-//------------------------------------------------------
-// index_example
-//
-// PURPOSE: Run an example showing how to index a symbol in a string.  Prompts
-//          the user to input the symbol they want to search for.
-//
-// PARAMETERS:
-//      - input_string is the string to search in.
-//
-//------------------------------------------------------
+///------------------------------------------------------
+/// index_example
+///
+/// PURPOSE: Run an example showing how to index a symbol in a string.  Prompts
+///          the user to input the symbol they want to search for.
+///
+/// PARAMETERS:
+///      - input_string is the string to search in.
+///
+///------------------------------------------------------
 fn index_example(input_string:&str) {
     let symbol:u8; // what symbol you're searching the position of
     let input;
@@ -273,24 +249,25 @@ fn index_example(input_string:&str) {
     println!("You input {}", *&symbol as char);
 
     match input_string.find(symbol as char){
-        Some(position) => println!("The symbol \"{}\" is at position \"{}\" \
-        in the input_string \"{}\".", *&symbol as char, position, input_string),
-
-        None => println!("The symbol \"{}\" wasn't found in the input_string.",
-        symbol),
+        Some(position) => {
+            println!("The symbol \"{}\" is at position \"{}\" \
+        in the input_string \"{}\".", *&symbol as char, position, input_string)
+        },
+        None => {
+            println!("The symbol \"{}\" wasn't found in the input_string.",
+                     symbol)
+        }
     }
 }
 
-//------------------------------------------------------
-// getUserInput
-//
-// PURPOSE: provides a way to get the user's command line input into the
-//			provided string.
-//
-// PARAMETERS:
-//      - destString is the string to write to.
-//
-//------------------------------------------------------
+///------------------------------------------------------
+/// get_user_input
+///
+/// PURPOSE: reads the user's stdin input and returns it as a string.
+///
+/// RETURN: returns the user's input (String), minus the newline character.
+///
+///------------------------------------------------------
 fn get_user_input() -> String {
     let mut input = String::new();
     let temp : &str;
@@ -309,16 +286,16 @@ fn get_user_input() -> String {
     temp[..temp.len() - 1].to_string()
 }
 
-//------------------------------------------------------
-// main
-//
-// PURPOSE: provides the filename for the file to open, and gets the contents
-//          of the file by calling get_content_array(). Passes the contents to
-//          listThings() and check_owned(), then calls index_example().
-//
-//------------------------------------------------------
+///------------------------------------------------------
+/// main
+///
+/// PURPOSE: Opens the provided file and passes the contents to list_things()
+///          and check_owned(), then calls index_example().
+///
+///------------------------------------------------------
 fn main() {
     const FILENAME:&str = "../../../resources/passwords/rockyou.txt";
+
     let mut content:Vec<&str> = Vec::new();
     let file_string: String = fs::read_to_string(FILENAME)
         .expect("Something went wrong reading the file.");
