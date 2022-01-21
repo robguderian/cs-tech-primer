@@ -1,11 +1,13 @@
 # Rust Specifics
 
-1. [Running Your Program](#running-your-program)   
-   1. [rustc](#rustc)
-   2. [cargo](#cargo)
-2. [Importing](#importing)
-3. [Ownership](#ownership)
-4. [Variables](#variables)
+1. Running Your Program   
+   1. rustc
+   2. cargo
+2. Importing
+3. Ownership
+4. Variables
+5. Functions
+6. Structs
 
 ## Running Your Program
 
@@ -47,6 +49,7 @@ checker.
 
 There can only ever be one owner of an item at a time.  If you wish to borrow
 an item, you can either:
+
 * borrow it immutably with `&item_name`, or
 * borrow it mutably with `&mut item_name`
 
@@ -71,4 +74,77 @@ name.
 let mut sum = 0; // a mutable sum
 let val : i32 = 10; // an immutable 32 bit signed integer
 const INPUT_FILE: &str = "inputFile.txt";
+```
+
+## Functions
+
+Functions in rust are defined with the `fn` keyword.  Both the return type and
+parameter types must be specified in the function's signature.  The return type
+is indicated after the closing parameter bracket with a `->`, then the type.
+If the function doesn't return something, then we don't have a `->`.
+
+When returning from a function, if the return statement is at the end of the
+function, you can either explicitly use the `return` keyword and end that line
+with a semicolon `;`, or you can write that line without the `return` keyword,
+and no semicolon.  Either way, rust knows that the function returns that item.
+
+Example of the two ways to return:
+
+```rust
+fn factorial1(num:i32) -> i32 { // returns an i32 value
+    let mut return_value = 1; // value to be returned
+
+    if num > 1{
+        return_value = num * factorial(&num - 1);
+    }
+
+    return return_value; // explicit with the return keyword and semicolon
+}
+
+fn factorial2(num:i32) -> i32 { // returns an i32 value
+   let mut return_value = 1; // value to be returned
+
+   if num > 1{
+      return_value = num * factorial(&num - 1);
+   }
+
+   return_value // implied without the return keyword and semicolon
+}
+```
+
+## Structs
+
+Rust doesn't have Objects, so instead it uses `struct`, combined with `impl`,
+to get a similar result.
+
+`struct` is similar to what you find in C, where you define a new data type
+that has certain properties / fields to it.
+
+`impl` is a way to add functions that can be called on a given struct.
+
+Example:
+
+```rust
+struct Person {
+    name: String,
+    age: u8,
+}
+
+impl Person {
+    fn new(name:String, age:u8) -> Self {
+        Person {name, age}
+    }
+
+    fn get_name(&self) -> &str {
+        &self.name
+    }
+
+    fn get_age(&self) -> u8 {
+        self.age.clone()
+    }
+
+    fn to_string(&self) -> String {
+        format!("Name: {}, Age: {}", self.name, self.age)
+    }
+}
 ```
