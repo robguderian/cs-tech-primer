@@ -9,14 +9,14 @@
 /// RETURN: returns the calculated factorial value (i32).
 ///
 ///------------------------------------------------------
-fn factorial(num:i32) -> i32{
+fn factorial(num:i32) -> i32 {
     let mut return_value = 1; // value to be returned
 
     if num > 1{
         return_value = num * factorial(&num - 1);
     }
 
-return return_value;
+    return return_value;
 }
 
 ///------------------------------------------------------

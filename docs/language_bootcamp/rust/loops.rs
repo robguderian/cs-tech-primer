@@ -69,7 +69,7 @@ fn while_loop(list:&Vec<i32>) {
 ///      - list is the vector of items to be printed
 ///
 /// ------------------------------------------------------
-fn infinite_loop(list:&Vec<i32>){
+fn infinite_loop(list:&Vec<i32>) {
     println!("\ninfinite_loop:");
 
     let mut i = 0;

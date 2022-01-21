@@ -1,4 +1,4 @@
-use std::env;
+use std::env; // environment
 
 ///------------------------------------------------------
 /// print_arguments
@@ -11,7 +11,7 @@ use std::env;
 ///              ./arguments 2 3 4
 ///
 ///------------------------------------------------------
-fn print_arguments(){
+fn print_arguments() {
     let args: Vec<String> = env::args().collect();
 
     println!("You passed {} arguments.  They were: ", args.len());
@@ -21,6 +21,6 @@ fn print_arguments(){
     }
 }
 
-fn main(){
+fn main() {
     print_arguments();
 }

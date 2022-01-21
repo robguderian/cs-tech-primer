@@ -11,7 +11,7 @@
 ///      - limit is the maximum number we want to check against.
 ///
 ///------------------------------------------------------
-fn fizz_buzz(limit:i8){
+fn fizz_buzz(limit:i8) {
     const FIZZ_NUM:i8 = 3; // the number value for Fizz
     const BUZZ_NUM:i8 = 5; // the number value for Buzz
     const FIZZ_STR:&str = "Fizz"; // the string for Fizz
@@ -40,7 +40,7 @@ fn fizz_buzz(limit:i8){
 /// PURPOSE: calls fizzBuzz() with a specified maximum value (LIMIT).
 ///
 ///------------------------------------------------------
-fn main(){
+fn main() {
     const LIMIT:i8 = 50; // max number you want to run fizzBuzz against
 
     fizz_buzz(LIMIT);

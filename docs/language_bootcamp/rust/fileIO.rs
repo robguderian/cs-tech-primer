@@ -1,5 +1,5 @@
-use std::fs;
-use std::io::Write;
+use std::fs; // file system
+use std::io::Write; // allow you to write to a file
 
 ///------------------------------------------------------
 /// add_line_numbers
