@@ -34,7 +34,8 @@ individual *characters*.
 Integers
 ------------
 
-Addition, subtraction and multiplication of integers works as you would expect...
+Addition, subtraction and multiplication of integers works as you would
+expect...
 
 ```java
 int x = 4 + 5;     // x is 9

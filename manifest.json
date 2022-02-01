@@ -735,6 +735,64 @@
                             ]
                         },
                         {
+                            "title": "5 Objects",
+                            "type": "module",
+                            "children": [
+                                {
+                                    "title": "1 Intro",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/5_Objects/1_Intro.md"
+                                },
+                                {
+                                    "title": "2 Accessmodifiers",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/5_Objects/2_AccessModifiers.md"
+                                },
+                                {
+                                    "title": "3 Static",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/5_Objects/3_Static.md"
+                                },
+                                {
+                                    "title": "4 Main",
+                                    "type": "topic",
+                                    "fileName": "language_bootcamp/java/5_Objects/4_Main.md"
+                                },
+                                {
+                                    "title": "Exampleperson",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "Main",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/java/5_Objects/ExamplePerson/Main.java"
+                                        },
+                                        {
+                                            "title": "Person",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/java/5_Objects/ExamplePerson/Person.java"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Examplestatic",
+                                    "type": "module",
+                                    "children": [
+                                        {
+                                            "title": "Main",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/java/5_Objects/ExampleStatic/Main.java"
+                                        },
+                                        {
+                                            "title": "Person",
+                                            "type": "topic",
+                                            "fileName": "language_bootcamp/java/5_Objects/ExampleStatic/Person.java"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
                             "title": "Cheatsheet",
                             "type": "topic",
                             "fileName": "language_bootcamp/java/cheatsheet.md"
