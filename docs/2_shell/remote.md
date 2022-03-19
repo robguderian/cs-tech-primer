@@ -119,7 +119,7 @@ scp `hello.c` you@aviary.cs.umanitoba.ca:~/primer/
 This will copy `hello.c` into the `primer` folder in your home
 directory. Note that the `primer` folder must exist for this to be successful.
 
-`scp` a folder structure`
+`scp` a folder structure
 -------------------------
 
 What if you have a *bunch* of files in a big directory tree that you want to
@@ -140,7 +140,7 @@ Oh, you have lots of files there, and you've only changed one... why push
 `rsync`, the better way
 ------------------------
 
-`rsync` is not installed by default no some systems, but is worth installing.
+`rsync` is not installed by default on some systems, but is worth installing.
 It *must* be installed on both the local and remote systems to work.
 
 `rsync` will compare the local and remote files/file systems, and find
